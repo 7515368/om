@@ -1,4 +1,4 @@
-const calculateScrollbarWidth = function() {
+const calculateScrollbarWidth = function () {
     const outer = document.createElement('div');
     outer.style.visibility = 'hidden';
     outer.style.overflow = 'scroll';
@@ -33,10 +33,10 @@ const toggleMenu = () => {
     burger.addEventListener('click', (e) => {
         burger.classList.toggle('is-active')
 
-        if(burger.classList.contains('is-active')) {
+        if (burger.classList.contains('is-active')) {
             document.body.style.overflow = 'hidden';
-            document.body.style.paddingRight = calculateScrollbarWidth()+'px';
-            header.style.paddingRight = calculateScrollbarWidth()+'px';
+            document.body.style.paddingRight = calculateScrollbarWidth() + 'px';
+            header.style.paddingRight = calculateScrollbarWidth() + 'px';
 
             menu.classList.add('is-active')
         } else {
@@ -47,8 +47,8 @@ const toggleMenu = () => {
         }
     }, false);
 
-    window.onkeydown = function( event ) {
-        if ( event.keyCode === 27 ) {
+    window.onkeydown = function (event) {
+        if (event.keyCode === 27) {
             document.body.style.overflow = ''
             menu.classList.remove('is-active');
             document.body.style.paddingRight = '';
@@ -72,7 +72,7 @@ const headerFixed = () => {
 
 const heroSlider = () => {
     let indexHeroSlider = document.querySelector('#indexHero');
-    if(indexHeroSlider) {
+    if (indexHeroSlider) {
         imagesLoaded(indexHeroSlider, () => {
             let slider = new Swiper(indexHeroSlider, {
                 speed: 1000,
@@ -101,9 +101,9 @@ const heroSlider = () => {
 const aboutOptionsSlider = () => {
     let optionsSlider = document.querySelector('#aboutOptions'),
         swiper;
-    if(optionsSlider) {
+    if (optionsSlider) {
         let init = () => {
-            if(window.innerWidth < 768) {
+            if (window.innerWidth < 768) {
                 swiper = new Swiper(optionsSlider, {
                     speed: 1000,
                     slidesPerView: 'auto',
@@ -130,10 +130,10 @@ const aboutOptionsSlider = () => {
         init()
 
         window.addEventListener('resize', () => {
-            if(window.innerWidth < 768 && !optionsSlider.classList.contains('swiper-initialized')) {
+            if (window.innerWidth < 768 && !optionsSlider.classList.contains('swiper-initialized')) {
                 init()
             }
-            if(window.innerWidth >= 768 && optionsSlider.classList.contains('swiper-initialized')) {
+            if (window.innerWidth >= 768 && optionsSlider.classList.contains('swiper-initialized')) {
                 swiper.destroy()
             }
         })
@@ -143,9 +143,9 @@ const aboutOptionsSlider = () => {
 const aboutComfortSlider = () => {
     let comfortSlider = document.querySelector('#aboutComfort'),
         swiper;
-    if(comfortSlider) {
+    if (comfortSlider) {
         let init = () => {
-            if(window.innerWidth < 480) {
+            if (window.innerWidth < 480) {
                 swiper = new Swiper(comfortSlider, {
                     speed: 1000,
                     slidesPerView: 'auto',
@@ -167,10 +167,10 @@ const aboutComfortSlider = () => {
         init()
 
         window.addEventListener('resize', () => {
-            if(window.innerWidth < 480 && !comfortSlider.classList.contains('swiper-initialized')) {
+            if (window.innerWidth < 480 && !comfortSlider.classList.contains('swiper-initialized')) {
                 init()
             }
-            if(window.innerWidth >= 480 && comfortSlider.classList.contains('swiper-initialized')) {
+            if (window.innerWidth >= 480 && comfortSlider.classList.contains('swiper-initialized')) {
                 swiper.destroy()
                 comfortSlider.querySelector('.swiper-pagination').remove()
             }
@@ -181,7 +181,7 @@ const aboutComfortSlider = () => {
 
 const locationSliders = () => {
     let locationComfortSlider = document.querySelector('#locationComfortSlider');
-    if(locationComfortSlider) {
+    if (locationComfortSlider) {
         imagesLoaded(locationComfortSlider, () => {
             let slider = new Swiper(locationComfortSlider, {
                 speed: 1000,
@@ -212,7 +212,7 @@ const locationSliders = () => {
     }
 
     let locationCultureSlider = document.querySelector('#locationCultureSlider');
-    if(locationCultureSlider) {
+    if (locationCultureSlider) {
         imagesLoaded(locationCultureSlider, () => {
             let slider = new Swiper(locationCultureSlider, {
                 speed: 1000,
@@ -245,7 +245,7 @@ const locationSliders = () => {
 
 const floors = () => {
     let floorsSlider = document.querySelector('#floors');
-    if(floorsSlider) {
+    if (floorsSlider) {
         let slider = new Swiper(floorsSlider, {
             speed: 1000,
             slidesPerView: 5,
@@ -259,7 +259,7 @@ const floors = () => {
 
 const filters = () => {
     let sliderFloor = document.getElementById('filterFloor');
-    if(sliderFloor) {
+    if (sliderFloor) {
         let sliderFloorMin = parseInt(sliderFloor.getAttribute('data-min')),
             sliderFloorMax = parseInt(sliderFloor.getAttribute('data-max'));
 
@@ -276,7 +276,7 @@ const filters = () => {
             document.getElementById('filterFloorMin'),
             document.getElementById('filterFloorMax')
         ];
-        sliderFloor.noUiSlider.on('update', function (values, handle ) {
+        sliderFloor.noUiSlider.on('update', function (values, handle) {
             let Format = wNumb({
                 decimals: 0
             });
@@ -285,7 +285,7 @@ const filters = () => {
     }
 
     let sliderCost = document.getElementById('filterCost');
-    if(sliderCost) {
+    if (sliderCost) {
         let filterCostMin = parseInt(sliderCost.getAttribute('data-min')),
             filterCostMax = parseInt(sliderCost.getAttribute('data-max'));
 
@@ -302,7 +302,7 @@ const filters = () => {
             document.getElementById('filterCostMin'),
             document.getElementById('filterCostMax')
         ];
-        sliderCost.noUiSlider.on('update', function (values, handle ) {
+        sliderCost.noUiSlider.on('update', function (values, handle) {
             let Format = wNumb({
                 decimals: 0
             });
@@ -311,7 +311,7 @@ const filters = () => {
     }
 
     let sliderSquare = document.getElementById('filterSquare');
-    if(sliderSquare) {
+    if (sliderSquare) {
         let filterSquareMin = parseInt(sliderSquare.getAttribute('data-min')),
             filterSquareMax = parseInt(sliderSquare.getAttribute('data-max'));
 
@@ -328,7 +328,7 @@ const filters = () => {
             document.getElementById('filterSquareMin'),
             document.getElementById('filterSquareMax')
         ];
-        sliderSquare.noUiSlider.on('update', function (values, handle ) {
+        sliderSquare.noUiSlider.on('update', function (values, handle) {
             let Format = wNumb({
                 decimals: 0
             });
@@ -340,13 +340,13 @@ const filters = () => {
         from: function (formattedValue) {
             return Number(formattedValue);
         },
-        to: function(numericValue) {
+        to: function (numericValue) {
             return Math.round(numericValue);
         }
     };
 
     let btnShowResults = document.querySelector('.js-showMore');
-    if(btnShowResults) {
+    if (btnShowResults) {
         btnShowResults.addEventListener('click', () => {
             let _grid = document.querySelector('.selection__grid'),
                 _header = document.querySelector('.header'),
@@ -376,7 +376,7 @@ function getElementOffset(el) {
 let orderForm = () => {
     let orderModal = document.querySelector(".select-flat__modal");
 
-    if(orderModal) {
+    if (orderModal) {
         let btnOrder = document.querySelectorAll('.js-order'),
             orderGrid = document.querySelector('.select-flat__grid'),
             info = document.querySelector('.select-flat__info'),
@@ -389,17 +389,17 @@ let orderForm = () => {
             btn.addEventListener('click', (e) => {
                 let _top = info.offsetTop - 20;
 
-                if(window.innerWidth >= 960 && window.innerWidth < 1280) {
+                if (window.innerWidth >= 960 && window.innerWidth < 1280) {
                     _top = info.offsetTop + 8;
-                    orderModal.style.width = info.clientWidth + 34*2 + 'px';
+                    orderModal.style.width = info.clientWidth + 34 * 2 + 'px';
                     orderModal.style.height = orderGrid.clientHeight - 46 + 'px';
                 }
-                if(window.innerWidth >= 1280) {
+                if (window.innerWidth >= 1280) {
                     _top = info.offsetTop + 8;
                     orderModal.style.width = info.clientWidth + 46 + 70 + 'px';
                     orderModal.style.height = orderGrid.clientHeight - 64 + 'px';
                 }
-                if(window.innerWidth < 960) {
+                if (window.innerWidth < 960) {
                     orderModal.style.width = '';
                     orderModal.style.height = '';
                 }
@@ -429,9 +429,9 @@ const mortgageSlider = () => {
     let mortgageSlider = document.querySelector('#mortgageSlider'),
         slider = false;
 
-    if(mortgageSlider) {
+    if (mortgageSlider) {
         let init = () => {
-            if(window.innerWidth < 1960 && !mortgageSlider.classList.contains("swiper-initialized")) {
+            if (window.innerWidth < 1960 && !mortgageSlider.classList.contains("swiper-initialized")) {
                 imagesLoaded(mortgageSlider, () => {
                     slider = new Swiper(mortgageSlider, {
                         speed: 5000,
@@ -456,7 +456,7 @@ const mortgageSlider = () => {
                 })
             }
 
-            if(window.innerWidth >= 1960 && mortgageSlider.classList.contains("swiper-initialized")) {
+            if (window.innerWidth >= 1960 && mortgageSlider.classList.contains("swiper-initialized")) {
                 slider.destroy()
             }
         }
@@ -469,7 +469,7 @@ const mortgageSlider = () => {
 const feedbackForm = () => {
     let form = document.querySelector('.feedback__form'),
         phoneInput = document.querySelectorAll('[name="phone"]');
-    if(form) {
+    if (form) {
         let btnSubmit = form.querySelector('.js-submit'),
             thanks = form.querySelector('.feedback__form-thanks'),
             checkAgreement = form.querySelector('.checkbox input');
@@ -478,8 +478,8 @@ const feedbackForm = () => {
             checkAgreement.checked ? btnSubmit.classList.remove('btn--disabled') : btnSubmit.classList.add('btn--disabled')
         });
     }
-    if(phoneInput) {
-        phoneInput.forEach((phone)=>{
+    if (phoneInput) {
+        phoneInput.forEach((phone) => {
             let phoneMask = IMask(phone, {
                 mask: '+{7} (000) 000-0000'
             });
@@ -491,12 +491,12 @@ const feedbackForm = () => {
 let _submitForm = (elem) => {
     let form = elem.closest('.feedback__form');
     form.classList.add('is-success');
-    setTimeout(()=>{
+    setTimeout(() => {
         form.classList.remove('is-success');
-    },3000)
+    }, 3000)
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     document.body.classList.remove('preload')
     toggleMenu();
     heroSlider();
@@ -517,3 +517,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
         offset: 20
     })
 });
+
+
+
+//////////////////////////////
+// удалить после тестирования!
+//////////////////////////////
+
+const cookies = document.cookie.split('; ');
+let username;
+
+for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].split('=');
+    if (cookie[0] === 'username') {
+        username = cookie[1];
+        break;
+    }
+}
+
+if (!username) {
+    window.location.href = 'index.html';
+} else {
+    const message = document.createElement('p');
+    message.textContent = `Добро пожаловать, ${username}!`;
+    document.body.appendChild(message);
+}
+

@@ -1,13 +1,4 @@
-
-<link rel="stylesheet" href="css/pass.css"/><form>
-<label for="username">Имя пользователя:</label>
-<input type="text" id="username" name="username"><br>
-<label for="password">Пароль:</label>
-<input type="password" id="password" name="password"><br>
-<input type="submit" value="Войти">
-</form>
-<script>
-   const form1 = document.querySelector('form');
+const form1 = document.querySelector('form');
 const username1 = document.querySelector('#username');
 const password1 = document.querySelector('#password');
 
@@ -22,5 +13,3 @@ form1.addEventListener('submit', function (event) {
         alert('Неверное имя пользователя или пароль');
     }
 });
-
-</script>

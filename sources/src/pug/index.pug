@@ -1,11 +1,16 @@
-extends base/_layout
-block head
-    title Главная
+link(rel="stylesheet" href="css/pass.css")
 
-block page
-    include blocks/_index-hero
-    include blocks/_index-about
-    include blocks/_index-advantages
-    include blocks/_index-exteriors
-    include blocks/_index-interior
-    include blocks/_feedback
+
+<form>
+  <label for="username">Имя пользователя:</label>
+  <input type="text" id="username" name="username"><br>
+
+  <label for="password">Пароль:</label>
+  <input type="password" id="password" name="password"><br>
+
+  <input type="submit" value="Войти">
+</form>
+
+script 
+    include ../js/password.js
+   
