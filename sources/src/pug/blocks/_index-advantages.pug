@@ -1,0 +1,36 @@
+section.index-advantages#advantages
+    .container.index-advantages__container
+        .index-advantages__title(data-aos="fade-up")
+            h2.h2 Место вашей силы
+
+        .index-advantages__subtitle(data-aos="fade-up") Комплекс формирует комфортное и современное пространство в экологичном районе Москвы.
+
+        .index-advantages__content
+            .index-advantages__list
+                -
+                    let advantages = [{
+                        title: 'Приватность',
+                        description: 'Клубный дом: 236 квартир на 2 дома'
+                    },{
+                        title: 'Безопасность',
+                        description: 'Территория круглосуточно находится под охраной и видеонаблюдением'
+                    },{
+                        title: 'Светлые квартиры',
+                        description: 'Потолки от 3 метров и панорамное остекление'
+                    },{
+                        title: 'Единение с природой',
+                        description: 'Жилой комплекс окружен многочисленными парками, скверами, водоемами.'
+                    },{
+                        title: 'Современная классика',
+                        description: 'В основу архитектурной концепции легло стремление подчеркнуть особенность проекта, его единство с окружающей застройкой.'
+                    },{
+                        title: 'Комфорт',
+                        description: 'Двухуровневый подземный паркинг на 180 машиномест'
+                    }]
+
+                each val,index in advantages
+                    .index-advantages__list-item(data-aos="fade-up" data-aos-delay=`${index*100}`)
+                        .index-advantages__list-image
+                            +picture(`index/advantages/item-${index+1}`,'jpg',true)
+                        .index-advantages__list-title= val.title
+                        .index-advantages__list-description= val.description

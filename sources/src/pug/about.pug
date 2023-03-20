@@ -1,0 +1,27 @@
+extends base/_layout
+block head
+    title О проекте
+    -
+        let page = 'О проекте',
+        headerInner = true
+
+block page
+    include blocks/_about-hero
+    include blocks/_about-description
+    include blocks/_about-stats
+    include blocks/_about-history
+    include blocks/_about-options
+    include blocks/_about-comfort
+    include blocks/_about-retail
+    include blocks/_feedback
+
+    section.cookie
+        .container
+            .cookie__close(onclick="document.querySelector('.cookie').classList.add('is-hidden')")
+                +use('close', 24, 24)
+
+            .cookie__text Мы используем файлы cookie, чтобы посещение сайта было как можно более комфортным
+
+            .cookie__button
+                a(href="#" onclick="document.querySelector('.cookie').classList.add('is-hidden'); return false").btn
+                    .btn__text Принять

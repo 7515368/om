@@ -1,0 +1,93 @@
+.swiper-controls
+  display: flex
+  align-items: center
+
+  &__buttons
+    position: relative
+    display: flex
+    align-items: center
+    margin-right: 40px
+
+  .swiper-button
+    position: unset
+    margin: 0
+    width: 48px
+    height: 48px
+    color: $colorAccent
+
+    &:after
+      display: none
+
+    &-prev
+      margin-right: 15px
+
+    .icony
+      transition: .3s ease
+
+    &:hover
+      .icony
+        background: $colorAccent
+
+        .icon
+          fill: #FFF
+
+  .swiper-pagination
+    position: unset
+    justify-content: flex-start
+    text-align: unset
+
+    &-bullet
+      background: #DEDEDE
+      width: 8px
+      height: 8px
+      margin: 0 7px !important
+      opacity: 1
+
+      &-active
+        background: $colorAccent
+
+  @include mq($from: desktopX)
+    .swiper-pagination
+      &-bullet
+        width: 10px
+        height: 10px
+        margin: 0 9px !important
+
+    .swiper-button
+      width: 64px
+      height: 64px
+
+      .icon
+        width: 32px
+        height: auto
+
+      .icony
+        width: 64px
+        height: 64px
+        border-width: 4px
+
+      &-prev
+        margin-right: 20px
+
+    &__buttons
+      margin-right: 54px
+
+  //@include mq($from: desktopX)
+    margin-left: calc(-9.33vw + 30px)
+
+  //@include mq($from: huge)
+    margin-left: calc(-9.33vw + 62px)
+
+    .swiper-button
+      width: 72px
+      height: 72px
+
+      &-prev
+        margin-right: 28px
+
+      .icon
+        width: 38px
+        height: auto
+
+    &__buttons
+      margin-right: 48px

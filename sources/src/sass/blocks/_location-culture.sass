@@ -1,0 +1,172 @@
+.location-culture
+  padding-top: 60px
+  padding-bottom: 45px
+
+  &__title
+    margin-bottom: 35px
+
+  &__slider
+    margin-left: -20px
+
+    &-item
+      display: flex
+      flex-wrap: wrap
+
+    &-picture
+      margin-bottom: 41px
+
+      &--first
+        flex: 1
+
+      &--second
+        flex: 25.8% 0 0
+        margin-left: 23px
+
+    &-description
+      padding-left: 20px
+      font-size: 11px
+      line-height: 1.57
+
+    &-image
+      position: relative
+
+      &:after
+        content: ''
+        display: block
+
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+      &--first
+        &:after
+          padding-bottom: 77.61%
+
+      &--second
+        &:after
+          padding-bottom: 158.44%
+
+    .swiper-wrapper
+      margin-bottom: 63px
+
+  @include mq($from: mobileX)
+    &__title
+      margin-bottom: 35px
+
+      .h2
+        font-size: 38px
+
+    &__slider
+      margin-left: -34px
+
+      &-picture
+        &--second
+          flex: 25.6% 0 0
+          margin-left: 33px
+
+      &-description
+        padding-left: 34px
+
+  @include mq($from: tablet)
+    &__title
+      margin-bottom: 32px
+      max-width: 70%
+
+      .h2
+        font-size: 42px
+
+    &__slider
+      margin-top: -123px
+
+      &-item
+        display: grid
+        grid-template-rows: auto auto
+        grid-template-columns:  auto 33.2%
+        grid-template-areas: "first second" "description second"
+
+      &-picture
+        &--first
+          padding-top: 123px
+
+      &-description
+        font-size: 12px
+
+      &-image
+        &--first
+          &:after
+            padding-bottom: 60.82%
+
+        &--second
+          &:after
+            padding-bottom: 148.57%
+
+  @include mq($from: desktop)
+    &__slider
+      margin-top: -70px
+
+      &-item
+        grid-template-columns:  auto 25.1%
+
+      &-picture
+        &--first
+          padding-top: 75px
+
+        &--second
+          margin-left: 35px
+
+      &-image
+        &--first
+          &:after
+            padding-bottom: 42.9%
+
+        &--second
+          &:after
+            padding-bottom: 158%
+
+      &-description
+        max-width: 76%
+
+  @include mq($from: desktopX)
+    padding-top: 80px
+    padding-bottom: 59px
+
+    &__title
+      .h2
+        font-size: 56px
+
+    &__slider
+      margin-top: -103px
+      margin-left: calc(-1*(100vw - 1280px)/2 - 46px)
+
+      &-item
+        grid-template-columns: auto 264px
+
+      .swiper-wrapper
+        margin-bottom: 87px
+
+      &-picture
+        &--first
+          padding-top: 116px
+          margin-bottom: 53px
+          margin-right: 46px
+
+        &--second
+          margin-left: unset
+          //margin-left: 46px
+
+      &-image
+        &--first
+          &:after
+            padding-bottom: 397px
+
+        &--second
+          &:after
+            padding-bottom: 417px
+
+      &-description
+        font-size: 14px
+        max-width: 620px
+        margin-left: calc((100vw - 1280px)/2 + 46px)
+        padding-left: 0

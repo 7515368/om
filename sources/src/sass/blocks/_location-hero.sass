@@ -1,0 +1,181 @@
+.location-hero
+  padding-top: 96px
+
+  &__title
+    margin-bottom: 35px
+
+  &__address
+    display: flex
+    font-weight: 250
+    font-size: 13px
+    margin-bottom: 37px
+
+    .icon
+      margin-right: 8px
+      display: block
+      margin-top: -2px
+
+  &__list
+    background: $colorAccent
+    color: #FFF
+    padding-top: 38px
+    padding-bottom: 6px
+
+    &-content
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+    &-item
+      margin-bottom: 33px
+      flex: 46.3% 0 0
+
+    &-count
+      font-weight: 900
+      margin-bottom: 19px
+      font-size: 15px
+
+    &-title
+      font-weight: 300
+      font-size: 11px
+      line-height: 157%
+
+  &__map
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    iframe
+      width: 100%
+      height: 100%
+
+    &-holder
+      position: relative
+      margin-bottom: 47px
+
+      &:after
+        content: ''
+        display: block
+        padding-bottom: 56.25%
+
+  @include mq($from: mobileX)
+    padding-top: 104px
+
+    &__address
+      font-size: 15px
+
+      .icon
+        margin-right: 10px
+
+    &__map
+      &-holder
+        margin-bottom: 45px
+
+    &__list
+      padding-top: 38px
+      padding-bottom: 6px
+
+      &-item
+        margin-bottom: 31px
+        flex: 46.1% 0 0
+
+        &:nth-of-type(n+3)
+          padding-right: 30px
+
+      &-count
+        margin-bottom: 12px
+        font-size: 19px
+        line-height: 1.57
+
+      &-title
+        font-size: 13px
+
+  @include mq($from: tablet)
+    &__title
+      margin-bottom: 54px
+
+    &__address
+      font-size: 17px
+
+    &__map
+      &-holder
+        margin-bottom: 47px
+
+    &__list
+      padding-bottom: 9px
+
+      &-item
+        margin-bottom: 29px
+        flex: 47.7% 0 0
+
+        &:nth-of-type(n+3)
+          padding-right: unset
+
+          .location-hero__list-title
+            max-width: 150px
+
+      &-title
+        max-width: 189px
+
+  @include mq($from: desktop)
+    &__map
+      &-holder
+        &:after
+          padding-bottom: 350px
+
+    &__list
+      padding-bottom: 9px
+
+      &-item
+        margin-bottom: 29px
+        flex: 22% 0 0
+
+      &-count
+        margin-bottom: 10px
+
+  @include mq($from: desktopX)
+    padding-top: 134px
+
+    &__title
+      margin-bottom: 75px
+
+    &__map
+      &-holder
+        margin-bottom: 61px
+
+        &:after
+          padding-bottom: 466px
+
+    &__address
+      font-size: 22px
+      margin-bottom: 54px
+
+      .icon
+        width: 20px
+        height: 24px
+        margin-right: 16px
+
+    &__list
+      padding-bottom: 23px
+      padding-top: 48px
+
+      &-item
+        &:nth-of-type(n+3)
+          .location-hero__list-title
+            max-width: unset
+
+      &-count
+        font-size: 25px
+        margin-bottom: 16px
+
+
+      &-title
+        max-width: 260px
+        font-size: 17px

@@ -1,0 +1,13 @@
+extends base/_layout
+block head
+    title Контакты
+    -
+        let headerInner = true
+
+block page
+    section.p404
+        .container
+            .p404__title(data-aos="fade-up")
+                h1.h3 К сожалению,<br> этой страницы не существует
+
+    include blocks/_feedback

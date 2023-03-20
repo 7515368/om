@@ -1,0 +1,69 @@
+section.selection
+    include ../blocks/_selection-filter
+
+    .selection__results(data-aos="fade-up")
+        .container
+            .selection__results-heading
+                .selection__view
+                    a(href="./select-grid.html").selection__view-item
+                        +use('view-grid', 20, 20)
+                        +use('view-grid-active', 20, 20)
+
+                    a(href="./select-list.html").selection__view-item.is-active
+                        +use('view-list', 20, 20)
+                        +use('view-list-active', 20, 20)
+
+                .selection__results-sorting
+                    .selection__results-sorting-caption Сортировать по:
+                    .selection__results-sorting-list
+                        .selection__results-sorting-item.is-active Этажу
+                        .selection__results-sorting-item Количеству комнат
+                        .selection__results-sorting-item Площади
+
+
+
+            .selection__grid.selection__grid--list
+                - let n = 10;
+
+                while n > 0
+                    a(href="./flat.html").selection__grid-item.selection__grid-item--list
+                        .selection__grid-row
+                            .selection__grid-cell.selection__grid-cell--number
+                                .selection__grid-label Номер
+                                .selection__grid-value 152
+
+                            .selection__grid-cell.selection__grid-cell--frame
+                                .selection__grid-label Корпус
+                                .selection__grid-value 1
+
+                            .selection__grid-cell.selection__grid-cell--floor
+                                .selection__grid-label Этаж
+                                .selection__grid-value 20
+
+                            .selection__grid-cell.selection__grid-cell--flats
+                                .selection__grid-label Комнат
+                                .selection__grid-value 2
+
+                            .selection__grid-cell.selection__grid-cell--square
+                                .selection__grid-label Площадь
+                                .selection__grid-value 43,34 <span class="measurements">м<sup>2</sup></span>
+
+                            .selection__grid-cell.selection__grid-cell--cost
+                                .selection__grid-label Стоимость
+                                .selection__grid-value 18 820 000 ₽
+
+                            .selection__grid-cell.selection__grid-cell--more
+                                .btn-more.popup-link
+                                    .btn__icon
+                                        +use('arrow-right', 10, 17)
+                                    .btn__text Подробнее
+
+                    -
+                        n--
+
+            .selection__table-more
+                .selection__table-more-button
+                    a(href="#").btn
+                        .btn__text Показать еще
+
+                .selection__table-more-pages 1 - 12  из 23

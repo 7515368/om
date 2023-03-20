@@ -1,0 +1,167 @@
+.location-infrastructure
+  background: #FBF9F9
+  padding-top: 60px
+  margin-bottom: 40px
+
+  &__title
+    margin-bottom: 35px
+
+    .h3
+      font-size: 32px
+
+  &__labels
+    display: flex
+    overflow: auto
+    margin-right: -20px
+    margin-left: -20px
+    padding-left: 20px
+    padding-right: 20px
+    margin-bottom: 13px
+    padding-bottom: 10px
+
+    &-item
+      text-align: center
+      font-size: 10px
+      line-height: 1.57
+      text-transform: uppercase
+      display: flex
+      flex-direction: column
+      min-width: 90px
+      align-items: center
+      cursor: pointer
+
+      &:first-of-type
+        margin-left: auto
+
+      &:last-of-type
+        margin-right: auto
+        
+      &.is-active,&:hover
+        .location-infrastructure
+          &__labels
+            &-icon
+              background: #C4DDC9
+
+              .icon
+                fill: $colorAccent
+
+    &-icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 48px
+      height: 48px
+      background: $colorAccent
+      border-radius: 50%
+      margin: 0 auto 25px
+      transition: .3s ease
+
+      .icon
+        fill: #FFF
+        height: unset
+        width: 24px
+        transition: .3s ease
+        
+  &__map
+    position: relative
+    height: 343px
+    margin-left: -20px
+    margin-right: -20px
+
+    img
+      object-fit: cover
+      width: 100%
+      height: 100%
+
+  @include mq($from: mobileX)
+    &__title
+      .h3
+        font-size: 43px
+
+    &__labels
+      margin-left: -34px
+      margin-right: -34px
+      padding-left: 28px
+      padding-right: 28px
+      margin-bottom: 8px
+
+      &-item
+        font-size: 11px
+        min-width: 99px
+
+      &-icon
+        width: 52px
+        height: 52px
+
+        .icon
+          width: 26px
+
+    &__map
+      margin-left: -34px
+      margin-right: -34px
+
+  @include mq($from: tablet)
+    padding-top: 56px
+
+    &__title
+      margin-bottom: 55px
+
+      .h3
+        font-size: 54px
+
+    &__labels
+      padding-left: 2px
+      padding-right: 2px
+      margin-bottom: 12px
+      margin-left: 0
+      margin-right: 0
+      justify-content: space-between
+
+      &-item
+        &:first-of-type,&:last-of-type
+          margin-left: unset
+          margin-right: unset
+
+    &__map
+      height: 549px
+
+  @include mq($from: desktop)
+    &__labels
+      padding-left: 0
+      padding-right: 0
+
+      &-item
+        min-width: 80px
+
+    &__map
+      height: 356px
+
+  @include mq($from: desktopX)
+    padding-top: 73px
+    margin-bottom: 61px
+
+    &__title
+      margin-bottom: 76px
+
+    .h3
+      font-size: 72px
+
+    &__labels
+      margin-bottom: 22px
+
+      &-item
+        font-size: 13px
+        min-width: 108px
+
+      &-icon
+        width: 70px
+        height: 70px
+        margin-bottom: 32px
+
+        .icon
+          width: 36px
+
+    &__map
+      height: 475px
+      margin-left: calc(-1*(100vw - 1280px)/2 - 46px)
+      margin-right: calc(-1*(var(--vw) - 1280px)/2 - 46px)

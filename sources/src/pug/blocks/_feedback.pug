@@ -1,0 +1,32 @@
+section.feedback
+    .container.feedback__container
+        .feedback__title(data-aos="fade-up")
+            h3.h3 Задайте нам вопрос
+
+        form.feedback__form
+            .form__row(data-aos="fade-up")
+                label.form__label Имя
+                input(type="text").input
+
+            .form__row(data-aos="fade-up")
+                label.form__label Телефон
+                input(type="text" name="phone").input
+
+            .form__row.form__row--textarea(data-aos="fade-up")
+                label.form__label Вопрос
+                textarea.input
+
+            .form__row.form__row--checkbox(data-aos="fade-up")
+                label.label
+                    span.checkbox
+                        input(type="checkbox" checked)
+                        span.checkbox__indicator
+
+                    span.label__text Согласен(-на) на обработку персональных данных
+
+            .form__row.form__row--button(data-aos="fade-up")
+                button(type="submit" onclick="_submitForm(this); return false").btn.js-submit
+                    span.btn__text Отправить
+
+            .feedback__form-thanks
+                p Спасибо за ваше обращение! <br> Мы свяжемся с вами в ближайшее время.

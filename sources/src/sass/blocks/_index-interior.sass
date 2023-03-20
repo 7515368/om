@@ -1,0 +1,150 @@
+.index-interior
+  margin-bottom: 40px
+
+  &__title
+    margin-bottom: 36px
+
+  &__description
+    font-size: 12px
+    line-height: 157%
+    margin-bottom: 39px
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+
+  &__header
+    flex: 100% 0 0
+
+  &__image
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+      padding-bottom: 200px
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &--second
+      &:after
+        padding-bottom: 125.6%
+
+    &--third
+      &:after
+        padding-bottom: 80%
+
+  &__picture
+    &--first
+      display: none
+
+    &--second
+      flex: 28% 0 0
+
+    &--third
+      flex: 71% 0 0
+      margin-left: auto
+      margin-right: -20px
+
+  @include mq($from: mobileX)
+    &__title
+      margin-bottom: 31px
+
+    &__picture
+      &--third
+        margin-right: -34px
+        flex-basis: 72%
+
+  @include mq($from: tablet)
+    &__grid
+      display: flex
+      flex-wrap: wrap
+
+    &__header
+      flex: 65% 0 0
+      padding-right: 2%
+
+    &__title
+      margin-bottom: 27px
+
+    &__picture
+      &--first
+        display: block
+        flex: 30% 0 0
+        margin-left: auto
+        padding-top: 14px
+
+        .index-interior__image
+          &:after
+            padding-bottom: 141.9%
+
+      &--second
+        flex: 30% 0 0
+
+      &--third
+        margin-left: auto
+        flex: 70% 0 0
+        margin-right: -34px
+        padding-top: 67px
+
+        .index-interior__image
+          &:after
+            padding-bottom: 60.9%
+
+  @include mq($from: desktop)
+    &__header
+      flex-basis: 69%
+
+    &__title
+      margin-bottom: 29px
+
+    &__picture
+      &--first
+        flex-basis: 22.2%
+
+        .index-interior__image
+          &:after
+            padding-bottom: 110.65%
+
+      &--second
+        flex-basis: 22.2%
+
+        .index-interior__image
+          &:after
+            padding-bottom: 133.65%
+
+      &--third
+        flex-basis: 77.9%
+
+        .index-interior__image
+          &:after
+            padding-bottom: 43.25%
+
+  @include mq($from: desktopX)
+    margin-bottom: 61px
+
+    &__description
+      font-size: 14px
+      max-width: 710px
+      margin-bottom: 40px
+
+    &__title
+      margin-bottom: 35px
+
+    &__picture
+      &--first
+        padding-top: 5px
+
+      &--third
+        padding-top: 93px
+        margin-right: calc(-1*((var(--vw) - 1280px)/2) - 46px)
+        flex-grow: 1
+        margin-left: 46px
+
+        .index-interior__image
+          &:after
+            padding-bottom: 397px

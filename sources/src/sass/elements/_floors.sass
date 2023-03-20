@@ -1,0 +1,42 @@
+.floors
+  height: 200px
+
+  &-item
+    width: 37px
+    height: 37px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid transparent
+    transition: .3s ease
+    font-size: 9px
+    cursor: pointer
+
+    .swiper-slide-active &
+      font-size: 17px
+      background-color: #C4DDC9
+      border-color: $colorPrimary
+
+    .swiper-slide-prev &
+      font-size: 11px
+
+    .swiper-slide-next &
+      font-size: 11px
+
+  @include mq($from: desktopX)
+    height: 280px
+
+    &-item
+      width: 48px
+      height: 48px
+      font-size: 12px
+
+      .swiper-slide-active &
+        font-size: 22px
+
+      .swiper-slide-prev &
+        font-size: 14px
+
+      .swiper-slide-next &
+        font-size: 14px

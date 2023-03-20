@@ -1,0 +1,83 @@
+section.mortgage
+    .container.mortgage__container
+        .mortgage__title(data-aos="fade-up")
+            h1.h2 Ипотека
+
+        .mortgage__grid
+            .mortgage__description(data-aos="fade-up") ЖК ОМ аккредитован крупнейшими банками России. Мы постоянно работаем над расширением списка банков и ипотечных программ.
+
+            .mortgage__picture.mortgage__picture--first(data-aos="fade-up" data-aos-delay=100)
+                .mortgage__image.mortgage__image--first
+                    +picture('mortgage/img-1', 'jpg', true)
+
+            .mortgage__picture.mortgage__picture--second(data-aos="fade-up" data-aos-delay=200)
+                .mortgage__image.mortgage__image--second
+                    +picture('mortgage/img-2', 'jpg', true)
+
+
+    .mortgage__slider
+        .container
+            .mortgage__list.swiper#mortgageSlider(data-aos="fade-up")
+                .swiper-wrapper
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/sber.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/vtb.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/gazprom.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/rosbank.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/domrf.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/rosselhoz.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/absolut.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/sber.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/vtb.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/gazprom.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/rosbank.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/domrf.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/rosselhoz.svg" alt="")
+
+                    .swiper-slide
+                        .mortgage__list-item
+                            img(src="images/logos/absolut.svg" alt="")
+
+
+
+
+            .mortgage__button
+                a(href="#" data-popup="#orderMortgage").btn
+                    .btn__text Подать заявку на ипотеку

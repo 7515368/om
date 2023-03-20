@@ -1,0 +1,223 @@
+.mortgage
+  padding-top: 96px
+  margin-bottom: 44px
+
+  &__title
+    margin-bottom: 31px
+
+  &__text
+    margin-bottom: 26px
+
+  &__description
+    line-height: 157%
+    font-size: 11px
+    margin-bottom: 39px
+
+  &__image
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &--first
+      &:after
+        padding-bottom: 118%
+
+    &--second
+      &:after
+        padding-bottom: 78%
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: -30px
+    position: relative
+    z-index: 1
+
+  &__button
+    .btn
+      border-width: 3px
+      font-weight: 700
+      font-size: 12px
+
+      &:hover
+        background: $colorAccent
+        color: #FFF
+
+  &__picture
+    &--first
+      flex: 27% 0 0
+      margin-right: 24px
+
+    &--second
+      flex: calc(100% - 27% - 4px)  0 0
+      margin-right: -20px
+
+
+  &__slider
+    padding-top: 94px
+    padding-bottom: 64px
+    background: #FBF9F9
+
+  &__list
+    height: 32px
+    margin-bottom: 80px
+    margin-left: -20px
+    margin-right: -20px
+
+    .swiper-slide
+      width: auto !important
+
+    .swiper-wrapper
+      transition-timing-function: linear !important
+      animation-timing-function: linear !important
+
+    img
+      display: block
+      height: 25px
+      width: unset
+      max-width: unset
+
+  @include mq($from: mobileX)
+    padding-top: 104px
+
+    &__description
+      padding-right: 5%
+      margin-bottom: 38px
+
+    &__list
+      margin-left: -34px
+      margin-right: -34px
+
+    &__picture
+      &--first
+        margin-right: 34px
+        flex-basis: 27.8%
+
+      &--second
+        flex: calc(100% - 27.8%)  0 0
+        margin-right: -34px
+
+  @include mq($from: tablet)
+    padding-top: 101px
+
+    &__grid
+      display: grid
+      grid-template-rows: auto 1fr
+      grid-template-columns: 33.2% auto
+      grid-template-areas: "first description" "first second"
+      margin-right: -34px
+      margin-bottom: -70px
+
+    &__picture
+      &--first
+        grid-area: first
+        margin-right: 34px
+        padding-top: 5px
+
+      &--second
+        grid-area: second
+        margin: unset
+
+    &__description
+      grid-area: description
+      font-size: 12px
+      padding-right: 12%
+      margin-bottom: 123px
+
+    &__title
+      margin-bottom: 28px
+
+    &__image
+      &--first
+        &:after
+          padding-bottom: 313px
+
+      &--second
+        &:after
+          padding-bottom: 298px
+
+    &__slider
+      padding-top: 136px
+
+    &__list
+      margin-bottom: 65px
+
+  @include mq($from: desktop)
+    &__grid
+      grid-template-columns: 24.9% auto
+
+    &__description
+      margin-bottom: 161px
+
+    &__slider
+      margin-bottom: -24px
+
+    &__list
+      .swiper-wrapper
+        justify-content: space-between
+
+      img
+        height: 20px
+
+
+  @include mq($from: desktopX)
+    padding-top: 134px
+
+    &__title
+      margin-bottom: 38px
+
+    &__description
+      font-size: 14px
+      padding-right: 15%
+      margin-bottom: 218px
+
+    &__grid
+      grid-template-columns: 26% auto
+      margin-bottom: -94px
+      margin-right: unset
+
+    &__picture
+      &--first
+        margin-right: 46px
+        padding-top: 3px
+
+    &__image
+      &--first
+        &:after
+          padding-bottom: 417px
+
+      &--second
+        margin-right: calc(-1 * (var(--vw) - 1280px)/ 2 - 46px)
+
+        &:after
+          padding-bottom: 397px
+
+    &__slider
+      padding-top: 190px
+      padding-bottom: 94px
+      margin-bottom: -19px
+
+    &__list
+      margin-left: calc(-1 * (var(--vw) - 1280px)/ 2 - 46px)
+      margin-right: calc(-1 * (var(--vw) - 1280px)/ 2 - 46px)
+      margin-bottom: 92px
+
+      img
+        height: 32px
+
+    &__button
+      .btn
+        height: 64px
+        font-size: 14px
+        border-radius: 32px
+        padding-left: 46px
+        padding-right: 46px
+        border-width: 4px

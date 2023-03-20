@@ -1,0 +1,53 @@
+section.index-hero
+    .index-hero__container
+        .index-hero__content(data-aos="fade-up")
+            .container
+                .index-hero__title
+                    h1.h1 Старт продаж
+
+                .index-hero__logo
+                    .logo
+
+        .index-hero__slider.swiper#indexHero(data-aos="fade-up")
+            .swiper-wrapper
+                .swiper-slide
+                    .index-hero__slider-slide
+                        .index-hero__slider-img
+                            +picture('index/hero-slide-1', "jpg", true)
+
+                        .index-hero__slider-description
+                            .container Новый комплекс бизнес&#8209;класса на&nbsp;Мичуринском проспекте
+
+                .swiper-slide
+                    .index-hero__slider-slide
+                        .index-hero__slider-img
+                            +picture('index/hero-slide-2', "jpg", true)
+
+                        .index-hero__slider-description
+                            .container Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur cum eaque minima!
+
+                .swiper-slide
+                    .index-hero__slider-slide
+                        .index-hero__slider-img
+                            +picture('index/hero-slide-3', "jpg", true)
+                        .index-hero__slider-description
+                            .container Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, deleniti eaque ipsam odio possimus repellat!
+
+                .swiper-slide
+                    .index-hero__slider-slide
+                        .index-hero__slider-img
+                            +picture('index/hero-slide-4', "jpg", true)
+                        .index-hero__slider-description
+                            .container Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eligendi.
+
+
+    .container(data-aos="fade-up")
+        .swiper-controls#indexHeroControls
+            .swiper-controls__buttons
+                .swiper-button.swiper-button-prev
+                    .icony
+                        +use('slider-prev', 25, 12)
+                .swiper-button.swiper-button-next
+                    .icony
+                        +use('slider-next', 25, 12)
+            .swiper-pagination

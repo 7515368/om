@@ -1,0 +1,70 @@
+.btn
+  height: 46px
+  border-radius: 23px
+  border: 1px solid $colorAccent
+  color: $colorAccent
+  padding-left: 30px
+  padding-right: 30px
+  display: inline-flex
+  align-items: center
+  line-height: normal
+  font-weight: 900
+  outline: none
+  white-space: nowrap
+  appearance: none
+  cursor: pointer
+  transition: .3s ease
+  background: none
+  font-size: 12px
+
+  &:hover
+    background: $colorAccent
+    color: #FFF
+
+  &--large
+    height: 64px
+    border-width: 4px
+    padding-left: 40px
+    padding-right: 40px
+    border-radius: 32px
+
+  &--disabled
+    color: $colorGray
+    cursor: default
+    pointer-events: none
+    border-color: $colorGray
+
+  &--download
+    border: none
+    padding: unset
+
+    .btn__text
+      font-weight: normal
+
+    .btn__icon
+      width: 30px
+      height: 30px
+      border-radius: 8px
+      background: #FFF
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 15px
+      transition: .3s ease
+
+    .icon
+      fill: currentColor
+
+    &:hover
+      background: none
+      color: $colorAccent
+
+      .btn__icon
+        background: $colorAccent
+
+      .icon
+        fill: #FFF
+
+
+  @include mq($from: desktopX)
+    font-size: 14px

@@ -1,0 +1,55 @@
+.about-description
+  padding-top: 20px
+  padding-bottom: 24px
+
+  &__title
+    margin-bottom: 40px
+
+    .h3
+      font-size: 22px
+
+  &__info
+    font-size: 11px
+    line-height: 157%
+
+    &-paragraph
+      margin-bottom: 15px
+
+  @include mq($from: mobileX)
+    &__title
+      margin-bottom: 32px
+
+      .h3
+        font-size: 28px
+
+  @include mq($from: tablet)
+    &__title
+      max-width: 60%
+
+      .h3
+        font-size: 34px
+
+    &__info
+      display: flex
+      justify-content: space-between
+      font-size: 12px
+
+      &-paragraph
+        flex: 47.6% 0 0
+
+  @include mq($from: desktop)
+    &__info
+      &-paragraph
+        flex: 48.2% 0 0
+
+  @include mq($from: desktopX)
+    padding-bottom: 37px
+
+    &__title
+      margin-bottom: 41px
+
+      .h3
+        font-size: 46px
+
+    &__info
+      font-size: 14px

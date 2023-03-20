@@ -1,0 +1,13 @@
+section.about-hero
+    .container
+        .about-hero__title(data-aos="fade-up")
+            h1.h2 О проекте
+
+    .about-hero__images.container
+        .about-hero__picture.about-hero__picture--first(data-aos="fade-up")
+            .about-hero__image.about-hero__image--first
+                +picture('about/hero-1','jpg', true)
+
+        .about-hero__picture.about-hero__picture--second(data-aos="fade-up" data-aos-delay="100")
+            .about-hero__image.about-hero__image--second
+                +picture('about/hero-2','jpg', true)

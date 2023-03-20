@@ -1,0 +1,28 @@
+section.about-stats
+    .container
+        .about-stats__list
+            -
+                let stats = [{
+                    count: 310,
+                    label: 'Общее количество<br> квартир'
+                },{
+                    count: 24,
+                    label: 'Этажа<br> в&nbsp;комплексе'
+                },{
+                    count: 3,
+                    label: 'Высота<br> потолков'
+                },{
+                    count: '<sup>,</sup>25',
+                    label: 'Год ввода<br> в&nbsp;эксплуатацию'
+                },{
+                    count: 2,
+                    label: 'Корпуса<br> в&nbsp;комплексе'
+                },{
+                    count: 139,
+                    label: 'Машиномест<br> в&nbsp;паркинге'
+                }]
+
+            each item,index in stats
+                .about-stats__list-item(data-aos="fade-up" data-aos-delay=`${index*50}`)
+                    .about-stats__list-count !{item.count}
+                    .about-stats__list-title !{item.label}

@@ -1,0 +1,106 @@
+extends base/_layout
+block head
+    title Выбор квартиры
+    -
+        let page = "Квартиры",
+            isVisual = true,
+            headerInner = true
+
+block page
+    section.select-flat
+        .container
+            .select-flat__header
+                .select-flat__header-title(data-aos="fade-up")
+                    h1.h2 Выбор квартиры
+
+                .select-flat__header-button(data-aos="fade-up" data-aos-delay=100)
+                    a(href="./select-grid.html").btn
+                        .btn__text Выбор по параметрам
+
+            .select-flat__grid(data-aos="fade-up" data-aos-delay=200)
+                .select-flat__image
+                    span(style="width:100px;height:20px;left:20px;top:40px").floor.floor--current
+                    span(style="width:100px;height:20px;left:20px;top:80px").floor.floor--empty
+                    .select-flat__image-body.select-flat__image-body--first корпус 1
+                    .select-flat__image-body.select-flat__image-body--second корпус 2
+
+                    .select-flat__image-label
+                        .select-flat__image-label-item
+                            .select-flat__image-label-count 11
+                            .select-flat__image-label-title Свободных<br> квартир
+
+                        .select-flat__image-label-item
+                            .select-flat__image-label-count 21
+                            .select-flat__image-label-title Этаж
+
+                    .select-flat__image-label.select-flat__image-label--second(style="top: 63%")
+                        .select-flat__image-label-item
+                            .select-flat__image-label-count 2
+                            .select-flat__image-label-title Свободных<br> квартиры
+
+                        .select-flat__image-label-item
+                            .select-flat__image-label-count 8
+                            .select-flat__image-label-title Этаж
+
+
+
+
+                    +picture('flats/flats', 'jpg', true)
+
+                .select-flat__info
+                    a(href="./flat.html").select-flat__plan
+                        .flat-number.flat-number--one(style="left:9.1%; top: 51%") 1
+                        .flat-number.flat-number--two(style="right:7.4%; bottom: 12%") 2K
+                        .flat-number.flat-number--three.is-active(style="left:9.1%; top: 10.4%") 3
+                        +picture('flats/floor', 'jpg', true)
+
+                    .select-flat__floor
+                        .select-flat__floor-label Этаж
+                        .select-flat__floor-number 12
+
+                    .select-flat__cost
+                        .select-flat__cost-item
+                            .select-flat__cost-rooms 1
+                            .select-flat__cost-price(data-prefix="от") 12 820 000 ₽
+
+                        .select-flat__cost-item
+                            .select-flat__cost-rooms 2К
+                            .select-flat__cost-price(data-prefix="от") 18 340 000 ₽
+
+                        .select-flat__cost-item
+                            .select-flat__cost-rooms 3
+                            .select-flat__cost-price(data-prefix="от") 24 189 000 ₽
+
+                .select-flat__controls
+                    .select-flat__controls-direction
+                        +use('direction', 30, 30)
+
+                    .select-flat__controls-list
+                        .swiper.floors#floors
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .floors-item 24
+                                .swiper-slide
+                                    .floors-item 20
+                                .swiper-slide
+                                    .floors-item 18
+                                .swiper-slide
+                                    .floors-item 17
+                                .swiper-slide
+                                    .floors-item 14
+                                .swiper-slide
+                                    .floors-item 12
+                                .swiper-slide
+                                    .floors-item 11
+                                .swiper-slide
+                                    .floors-item 8
+                                .swiper-slide
+                                    .floors-item 5
+                                .swiper-slide
+                                    .floors-item 2
+
+                    .select-flat__controls-body
+                        .select-flat__controls-body-label Корпус 1
+                        img(src="images/flats/body.svg" alt="")
+
+    include blocks/_feedback

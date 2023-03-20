@@ -1,0 +1,881 @@
+@use 'sass:math';
+
+%svg-common {
+	background: url("../images/sprites/main.svg") no-repeat;
+}
+
+.svg-image-arrow-right {
+	@extend %svg-common;
+	background-position: 57.60485093481556% 45.2698781195589%;
+	background-size: math.div(209, 11.1)*100% auto;
+	width: 11.1px;
+
+}
+@mixin svg-pos-image-arrow-right {
+	background-position: 57.60485093481556% 45.2698781195589%;
+}
+@mixin svg-image-arrow-right-hover {
+	.svg-image-arrow-right {
+		@include svg-pos-image-arrow-right-hover
+	}
+}
+
+.svg-image-arrow-right:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(18.7, 11.1)*100%;
+}
+
+.svg-image-arrow-right-dims {
+	width: 11.1px;
+	height: 18.7px;
+}
+
+.svg-image-check {
+	@extend %svg-common;
+	background-position: 8.994708994708995% 94.97206703910615%;
+	background-size: math.div(209, 20)*100% auto;
+	width: 20px;
+
+}
+@mixin svg-pos-image-check {
+	background-position: 8.994708994708995% 94.97206703910615%;
+}
+@mixin svg-image-check-hover {
+	.svg-image-check {
+		@include svg-pos-image-check-hover
+	}
+}
+
+.svg-image-check:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(12, 20)*100%;
+}
+
+.svg-image-check-dims {
+	width: 20px;
+	height: 12px;
+}
+
+.svg-image-close {
+	@extend %svg-common;
+	background-position: 91.20879120879121% 68.29268292682927%;
+	background-size: math.div(209, 27)*100% auto;
+	width: 27px;
+
+}
+@mixin svg-pos-image-close {
+	background-position: 91.20879120879121% 68.29268292682927%;
+}
+@mixin svg-image-close-hover {
+	.svg-image-close {
+		@include svg-pos-image-close-hover
+	}
+}
+
+.svg-image-close:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(27, 27)*100%;
+}
+
+.svg-image-close-dims {
+	width: 27px;
+	height: 27px;
+}
+
+.svg-image-direction {
+	@extend %svg-common;
+	background-position: 74.70588235294117% 0;
+	background-size: math.div(209, 39)*100% auto;
+	width: 39px;
+
+}
+@mixin svg-pos-image-direction {
+	background-position: 74.70588235294117% 0;
+}
+@mixin svg-image-direction-hover {
+	.svg-image-direction {
+		@include svg-pos-image-direction-hover
+	}
+}
+
+.svg-image-direction:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(40, 39)*100%;
+}
+
+.svg-image-direction-dims {
+	width: 39px;
+	height: 40px;
+}
+
+.svg-image-download {
+	@extend %svg-common;
+	background-position: 100% 0;
+	background-size: math.div(209, 15)*100% auto;
+	width: 15px;
+
+}
+@mixin svg-pos-image-download {
+	background-position: 100% 0;
+}
+@mixin svg-image-download-hover {
+	.svg-image-download {
+		@include svg-pos-image-download-hover
+	}
+}
+
+.svg-image-download:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(12.3, 15)*100%;
+}
+
+.svg-image-download-dims {
+	width: 15px;
+	height: 12.3px;
+}
+
+.svg-image-label-caffe {
+	@extend %svg-common;
+	background-position: 73.41040462427746% 26.143790849673202%;
+	background-size: math.div(209, 36)*100% auto;
+	width: 36px;
+
+}
+@mixin svg-pos-image-label-caffe {
+	background-position: 73.41040462427746% 26.143790849673202%;
+}
+@mixin svg-image-label-caffe-hover {
+	.svg-image-label-caffe {
+		@include svg-pos-image-label-caffe-hover
+	}
+}
+
+.svg-image-label-caffe:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(38, 36)*100%;
+}
+
+.svg-image-label-caffe-dims {
+	width: 36px;
+	height: 38px;
+}
+
+.svg-image-label-fitness {
+	@extend %svg-common;
+	background-position: 41.142857142857146% 74.52229299363057%;
+	background-size: math.div(209, 34)*100% auto;
+	width: 34px;
+
+}
+@mixin svg-pos-image-label-fitness {
+	background-position: 41.142857142857146% 74.52229299363057%;
+}
+@mixin svg-image-label-fitness-hover {
+	.svg-image-label-fitness {
+		@include svg-pos-image-label-fitness-hover
+	}
+}
+
+.svg-image-label-fitness:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(34, 34)*100%;
+}
+
+.svg-image-label-fitness-dims {
+	width: 34px;
+	height: 34px;
+}
+
+.svg-image-label-kindergartens {
+	@extend %svg-common;
+	background-position: 24.277456647398843% 50.32258064516129%;
+	background-size: math.div(209, 36)*100% auto;
+	width: 36px;
+
+}
+@mixin svg-pos-image-label-kindergartens {
+	background-position: 24.277456647398843% 50.32258064516129%;
+}
+@mixin svg-image-label-kindergartens-hover {
+	.svg-image-label-kindergartens {
+		@include svg-pos-image-label-kindergartens-hover
+	}
+}
+
+.svg-image-label-kindergartens:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(36, 36)*100%;
+}
+
+.svg-image-label-kindergartens-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-image-label-mall {
+	@extend %svg-common;
+	background-position: 45.08670520231214% 49.681528662420384%;
+	background-size: math.div(209, 36)*100% auto;
+	width: 36px;
+
+}
+@mixin svg-pos-image-label-mall {
+	background-position: 45.08670520231214% 49.681528662420384%;
+}
+@mixin svg-image-label-mall-hover {
+	.svg-image-label-mall {
+		@include svg-pos-image-label-mall-hover
+	}
+}
+
+.svg-image-label-mall:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(34, 36)*100%;
+}
+
+.svg-image-label-mall-dims {
+	width: 36px;
+	height: 34px;
+}
+
+.svg-image-label-recreation {
+	@extend %svg-common;
+	background-position: 73.83720930232558% 50.32258064516129%;
+	background-size: math.div(209, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-label-recreation {
+	background-position: 73.83720930232558% 50.32258064516129%;
+}
+@mixin svg-image-label-recreation-hover {
+	.svg-image-label-recreation {
+		@include svg-pos-image-label-recreation-hover
+	}
+}
+
+.svg-image-label-recreation:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(36, 37)*100%;
+}
+
+.svg-image-label-recreation-dims {
+	width: 37px;
+	height: 36px;
+}
+
+.svg-image-label-transport {
+	@extend %svg-common;
+	background-position: 0 75.48387096774194%;
+	background-size: math.div(209, 36)*100% auto;
+	width: 36px;
+
+}
+@mixin svg-pos-image-label-transport {
+	background-position: 0 75.48387096774194%;
+}
+@mixin svg-image-label-transport-hover {
+	.svg-image-label-transport {
+		@include svg-pos-image-label-transport-hover
+	}
+}
+
+.svg-image-label-transport:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(36, 36)*100%;
+}
+
+.svg-image-label-transport-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-image-label-university {
+	@extend %svg-common;
+	background-position: 20.809248554913296% 75.48387096774194%;
+	background-size: math.div(209, 36)*100% auto;
+	width: 36px;
+
+}
+@mixin svg-pos-image-label-university {
+	background-position: 20.809248554913296% 75.48387096774194%;
+}
+@mixin svg-image-label-university-hover {
+	.svg-image-label-university {
+		@include svg-pos-image-label-university-hover
+	}
+}
+
+.svg-image-label-university:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(36, 36)*100%;
+}
+
+.svg-image-label-university-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-image-list-grid {
+	@extend %svg-common;
+	background-position: 58.888888888888886% 72.22222222222223%;
+	background-size: math.div(209, 29)*100% auto;
+	width: 29px;
+
+}
+@mixin svg-pos-image-list-grid {
+	background-position: 58.888888888888886% 72.22222222222223%;
+}
+@mixin svg-image-list-grid-hover {
+	.svg-image-list-grid {
+		@include svg-pos-image-list-grid-hover
+	}
+}
+
+.svg-image-list-grid:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(29, 29)*100%;
+}
+
+.svg-image-list-grid-dims {
+	width: 29px;
+	height: 29px;
+}
+
+.svg-image-list-list {
+	@extend %svg-common;
+	background-position: 75% 72.22222222222223%;
+	background-size: math.div(209, 29)*100% auto;
+	width: 29px;
+
+}
+@mixin svg-pos-image-list-list {
+	background-position: 75% 72.22222222222223%;
+}
+@mixin svg-image-list-list-hover {
+	.svg-image-list-list {
+		@include svg-pos-image-list-list-hover
+	}
+}
+
+.svg-image-list-list:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(29, 29)*100%;
+}
+
+.svg-image-list-list-dims {
+	width: 29px;
+	height: 29px;
+}
+
+.svg-image-lu {
+	@extend %svg-common;
+	background-position: 0 87.93103448275862%;
+	background-size: math.div(209, 26)*100% auto;
+	width: 26px;
+
+}
+@mixin svg-pos-image-lu {
+	background-position: 0 87.93103448275862%;
+}
+@mixin svg-image-lu-hover {
+	.svg-image-lu {
+		@include svg-pos-image-lu-hover
+	}
+}
+
+.svg-image-lu:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(17, 26)*100%;
+}
+
+.svg-image-lu-dims {
+	width: 26px;
+	height: 17px;
+}
+
+.svg-image-option-housing {
+	@extend %svg-common;
+	background-position: 25.748502994011975% 0;
+	background-size: math.div(209, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-option-housing {
+	background-position: 25.748502994011975% 0;
+}
+@mixin svg-image-option-housing-hover {
+	.svg-image-option-housing {
+		@include svg-pos-image-option-housing-hover
+	}
+}
+
+.svg-image-option-housing:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 42)*100%;
+}
+
+.svg-image-option-housing-dims {
+	width: 42px;
+	height: 39px;
+}
+
+.svg-image-option-increased {
+	@extend %svg-common;
+	background-position: 0 25.657894736842106%;
+	background-size: math.div(209, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-option-increased {
+	background-position: 0 25.657894736842106%;
+}
+@mixin svg-image-option-increased-hover {
+	.svg-image-option-increased {
+		@include svg-pos-image-option-increased-hover
+	}
+}
+
+.svg-image-option-increased:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 42)*100%;
+}
+
+.svg-image-option-increased-dims {
+	width: 42px;
+	height: 39px;
+}
+
+.svg-image-option-infrastructure {
+	@extend %svg-common;
+	background-position: 25.149700598802394% 25.657894736842106%;
+	background-size: math.div(209, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-option-infrastructure {
+	background-position: 25.149700598802394% 25.657894736842106%;
+}
+@mixin svg-image-option-infrastructure-hover {
+	.svg-image-option-infrastructure {
+		@include svg-pos-image-option-infrastructure-hover
+	}
+}
+
+.svg-image-option-infrastructure:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 42)*100%;
+}
+
+.svg-image-option-infrastructure-dims {
+	width: 42px;
+	height: 39px;
+}
+
+.svg-image-option-parking {
+	@extend %svg-common;
+	background-position: 0 0;
+	background-size: math.div(209, 43)*100% auto;
+	width: 43px;
+
+}
+@mixin svg-pos-image-option-parking {
+	background-position: 0 0;
+}
+@mixin svg-image-option-parking-hover {
+	.svg-image-option-parking {
+		@include svg-pos-image-option-parking-hover
+	}
+}
+
+.svg-image-option-parking:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 43)*100%;
+}
+
+.svg-image-option-parking-dims {
+	width: 43px;
+	height: 39px;
+}
+
+.svg-image-option-roof {
+	@extend %svg-common;
+	background-position: 50.89820359281437% 0;
+	background-size: math.div(209, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-option-roof {
+	background-position: 50.89820359281437% 0;
+}
+@mixin svg-image-option-roof-hover {
+	.svg-image-option-roof {
+		@include svg-pos-image-option-roof-hover
+	}
+}
+
+.svg-image-option-roof:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 42)*100%;
+}
+
+.svg-image-option-roof-dims {
+	width: 42px;
+	height: 39px;
+}
+
+.svg-image-option-security {
+	@extend %svg-common;
+	background-position: 50.89820359281437% 25.657894736842106%;
+	background-size: math.div(209, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-option-security {
+	background-position: 50.89820359281437% 25.657894736842106%;
+}
+@mixin svg-image-option-security-hover {
+	.svg-image-option-security {
+		@include svg-pos-image-option-security-hover
+	}
+}
+
+.svg-image-option-security:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 42)*100%;
+}
+
+.svg-image-option-security-dims {
+	width: 42px;
+	height: 39px;
+}
+
+.svg-image-option-yard {
+	@extend %svg-common;
+	background-position: 0 51.31578947368421%;
+	background-size: math.div(209, 42)*100% auto;
+	width: 42px;
+
+}
+@mixin svg-pos-image-option-yard {
+	background-position: 0 51.31578947368421%;
+}
+@mixin svg-image-option-yard-hover {
+	.svg-image-option-yard {
+		@include svg-pos-image-option-yard-hover
+	}
+}
+
+.svg-image-option-yard:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(39, 42)*100%;
+}
+
+.svg-image-option-yard-dims {
+	width: 42px;
+	height: 39px;
+}
+
+.svg-image-phone {
+	@extend %svg-common;
+	background-position: 99.2835209825998% 6.980703745743474%;
+	background-size: math.div(209, 13.6)*100% auto;
+	width: 13.6px;
+
+}
+@mixin svg-pos-image-phone {
+	background-position: 99.2835209825998% 6.980703745743474%;
+}
+@mixin svg-image-phone-hover {
+	.svg-image-phone {
+		@include svg-pos-image-phone-hover
+	}
+}
+
+.svg-image-phone:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(14.8, 13.6)*100%;
+}
+
+.svg-image-phone-dims {
+	width: 13.6px;
+	height: 14.8px;
+}
+
+.svg-image-pin-om {
+	@extend %svg-common;
+	background-position: 0 100%;
+	background-size: math.div(209, 17)*100% auto;
+	width: 17px;
+
+}
+@mixin svg-pos-image-pin-om {
+	background-position: 0 100%;
+}
+@mixin svg-image-pin-om-hover {
+	.svg-image-pin-om {
+		@include svg-pos-image-pin-om-hover
+	}
+}
+
+.svg-image-pin-om:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(21, 17)*100%;
+}
+
+.svg-image-pin-om-dims {
+	width: 17px;
+	height: 21px;
+}
+
+.svg-image-slider-next {
+	@extend %svg-common;
+	background-position: 89.82683982683982% 77.43732590529248%;
+	background-size: math.div(209, 24.2)*100% auto;
+	width: 24.2px;
+
+}
+@mixin svg-pos-image-slider-next {
+	background-position: 89.82683982683982% 77.43732590529248%;
+}
+@mixin svg-image-slider-next-hover {
+	.svg-image-slider-next {
+		@include svg-pos-image-slider-next-hover
+	}
+}
+
+.svg-image-slider-next:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(11.5, 24.2)*100%;
+}
+
+.svg-image-slider-next-dims {
+	width: 24.2px;
+	height: 11.5px;
+}
+
+.svg-image-slider-prev {
+	@extend %svg-common;
+	background-position: 14.069264069264069% 85.23676880222841%;
+	background-size: math.div(209, 24.2)*100% auto;
+	width: 24.2px;
+
+}
+@mixin svg-pos-image-slider-prev {
+	background-position: 14.069264069264069% 85.23676880222841%;
+}
+@mixin svg-image-slider-prev-hover {
+	.svg-image-slider-prev {
+		@include svg-pos-image-slider-prev-hover
+	}
+}
+
+.svg-image-slider-prev:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(11.5, 24.2)*100%;
+}
+
+.svg-image-slider-prev-dims {
+	width: 24.2px;
+	height: 11.5px;
+}
+
+.svg-image-view-grid {
+	@extend %svg-common;
+	background-position: 91.71270718232044% 0;
+	background-size: math.div(209, 28)*100% auto;
+	width: 28px;
+
+}
+@mixin svg-pos-image-view-grid {
+	background-position: 91.71270718232044% 0;
+}
+@mixin svg-image-view-grid-hover {
+	.svg-image-view-grid {
+		@include svg-pos-image-view-grid-hover
+	}
+}
+
+.svg-image-view-grid:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(28, 28)*100%;
+}
+
+.svg-image-view-grid-dims {
+	width: 28px;
+	height: 28px;
+}
+
+.svg-image-view-grid-active {
+	@extend %svg-common;
+	background-position: 91.71270718232044% 17.177914110429448%;
+	background-size: math.div(209, 28)*100% auto;
+	width: 28px;
+
+}
+@mixin svg-pos-image-view-grid-active {
+	background-position: 91.71270718232044% 17.177914110429448%;
+}
+@mixin svg-image-view-grid-active-hover {
+	.svg-image-view-grid-active {
+		@include svg-pos-image-view-grid-active-hover
+	}
+}
+
+.svg-image-view-grid-active:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(28, 28)*100%;
+}
+
+.svg-image-view-grid-active-dims {
+	width: 28px;
+	height: 28px;
+}
+
+.svg-image-view-list {
+	@extend %svg-common;
+	background-position: 91.71270718232044% 34.355828220858896%;
+	background-size: math.div(209, 28)*100% auto;
+	width: 28px;
+
+}
+@mixin svg-pos-image-view-list {
+	background-position: 91.71270718232044% 34.355828220858896%;
+}
+@mixin svg-image-view-list-hover {
+	.svg-image-view-list {
+		@include svg-pos-image-view-list-hover
+	}
+}
+
+.svg-image-view-list:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(28, 28)*100%;
+}
+
+.svg-image-view-list-dims {
+	width: 28px;
+	height: 28px;
+}
+
+.svg-image-view-list-active {
+	@extend %svg-common;
+	background-position: 91.71270718232044% 51.533742331288344%;
+	background-size: math.div(209, 28)*100% auto;
+	width: 28px;
+
+}
+@mixin svg-pos-image-view-list-active {
+	background-position: 91.71270718232044% 51.533742331288344%;
+}
+@mixin svg-image-view-list-active-hover {
+	.svg-image-view-list-active {
+		@include svg-pos-image-view-list-active-hover
+	}
+}
+
+.svg-image-view-list-active:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(28, 28)*100%;
+}
+
+.svg-image-view-list-active-dims {
+	width: 28px;
+	height: 28px;
+}
+
+
+.image-by-height { width:auto; }
+.image-by-height:before { content:none; }
+.image-by-height > svg { height: inherit; }
+.image-by-height > img { height: inherit !important; vertical-align: top !important; margin: 0 !important; padding: 0 !important; max-width: none !important; max-height: none !important; border: 0 !important; opacity: 0 !important; }

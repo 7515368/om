@@ -1,0 +1,157 @@
+.form
+  &__row
+    margin-bottom: 22px
+
+.label
+  display: flex
+  align-items: flex-start
+
+  .checkbox
+    min-width: 24px
+    margin-right: 14px
+
+  @include mq($from: mobileX)
+    .checkbox
+      margin-right: 17px
+
+  @include mq($from: desktopX)
+    .checkbox
+      margin-right: 29px
+
+.input
+  border: none
+  border-radius: 8px
+  padding: 0 1em
+  background: #FBF9F9
+  appearance: none
+  box-shadow: none
+  width: 100%
+  height: 30px
+  font-size: 13px
+  line-height: normal
+
+  @include mq($from: desktopX)
+    height: 40px
+
+textarea.input
+  padding-top: .95em
+  padding-bottom: .95em
+  resize: none
+  height: 96px
+
+  @include mq($from: desktopX)
+    height: 83px
+
+.checkbox
+  cursor: pointer
+
+  input
+    position: absolute
+    opacity: 0
+    z-index: -1
+
+    &:checked
+      ~ .checkbox__indicator
+        &:after
+          opacity: 1
+
+  &__indicator
+    border: 1px solid #2C2C2C
+    width: 24px
+    min-width: 24px
+    height: 24px
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:after
+      content: ''
+      display: block
+      mask: url("../images/sprites/main.stack.svg#image-check") 50% 50% no-repeat
+      mask-size: cover
+      width: 16px
+      height: 16px
+      background: #2c2c2c
+      opacity: 0
+      transition: .15s ease
+
+  &--filter
+    position: relative
+    width: 30px
+    height: 30px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+
+    .checkbox__indicator
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      border-radius: 8px
+
+      &:after
+        display: none
+
+    .checkbox__text
+      font-size: 13px
+      position: relative
+      z-index: 2
+
+
+    input:checked
+      ~ .checkbox__indicator
+        background: #C4DDC9
+
+  @include mq($from: desktopX)
+    &__indicator
+      width: 32px
+      height: 32px
+      min-width: 32px
+
+    &--filter
+      width: 40px
+      height: 40px
+
+      .checkbox__indicator
+        width: 40px
+        height: 40px
+
+      .checkbox__text
+        font-size: 17px
+
+.noUi-target
+  background: #2c2c2c
+  height: 1px
+  border: none
+  box-shadow: none
+
+.noUi-horizontal
+  margin-left: 8px
+  margin-right: 8px
+
+  .noUi-handle
+    width: 15px
+    height: 15px
+    border: 1px solid #2c2c2c
+    border-radius: 50%
+    box-shadow: none
+    top: -7px
+    right: -7px
+
+    &:before,&:after
+      display: none
+
+  .noUi-tooltip
+    background: none
+    border: none
+    font-size: 13px
+
+  @include mq($from: desktopX)
+    .noUi-handle
+      width: 19px
+      height: 19px
+      top: -9px
+      right: -10px

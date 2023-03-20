@@ -1,0 +1,37 @@
+.h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5
+  font-weight: 250
+  margin: 0
+  line-height: 121%
+
+.h1,h1
+  font-size: 48px
+
+  @include mq($from: mobileX)
+    font-size: 54px
+
+  @include mq($from: desktopX)
+    font-size: 72px
+
+h2,.h2
+  font-size: 37px
+
+  @include mq($from: mobileX)
+    font-size: 43px
+
+  @include mq($from: tablet)
+    font-size: 54px
+
+  @include mq($from: desktopX)
+    font-size: 72px
+
+h3,.h3
+  font-size: 24px
+
+  @include mq($from: mobileX)
+    font-size: 28px
+
+  @include mq($from: tablet)
+    font-size: 34px
+
+  @include mq($from: desktopX)
+    font-size: 46px

@@ -1,0 +1,81 @@
+.about-stats
+  background: $colorAccent
+  padding-top: 46px
+  padding-bottom: 8px
+  color: #FFF
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    &-item
+      margin-bottom: 32px
+      flex: 46.3% 0 0
+
+    &-count
+      font-weight: 250
+      margin-bottom: 27px
+      font-size: 38px
+
+      sup
+        top: -.85em
+
+    &-title
+      font-weight: 900
+      font-size: 11px
+      line-height: 157%
+      padding-right: 6px
+
+  @include mq($from: mobileX)
+    padding-top: 48px
+    padding-bottom: 39px
+
+    &__list
+      &-title
+        font-size: 13px
+
+      &-count
+        font-size: 42px
+        margin-bottom: 24px
+
+      &-item
+        margin-bottom: 42px
+        flex-basis: 27%
+
+        &:nth-child(4n),&:nth-child(1)
+          flex-basis: 37%
+
+        &:nth-child(n+4)
+          margin-bottom: 0
+
+  @include mq($from: tablet)
+    &__list
+      &-item
+        flex-basis: 30%
+
+        &:nth-child(4n),&:nth-child(1)
+          flex-basis: 30.2%
+
+  @include mq($from: desktop)
+    &__list
+      flex-wrap: nowrap
+
+      &-item
+        flex: auto 0 0
+
+        &:nth-child(n)
+          flex-basis: auto
+          margin-bottom: 0
+
+  @include mq($from: desktopX)
+    padding-top: 66px
+    padding-bottom: 51px
+
+    &__list
+      &-count
+        font-size: 56px
+        margin-bottom: 38px
+
+      &-title
+        font-size: 17px

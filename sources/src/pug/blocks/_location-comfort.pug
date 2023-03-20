@@ -1,0 +1,32 @@
+section.location-comfort
+    .container
+        .location-comfort__title(data-aos="fade-up")
+            h2.h2 Комфортное пространство в экологичном районе
+
+        .location-comfort__slider.swiper#locationComfortSlider(data-aos="fade-up" data-aos-delay=100)
+            .swiper-wrapper
+                - let n=5
+                    while n>0
+                        .swiper-slide
+                            .location-comfort__slider-item
+                                .location-comfort__slider-picture.location-comfort__slider-picture--first
+                                    .location-comfort__slider-image.location-comfort__slider-image--first
+                                        +picture('location/slide-1-1',"jpg", true)
+
+                                .location-comfort__slider-picture.location-comfort__slider-picture--second
+                                    .location-comfort__slider-image.location-comfort__slider-image--second
+                                        +picture('location/slide-1-2',"jpg", true)
+
+                                .location-comfort__slider-description В 2 минутах ходьбы от ЖК «ОМ» находится Очаковский парк: на его территории есть большой пруд, детские и спортивные площадки, церковь и смотровая площадка.
+                        -
+                            n--
+
+        .swiper-controls#locationComfortControls(data-aos="fade-up")
+            .swiper-controls__buttons
+                .swiper-button.swiper-button-prev
+                    .icony
+                        +use('slider-prev', 23, 10)
+                .swiper-button.swiper-button-next
+                    .icony
+                        +use('slider-next', 23, 10)
+            .swiper-pagination

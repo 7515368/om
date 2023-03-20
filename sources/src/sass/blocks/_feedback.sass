@@ -1,0 +1,257 @@
+.feedback
+  padding-top: 24px
+  padding-bottom: 47px
+
+  &__title
+    margin-bottom: 29px
+
+    .h3
+      font-size: 27px
+
+  .form__label
+    font-size: 11px
+    display: block
+
+  .form__row
+    &--checkbox
+      padding-top: 2px
+      margin-bottom: 45px
+
+      .label
+        align-items: center
+
+        &__text
+          display: block
+          line-height: 157%
+
+    .label__text
+      font-size: 8px
+      line-height: 157%
+
+  .checkbox
+    min-width: 24px
+    width: 24px
+
+  .btn
+    border-width: 4px
+
+
+  &__form
+    position: relative
+    
+    &--order
+      .feedback__form-caption
+        margin-bottom: 20px
+
+      .input
+        width: 62%
+
+      .form__row
+        margin-bottom: 16px
+
+        &--checkbox
+          padding-top: 14px
+          margin-bottom: 50px
+
+        &--button
+          margin-bottom: 0
+
+      .label
+        align-items: center
+        
+    &-thanks
+      position: absolute
+      pointer-events: none
+      background: #FFF
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      transition: .3s ease
+      opacity: 0
+      font-size: 22px
+      font-weight: 250
+      line-height: 157%
+
+      p
+        margin: 0
+
+    &.is-success
+      .feedback__form-thanks
+        opacity: 1
+        pointer-events: auto
+
+  @include mq($from: mobileX)
+    padding-top: 22px
+
+    &__title
+      margin-bottom: 27px
+
+      .h3
+        font-size: 35px
+
+    .form
+      &__label
+        font-size: 12px
+
+      &__row
+       .label__text
+          font-size: 10px
+
+  @include mq($from: tablet)
+    padding-top: 19px
+    padding-bottom: 44px
+
+    &__title
+      margin-bottom: 27px
+
+      .h3
+        font-size: 42px
+
+    &__form
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      &-caption
+        flex: 100% 0 0
+
+      .input
+        max-width: unset
+
+      .form__row
+        flex: calc(50% - 17px) 0 0
+        margin-bottom: 24px
+
+        &--checkbox
+          flex: 100% 0 0
+          font-size: 14px
+          padding-top: 15px
+          margin-bottom: 44px
+
+        &--textarea
+          flex-basis: 100%
+          margin-bottom: 8px
+
+          textarea.input
+            height: 83px
+
+      &--order
+        padding: 84px 13.93vw 32px
+
+        .feedback__form-caption
+          margin-bottom: 33px
+
+        .input
+          width: 100%
+
+      &-thanks
+        font-size: 29px
+
+  @include mq($from: desktop)
+    padding-top: 19px
+    padding-bottom: 47px
+
+    &__title
+      margin-bottom: 28px
+
+    &__form
+      display: grid
+      grid-template-columns: 26% 26% auto
+      grid-template-rows: auto auto auto
+      grid-template-areas: "name phone question" "agreement agreement question" "button button button"
+      justify-content: unset
+      align-items: flex-start
+
+      .form__row
+        margin-bottom: 22px
+
+        .label__text
+          font-size: 11px
+
+        &:first-of-type
+          grid-area: name
+          margin-right: 34px
+
+        &:nth-of-type(2)
+          grid-area: phone
+          margin-right: 34px
+
+        &--checkbox
+          flex-basis: 60%
+          padding-top: 9px
+          grid-area: agreement
+          margin-bottom: 44px
+
+        &--textarea
+          grid-area: question
+          margin-bottom: 0
+
+        &--button
+          flex: 100% 0 0
+          grid-area: button
+
+      &--order
+        .form__row
+          flex-basis: calc(50% - 15px)
+
+          &--checkbox
+            flex: 100% 0 0
+
+
+  @include mq($from: desktopX)
+    padding-bottom: 93px
+
+    &__title
+      margin-bottom: 36px
+
+      .h3
+        font-size: 56px
+
+    .form__label
+      font-size: 14px
+      margin-bottom: 5px
+
+    &__form
+      .form__row
+        flex-basis: calc((100% - 120px)/ 3)
+
+        &--checkbox
+          flex-basis: 100%
+          padding-top: 17px
+          margin-bottom: 59px
+
+        &--textarea
+          textarea.input
+            height: 110px
+
+        &--button
+          margin-bottom: unset
+
+        .label__text
+          font-size: 14px
+
+      &--order
+        padding-left: 9.3vw
+        padding-right: 9.3vw
+
+        .feedback__form-caption
+          margin-bottom: 28px
+
+        .form__row
+          flex-basis: calc((100% - 30px)/ 2)
+
+          &--checkbox
+            flex: 100% 0 0
+            padding-top: 10px
+            margin-bottom: 56px
+
+      &-thanks
+        font-size: 38px
+
+    .btn
+      height: 64px
+      font-size: 14px
+      border-radius: 32px
+      padding-left: 47px
+      padding-right: 47px

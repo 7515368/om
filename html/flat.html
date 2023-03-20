@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Выбор квартиры</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="preload" href="fonts/RFDewi-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewi-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Black.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Black.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Light.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Thin.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Thin.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Ultrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Ultrabold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  </head>
+  <body class="preload">
+    <header class="header header--inner">
+      <div class="container header__container">
+        <div class="header__burger"><span></span><span></span><span></span></div>
+        <div class="header__logo"><a class="logo" href="./"></a></div>
+        <div class="header__menu">
+          <div class="header__menu-list">
+            <div class="header__menu-item"><a href="./about.html">О проекте</a></div>
+            <div class="header__menu-item"><a href="./location.html">Расположение</a></div>
+            <div class="header__menu-item header__menu-item--subitems"><a class="is-active" href="./flats.html">Квартиры</a>
+              <div class="header__submenu">
+                <div class="header__submenu-item"><a href="./select-grid.html">Подбор по параметрам</a></div>
+                <div class="header__submenu-item"><a href="./flats.html">Визуальный выбор</a></div>
+              </div>
+            </div>
+            <div class="header__menu-item"><a href="./mortgage.html">Ипотека</a></div>
+            <div class="header__menu-item"><a href="./contacts.html">Контакты</a></div>
+          </div>
+        </div><a class="header__tel" href="tel:+7(495)138-40-40">
+          <div class="header__tel-number">+7 (495) 138-40-40</div>
+          <div class="header__tel-icon">
+            <div class="icony">
+              <svg class="icon" width="15" height="14" viewBox="0 0 15 14">
+                <use xlink:href="images/sprites/main.stack.svg#image-phone"></use>
+              </svg>
+            </div>
+          </div></a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="select-flat select-flat--one">
+        <div class="container">
+          <div class="select-flat__header">
+            <div class="select-flat__header-title" data-aos="fade-up">
+              <h1 class="h2">Выбор квартиры</h1>
+            </div>
+            <div class="select-flat__header-button" data-aos="fade-up" data-aos-delay="100"><a class="btn" href="./select-grid.html">
+                <div class="btn__text">Выбор по параметрам</div></a></div>
+          </div>
+          <div class="select-flat__grid select-flat__grid--one" data-aos="fade-up" data-aos-delay="200">
+            <div class="select-flat__image">
+              <div class="select-flat__image-close">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="images/sprites/main.stack.svg#image-close"></use>
+                </svg>
+              </div>
+              <div class="select-flat__image-flatnumber">Квартира №12</div>
+              <div class="select-flat__image-holder"><img src="images/tmp/flat-one.svg" alt=""></div>
+              <div class="select-flat__image-download"><a class="btn btn--download" href="#">
+                  <div class="btn__icon">
+                    <svg class="icon" width="16" height="13" viewBox="0 0 16 13">
+                      <use xlink:href="images/sprites/main.stack.svg#image-download"></use>
+                    </svg>
+                  </div>
+                  <div class="btn__text">PDF-презентация</div></a></div>
+            </div>
+            <div class="select-flat__info select-flat__info--one">
+              <div class="select-flat__plan">
+                <div class="select-flat__plan-image">
+                  <div class="flat-number flat-number--one is-active" style="left:9.1%; top: 51%">1</div>
+                  <div class="flat-number flat-number--two" style="right:7.4%; bottom: 12%">2K</div>
+                  <div class="flat-number flat-number--three" style="left:9.1%; top: 10.4%">3</div>
+                  <picture>
+                    <source srcset="images/flats/floor.webp, images/flats/floor@2x.webp 2x" type="image/webp"/><img src="images/flats/floor.jpg" srcset="images/flats/floor.jpg, images/flats/floor@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="select-flat__plan-controls">
+                  <div class="select-flat__controls-direction">
+                    <svg class="icon" width="30" height="30" viewBox="0 0 30 30">
+                      <use xlink:href="images/sprites/main.stack.svg#image-direction"></use>
+                    </svg>
+                  </div>
+                  <div class="select-flat__controls-frame">Корпус 1</div>
+                  <div class="select-flat__controls-body"><img src="images/flats/body.svg" alt=""></div>
+                </div>
+              </div>
+              <div class="select-flat__frame">
+                <div class="select-flat__label">Корпус</div>
+                <div class="select-flat__number">1</div>
+              </div>
+              <div class="select-flat__floor">
+                <div class="select-flat__label">Этаж</div>
+                <div class="select-flat__number">20</div>
+              </div>
+              <div class="select-flat__flats">
+                <div class="select-flat__label">Комнат</div>
+                <div class="select-flat__number">2</div>
+              </div>
+              <div class="select-flat__square">
+                <div class="select-flat__label">Площадь</div>
+                <div class="select-flat__number">43,34 <span>м<sup>2</sup></span></div>
+              </div>
+              <div class="select-flat__cost">
+                <div class="select-flat__label">Стоимость</div>
+                <div class="select-flat__number">18 820 000 ₽</div>
+              </div>
+            </div>
+            <div class="select-flat__controls">
+              <div class="select-flat__controls-direction">
+                <svg class="icon" width="30" height="30" viewBox="0 0 30 30">
+                  <use xlink:href="images/sprites/main.stack.svg#image-direction"></use>
+                </svg>
+              </div>
+              <div class="select-flat__controls-body">
+                <div class="select-flat__controls-body-label">Корпус 1</div><img src="images/flats/body.svg" alt="">
+              </div>
+            </div>
+            <div class="select-flat__order"><a class="btn js-order" href="#">
+                <div class="btn__text">Забронировать</div></a></div>
+            <div class="select-flat__modal">
+              <div class="select-flat__modal-container">
+                <div class="select-flat__modal-close js-close">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="images/sprites/main.stack.svg#image-close"></use>
+                  </svg>
+                </div>
+                <form class="select-flat__modal-form">
+                  <div class="h3">Забронировать эту квартиру</div>
+                  <div class="select-flat__modal-content">
+                    <div class="select-flat__modal-data">
+                      <div class="select-flat__modal-form-row">
+                        <div class="select-flat__modal-form-label">Имя</div>
+                        <input class="input" type="text">
+                      </div>
+                      <div class="select-flat__modal-form-row">
+                        <div class="select-flat__modal-form-label">Телефон</div>
+                        <input class="input" type="text" name="phone">
+                      </div>
+                      <label class="checkbox select-flat__modal-agreement">
+                        <input type="checkbox" checked><span class="checkbox__indicator"></span><span class="checkbox__text">Согласен(-на) на обработку персональных данных</span>
+                      </label>
+                      <div class="select-flat__modal-footer">
+                        <button class="btn btn--submit js-submit" type="submit" onclick="return false"><span class="btn__text">Отправить</span></button>
+                      </div>
+                    </div>
+                    <div class="select-flat__modal-thanks">
+                      <p>Спасибо за ваше обращение!<br> Мы свяжемся с вами в ближайшее время.</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="container feedback__container">
+          <div class="feedback__title" data-aos="fade-up">
+            <h3 class="h3">Задайте нам вопрос</h3>
+          </div>
+          <form class="feedback__form">
+            <div class="form__row" data-aos="fade-up">
+              <label class="form__label">Имя</label>
+              <input class="input" type="text">
+            </div>
+            <div class="form__row" data-aos="fade-up">
+              <label class="form__label">Телефон</label>
+              <input class="input" type="text" name="phone">
+            </div>
+            <div class="form__row form__row--textarea" data-aos="fade-up">
+              <label class="form__label">Вопрос</label>
+              <textarea class="input"></textarea>
+            </div>
+            <div class="form__row form__row--checkbox" data-aos="fade-up">
+              <label class="label"><span class="checkbox">
+                  <input type="checkbox" checked><span class="checkbox__indicator"></span></span><span class="label__text">Согласен(-на) на обработку персональных данных</span></label>
+            </div>
+            <div class="form__row form__row--button" data-aos="fade-up">
+              <button class="btn js-submit" type="submit" onclick="_submitForm(this); return false"><span class="btn__text">Отправить</span></button>
+            </div>
+            <div class="feedback__form-thanks">
+              <p>Спасибо за ваше обращение! <br> Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" data-aos="fade-in">
+      <div class="container footer__container">
+        <div class="footer__grid">
+          <div class="footer__logo" data-aos="fade-in" data-aos-delay="50"><a class="logo" href="#"></a></div>
+          <div class="footer__menu">
+            <div class="footer__menu-container">
+              <div class="footer__menu-list" data-aos="fade-in" data-aos-delay="100">
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">О проекте</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Расположение</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Ипотека</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Контакты</a></div>
+              </div>
+              <div class="footer__menu-list" data-aos="fade-in" data-aos-delay="150">
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Квартиры</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Подбор по параметрам</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Выбор на плане</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Паркинг</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Коммерция</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__booklet" data-aos="fade-in" data-aos-delay="200"><a href="#">Скачать буклет</a></div>
+          <div class="footer__address" data-aos="fade-in" data-aos-delay="250">
+            <div class="footer__address-caption">Офис продаж</div>
+            <p>г. Москва, Мичуринский проспект, д. 72а</p>
+            <div class="footer__address-tel"><a href="tel:+7(495)154-46-15">+7 (495) 154-46-15</a></div>
+          </div>
+          <div class="footer__dev" data-aos="fade-in" data-aos-delay="300">
+            <div class="footer__dev-link">
+              <div class="footer__dev-caption">Разработка:</div><a class="footer__dev-icon" href="#">
+                <svg class="icon" width="24" height="15" viewBox="0 0 24 15">
+                  <use xlink:href="images/sprites/main.stack.svg#image-lu"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__info" data-aos="fade-in" data-aos-delay="300">Застройщик “СЗ ДОХОДНЫЙ ДОМ”.<br> Проектная декларация на сайте наш.дом.рф.</div>
+          <div class="footer__offert" data-aos="fade-in" data-aos-delay="300">Любая информация, представленная на сайте, носит исключительно информационный характер и не является публичной офертой.</div>
+          <div class="footer__copy" data-aos="fade-in" data-aos-delay="300">© ЖК ОМ, 2023</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

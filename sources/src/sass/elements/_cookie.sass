@@ -1,0 +1,86 @@
+.cookie
+  position: fixed
+  left: 0
+  bottom: 0
+  right: 0
+  padding-bottom: 30px
+  padding-top: 20px
+  background: #FBF9F9
+  z-index: 10
+  transition: .3s ease
+
+  .container
+    position: relative
+
+  &__close
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    border: 1px solid $colorPrimary
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    position: absolute
+    right: 20px
+    top: 0
+    transition: .3s ease
+
+    .icon
+      width: 18px
+      height: 18px
+      transition: fill .3s ease
+
+    &:hover
+      background: #FFF
+      border-color: #FFF
+
+  &.is-hidden
+    opacity: 0
+    pointer-events: none
+
+  &__text
+    line-height: 157%
+    font-size: 11px
+    padding-top: 40px
+    padding-bottom: 30px
+
+  .btn
+    border-width: 3px
+
+  @include mq($from: mobileX)
+    &__close
+      right: 34px
+
+  @include mq($from: tablet)
+    &__close
+      right: 46px
+
+    &__text
+      font-size: 12px
+
+  @include mq($from: desktop)
+    &__close
+      width: 36px
+      height: 36px
+
+  @include mq($from: desktopX)
+    padding-top: 30px
+
+    &__close
+      width: 48px
+      height: 48px
+
+      .icon
+        width: 24px
+        height: 24px
+
+    &__text
+      font-size: 14px
+
+    .btn
+      height: 64px
+      border-radius: 32px
+      border-width: 4px
+      padding-left: 46px
+      padding-right: 46px

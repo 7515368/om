@@ -1,0 +1,36 @@
+.p404
+  padding-top: 141px
+  margin-bottom: 128px
+
+  &__title
+    .h3
+      font-size: 20px
+      line-height: 157%
+
+  @include mq($from: mobileX)
+    padding-top: 264px
+    margin-bottom: 163px
+
+    &__title
+      .h3
+        font-size: 22px
+
+  @include mq($from: tablet)
+    padding-top: 310px
+    margin-bottom: 212px
+
+    &__title
+      .h3
+        font-size: 29px
+
+  @include mq($from: desktop)
+    padding-top: 271px
+    margin-bottom: 171px
+
+  @include mq($from: desktopX)
+    padding-top: 361px
+    margin-bottom: 237px
+
+    &__title
+      .h3
+        font-size: 38px

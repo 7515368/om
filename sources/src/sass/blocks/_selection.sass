@@ -1,0 +1,1142 @@
+.selection
+  padding-top: 96px
+  margin-bottom: 41px
+
+  &__header
+    &-button
+      display: none
+
+  &__title
+    margin-bottom: 15px
+
+  &__filter
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 28px
+
+    &-title
+      margin-bottom: 10px
+      font-size: 10px
+      line-height: 1.2
+
+    &-section
+      margin-bottom: 26px
+
+      &--frame
+        flex: 30% 0 0
+        margin-right: auto
+
+
+      &--flats
+        flex: 58% 0 0
+        margin-left: auto
+
+        .selection__filter-input
+          white-space: nowrap
+
+      &--floor
+        flex: 47% 0 0
+        margin-right: auto
+        margin-bottom: unset
+
+        .selection__filter-title
+          margin-bottom: 6px
+
+      &--cost
+        flex: 60% 0 0
+        margin-bottom: 17px
+
+        .selection__filter-title
+          margin-bottom: 6px
+
+      &--square
+        flex: 46% 0 0
+        margin-bottom: 18px
+
+        .selection__filter-title
+          margin-bottom: 6px
+
+      &--finishing
+        flex: auto 0 1
+        margin-left: auto
+        margin-bottom: 0
+
+        .selection__filter-title
+          margin-bottom: 6px
+
+        label
+          display: inline-block
+          margin-top: 5px
+
+        .checkbox
+          &__indicator
+            width: 30px
+            height: 30px
+            border-radius: 8px
+
+    &-footer
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      width: 100%
+      flex: 100% 0 0
+
+    &-button
+      order: 3
+      flex: 100% 0 0
+      margin-top: 42px
+
+      .btn
+        border-width: 3px
+        padding-left: 48px
+        padding-right: 48px
+
+    &-results
+      order: 1
+      font-size: 11px
+
+    &-clear
+      order: 2
+      margin-left: auto
+      font-size: 10px
+
+      a
+        display: flex
+        align-items: center
+
+        .icon
+          margin-left: 17px
+          width: 20px
+          height: 20px
+
+    &-slider
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 15px
+      font-size: 13px
+      line-height: 1
+
+      &-min
+        margin-bottom: 13px
+
+      &-max
+        margin-left: auto
+        margin-bottom: 13px
+
+      &-noui
+        flex: 100% 0 0
+
+
+  &__results
+    background: #FBF9F9
+    padding-top: 18px
+    padding-bottom: 69px
+    font-size: 11px
+
+    &-heading
+      margin-bottom: 45px
+
+    &-sorting
+      margin-right: -10px
+      line-height: normal
+
+      &-caption
+        margin-right: 5px
+        white-space: nowrap
+        margin-bottom: 18px
+
+      &-item
+        cursor: pointer
+        padding: 6px 9px
+        border-radius: 5px
+        margin-right: 9px
+        white-space: nowrap
+
+        &.is-active
+          background: #C4DDC9
+
+        &:last-of-type
+          margin-right: unset
+
+      &-list
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+
+  &__view
+    display: flex
+    margin-left: -10px
+    margin-bottom: 17px
+
+    &-item
+      padding: 10px
+      cursor: pointer
+
+      .icon
+        display: block
+
+        &:nth-child(2)
+          display: none
+
+      &.is-active
+        .icon
+          &:nth-child(1)
+            display: none
+
+          &:nth-child(2)
+            display: block
+
+  &__table
+    &-caption
+      background: #FBF9F9
+      margin-left: -15px
+      margin-right: -15px
+      padding-left: 15px
+      padding-right: 15px
+      font-weight: bold
+      position: sticky
+      top: 94px
+
+      .selection__table-cell
+        &--square, &--cost,&--more
+          display: none
+
+    .btn-more
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 36px
+      height: 36px
+      border: 3px solid #2C2C2C
+      border-radius: 12px
+      transition: .3s ease
+
+      &:hover
+        background: #2c2c2c
+
+        .icon
+          fill: #FFF
+
+    &-row
+      display: flex
+
+    &-cell
+      display: flex
+      align-items: center
+      padding-top: 20px
+      padding-bottom: 19px
+
+      &--number
+        flex: 28.5% 0 0
+
+      &--floor
+        flex: 26% 0 0
+
+      &--frame
+        flex: 30% 0 0
+
+    &-body
+      margin-bottom: 30px
+
+      .selection__table-row
+        flex-wrap: wrap
+        border-bottom: 1px solid #DEDEDE
+
+      .selection__table-cell
+        font-size: 17px
+
+        &--number,&--floor,&--frame,&--flats
+          padding-bottom: 0
+
+
+        &--square
+          display: block
+          padding-top: 16px
+          flex: 38% 0 0
+
+          &:before
+            content: attr(data-label)
+            display: block
+            font-size: 11px
+            font-weight: bold
+            margin-bottom: 11px
+
+        &--cost
+          display: block
+          padding-top: 16px
+
+          &:before
+            content: attr(data-label)
+            display: block
+            font-size: 11px
+            font-weight: bold
+            margin-bottom: 11px
+
+        &--more
+          margin-left: auto
+
+    &-more
+      display: flex
+      align-items: center
+
+      &-button
+        margin-right: 17px
+
+        .btn
+          border-width: 3px
+          padding-left: 46px
+          padding-right: 46px
+
+      &-pages
+        font-size: 11px
+        color: $colorPrimary
+
+  &__grid
+    margin-bottom: 44px
+
+    &-label
+      font-size: 11px
+      font-weight: 700
+
+    &-value
+      font-size: 17px
+
+    .btn-more
+      display: flex
+      align-items: center
+      transition: .3s ease
+
+      .btn__icon
+        height: 36px
+        width: 36px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 3px solid #2C2C2C
+        border-radius: 12px
+        margin-right: 18px
+        transition: background-color .3s ease
+
+      .btn__text
+        font-size: 11px
+        font-weight: bold
+
+    &-row
+      display: flex
+
+    &-heading
+      margin-bottom: 53px
+
+      .selection__grid
+        &-row
+          justify-content: space-between
+
+        &-cell
+          &--flats
+            display: none
+
+    &-footer
+      background: #FBF9F9
+      margin-left: -20px
+      margin-right: -20px
+      padding: 22px 20px 18px
+
+      .selection__grid-row
+        margin-bottom: 13px
+
+      .selection__grid-cell
+        &--flats
+          flex: 54% 0 0
+
+          .selection__grid-label
+            b
+              font-size: 17px
+              font-weight: normal
+              margin-left: .3em
+
+          .selection__grid-value
+            font-size: 17px
+
+          .measurements
+            font-size: 11px
+            font-weight: 700
+
+        &--cost
+          flex: 1
+
+          .selection__grid-label
+            &:after
+              content: ''
+              font-size: 17px
+
+        &--more
+          margin: 0 -20px
+          background: #FFF
+          padding: 10px 20px
+
+
+    &-cell
+      font-size: 17px
+
+      &--number
+        flex: 38% 0 0
+
+      &--frame
+        flex: 40% 0 0
+
+      &--square
+        flex: 37.9% 0 0
+
+      &--more
+        margin-left: auto
+        flex: 5% 0 0
+
+        &:before
+          display: none
+
+    &-image
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 80px
+      max-width: 100%
+      margin-left: auto
+      margin-right: auto
+
+      img
+        max-width: 100%
+        min-height: 100%
+        display: block
+
+    &-item
+      margin-bottom: 19px
+      background: #FFF
+      padding: 14px 20px 0
+      display: block
+
+      &--list
+        padding: 3px 20px 7px
+
+        .selection__grid
+          &-row
+            flex-wrap: wrap
+
+          &-label
+            color: #D9D9D9
+
+          &-cell
+            &--number
+              flex-basis: 42%
+              margin-bottom: 8px
+
+            &--floor
+              flex-basis: 10%
+              margin-left: auto
+
+            &--flats
+              flex-basis: 42%
+              margin-bottom: 8px
+
+            &--more
+              margin-left: auto
+              padding-top: 7px
+
+        .btn-more
+          .btn__text
+            display: none
+
+          .btn__icon
+            margin-right: 0
+            
+      &:hover
+        .btn-more
+          .btn__icon
+            background: #c4ddc9
+
+  @include mq($from: mobileX)
+    padding-top: 104px
+    margin-bottom: 14px
+
+    &__title
+      margin-bottom: 32px
+
+    &__view
+      margin-bottom: 19px
+
+    &__results
+      &-sorting
+        display: flex
+        align-items: center
+
+        &-caption
+          margin-right: 16px
+          margin-bottom: unset
+
+        &-item
+          margin-right: 7px
+          padding-left: 8px
+          padding-right: 8px
+
+    &__filter
+      &-title
+        font-size: 11px
+
+      &-section
+        &--frame
+          .selection__filter-title
+            br
+              display: none
+
+        &--flats
+          flex-basis: 45.7%
+
+          .selection__filter-title
+            br
+              display: none
+
+        &--floor
+          flex-basis: 40.5%
+
+        &--cost
+          flex-basis: 40.5%
+          margin-bottom: 37px
+
+        &--square
+          flex-basis: 45.7%
+
+        &--finishing
+          flex-basis: auto
+          .selection__filter-title
+            margin-bottom: 4px
+
+      &-footer
+        .selection__filter
+          &-button
+            order: 1
+            flex: unset
+            margin: unset
+
+          &-results
+            order: 2
+            margin-left: auto
+            margin-right: auto
+
+          &-clear
+            order: 3
+            margin: unset
+
+    &__table
+      &-caption
+        padding-left: 30px
+        padding-right: 30px
+        margin-left: -30px
+        margin-right: -30px
+
+    &__grid
+      &-footer
+        margin-left: -30px
+        margin-right: -30px
+        padding-left: 30px
+        padding-right: 30px
+
+      &-item
+        &--list
+          padding-bottom: 12px
+          margin-bottom: 10px
+
+          .selection__grid
+            &-cell
+              &--number
+                flex-basis: 29%
+                margin-bottom: 10px
+
+              &--frame
+                flex-basis: 30%
+
+              &--floor
+                margin-left: unset
+                flex: 20% 0 0
+
+              &--flats
+                flex-basis: 14%
+                margin-left: auto
+
+              &--square
+                flex-basis: 43.9%
+
+
+  @include mq($from: tablet)
+    padding-top: 102px
+
+    &__title
+      margin-bottom: 30px
+
+    &__filter
+      padding-bottom: 28px
+
+      &-title
+        margin-bottom: 9px
+
+      &-section
+        margin-bottom: 27px
+
+        &--frame
+          flex-basis: 35.1%
+          margin-right: unset
+          order: 1
+
+        &--flats
+          margin-left: unset
+          flex-basis: 35%
+          order: 2
+
+        &--floor
+          margin-left: unset
+          margin-right: unset
+          padding-right: 11.2%
+          flex: 35% 0 0
+          order: 4
+
+        &--finishing
+          order: 3
+          flex-basis: 29%
+          margin-left: unset
+
+          .selection__filter-title
+            margin-bottom: 9px
+
+          label
+            margin-top: 0
+
+        &--cost
+          order: 6
+          flex-basis: 24.2%
+
+        &--square
+          order: 5
+          flex-basis: 35%
+          padding-right: 11.2%
+          margin-right: unset
+          margin-left: unset
+
+      &-footer
+        order: 7
+        margin-top: 11px
+
+        .selection__filter
+          &-button
+            margin-right: 7.6%
+
+    &__results
+      padding-top: 21px
+      padding-bottom: 86px
+
+      &-heading
+        margin-bottom: 35px
+        display: flex
+
+      &-sorting
+        margin-bottom: 0
+
+        &-caption
+          margin-right: 14px
+
+        &-item
+          padding-left: 10px
+          padding-right: 10px
+          margin-right: 3px
+
+    &__view
+      margin: 0 34px 0 -10px
+
+    &__table
+      font-size: 14px
+
+      &-caption
+        top: 124px
+
+        .selection__table-cell
+          flex: unset
+
+          &--square, &--cost, &--more
+            display: flex
+
+      &-body
+        margin-bottom: 59px
+
+        .selection__table-row
+          flex-wrap: nowrap
+
+        .selection__table-cell
+          font-size: 22px
+          display: flex
+          flex: unset
+          padding-top: 20px
+          padding-bottom: 17px
+
+          &:before
+            display: none
+
+      &-cell
+        padding-top: 18px
+        padding-bottom: 24px
+
+        &--number
+          flex: 13.6% 0 0 !important
+
+        &--floor
+          flex: 9.9% 0 0 !important
+
+        &--frame
+          flex: 11.9% 0 0 !important
+
+        &--flats
+          flex: 12.2% 0 0 !important
+
+        &--square
+          flex: 18.3% 0 0 !important
+
+        &--more
+          margin-left: unset
+          flex: 1 !important
+
+      &-more
+        &-button
+          margin-right: 49px
+
+        .btn
+          padding-left: 46px
+          padding-right: 46px
+
+    &__grid
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 15px
+
+      &--list
+        margin-bottom: 30px
+
+      &-image
+        max-width: 90%
+        margin-bottom: 42px
+
+      &-heading
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 6px
+        margin-bottom: 37px
+
+      &-footer
+        margin-left: 0
+        margin-right: 0
+        padding: 13px 20px
+
+        .selection__grid-row
+          flex-wrap: wrap
+          position: relative
+          margin-bottom: 13px
+
+        .selection__grid-cell
+          &--cost
+            flex: unset
+
+          &--flats
+            flex-basis: 50%
+      &-item
+        flex: calc(50% - 15px) 0 0
+        max-width: calc(50% - 15px)
+        padding: unset
+        margin-bottom: 19px
+
+        &--list
+          flex: 100% 0 0
+          max-width: 100%
+          padding: 5px 20px 3px
+          margin-bottom: 10px
+
+          .selection__grid
+            &-cell
+              margin-bottom: unset
+
+              &--number
+                flex-basis: 13.1%
+
+              &--frame
+                flex-basis: 13.8%
+
+              &--floor
+                flex-basis: 11.9%
+
+              &--flats
+                flex-basis: 14.1%
+                margin-left: unset
+
+              &--square
+                flex-basis: 18.1%
+
+              &--cost
+                flex-basis: auto
+
+              &--more
+                flex-basis: auto
+                margin-left: auto
+
+  @include mq($from: desktop)
+    &__filter
+      &-section
+        &--frame
+          flex-basis: 16%
+          order: 1
+
+        &--flats
+          flex-basis: 22.9%
+          order: 2
+
+        &--floor
+          flex-basis: 16.1%
+          padding-right: 3.9%
+          order: 3
+
+        &--square
+          flex-basis: 16.4%
+          padding-right: 4%
+          order: 4
+
+        &--cost
+          flex-basis: 21.8%
+          padding-right: 3%
+          order: 5
+
+        &--finishing
+          flex-basis: auto
+          margin-left: auto
+          order: 6
+
+      &-footer
+        .selection__filter-button
+          margin-right: 6%
+
+        .selection__filter-results
+          margin-left: unset
+
+    &__grid
+      &-item
+        flex: calc((100% - 35px*2)/3) 0 0
+        max-width: calc((100% - 35px*2)/3)
+
+        &--list
+          flex: 100% 0 0
+          max-width: 100%
+
+          .selection__grid
+            &-cell
+              &--number
+                flex-basis: 12.3%
+
+              &--frame
+                flex-basis: 12.8%
+
+              &--floor
+                flex-basis: 11.4%
+
+              &--flats
+                flex-basis: 12.9%
+                margin-left: unset
+
+              &--square
+                flex-basis: 16.2%
+
+              &--more
+                position: relative
+
+                &:after
+                  content: ''
+                  display: block
+                  border-left: 5px solid #FBF9F9
+                  top: -5px
+                  bottom: -5px
+                  position: absolute
+                  left: -25px
+
+          .btn-more
+            .btn__text
+              display: block
+
+            .btn__icon
+              margin-right: 17px
+
+  @include mq($from: desktopX)
+    padding-top: 134px
+
+    &__header
+      display: flex
+      margin-bottom: 39px
+
+      &-button
+        display: block
+        margin-left: auto
+        padding-top: 23px
+
+        .btn
+          padding-right: 46px
+          padding-left: 46px
+          font-weight: 700
+
+    &__title
+      margin-bottom: unset
+
+    &__filter
+      padding-bottom: 38px
+
+      &-slider
+        &-min,&-max
+          font-size: 17px
+          margin-bottom: 15px
+
+      &-label
+        margin-right: 3px
+
+      &-title
+        font-size: 14px
+        margin-bottom: 13px
+
+      &-section
+        &--frame
+          flex-basis: 15.5%
+
+        &--flats
+          flex-basis: 23.5%
+
+        &--floor
+          flex-basis: 16.4%
+          padding-right: 4.2%
+
+          .selection__filter-title
+            margin-bottom: 11px
+
+        &--square
+          order: 4
+          padding-right: 4.3%
+
+          .selection__filter-title
+            margin-bottom: 11px
+
+        &--cost
+          flex-basis: 21.4%
+          order: 5
+
+          .selection__filter-title
+            margin-bottom: 11px
+
+        &--finishing
+          order: 6
+          flex-basis: unset
+          margin-left: auto
+
+          .selection__filter-title
+            margin-bottom: 13px
+
+          .checkbox__indicator
+            width: 40px
+            height: 40px
+
+      &-results
+        font-size: 14px
+
+      &-clear
+        font-size: 14px
+
+        a
+          .icon
+            width: 24px
+            height: 24px
+            margin-left: 26px
+
+      &-footer
+        margin-top: 25px
+
+        .selection__filter-button
+          margin-right: 5%
+
+      &-button
+        .btn
+          border-width: 4px
+          height: 64px
+          border-radius: 32px
+          padding-left: 74px
+          padding-right: 74px
+
+
+    &__table
+      &-caption
+        margin-left: calc(-9.33vw)
+        margin-right: calc(-9.33vw)
+        padding-left: 9.33vw
+        padding-right: 9.33vw
+
+      &-cell
+
+        &--number
+          flex-basis: 14% !important
+
+        &--floor
+          flex-basis: 13.5%!important
+
+        &--frame
+          flex-basis: 11.7%!important
+
+        &--flats
+          flex-basis: 11.9%!important
+
+        &--square
+          flex-basis: 16.9%!important
+
+        &--cost
+          flex-basis: 23.2%!important
+
+      &-body
+        .selection__table-cell
+          padding-top: 19px
+          padding-bottom: 17px
+
+      &-more
+        .btn
+          border-width: 4px
+          height: 64px
+          border-radius: 32px
+          padding-left: 57px
+          padding-right: 57px
+
+        .btn__text
+          font-size: 14px
+
+        &-button
+          margin-right: 55px
+
+        &-pages
+          font-size: 14px
+
+    &__results
+      padding-bottom: 93px
+      padding-top: 30px
+      margin-bottom: 27px
+
+      &-heading
+        margin-bottom: 16px
+
+      &-sorting
+        font-size: 14px
+
+        &-caption
+          margin-right: 17px
+
+        &-item
+          border-radius: 8px
+          padding-left: 15px
+          padding-right: 15px
+
+    &__view
+      margin-right: 67px
+
+      &-item
+        padding: 9px 8px
+
+        .icon
+          width: 28px
+          height: 28px
+
+    &__grid
+      justify-content: flex-start
+      margin-right: -46px
+      padding-top: 35px
+      margin-bottom: 20px
+
+      &--list
+        margin-right: unset
+        margin-bottom: 40px
+
+      &-heading
+        padding: 8px 30px
+
+      &-label
+        font-size: 14px
+        margin-bottom: 9px
+
+      &-value
+        font-size: 22px
+
+      &-heading
+        margin-bottom: 66px
+
+      &-image
+        margin-bottom: 54px
+
+      &-footer
+        padding: 25px 30px 0
+
+        .selection__grid-row
+          margin-bottom: 22px
+
+        .selection__grid-cell
+          .selection__grid-label
+            margin-bottom: 7px
+
+          &--flats
+           .selection__grid-label b
+            font-size: 22px
+            margin-left: 12px
+
+          .selection__grid-value
+            font-size: 22px
+
+          .measurements
+            font-size: 14px
+
+          &--cost
+            .selection__grid-label
+              &:after
+                font-size: 22px
+
+          &--more
+            margin: 0 -30px
+            padding: 14px 30px
+
+      .btn-more
+        .btn__icon
+          width: 48px
+          height: 48px
+          border-width: 4px
+          margin-right: 24px
+
+        .btn__text
+          font-size: 14px
+
+      &-item
+        flex: calc((100% - 46px*3)/3) 0 0
+        max-width: calc((100% - 46px*3)/3)
+        margin-right: 46px
+        margin-bottom: 38px
+
+        &--list
+          flex: 100% 0 0
+          max-width: 100%
+          padding: 10px 30px
+          margin-bottom: 14px
+
+          .selection__grid
+            &-label
+              margin-bottom: 6px
+
+            &-cell
+              &--square
+                flex-basis: 16.6%
+
+              &--more
+                padding-top: 4px
+
+                &:after
+                  left: -41px
+                  top: -10px
+                  bottom: -10px
+                  border-left-width: 11px

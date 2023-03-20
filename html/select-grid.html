@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Выбор квартиры</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="preload" href="fonts/RFDewi-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewi-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Black.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Black.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Light.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Thin.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Thin.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Ultrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RFDewiExtended-Ultrabold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  </head>
+  <body class="preload">
+    <header class="header header--inner">
+      <div class="container header__container">
+        <div class="header__burger"><span></span><span></span><span></span></div>
+        <div class="header__logo"><a class="logo" href="./"></a></div>
+        <div class="header__menu">
+          <div class="header__menu-list">
+            <div class="header__menu-item"><a href="./about.html">О проекте</a></div>
+            <div class="header__menu-item"><a href="./location.html">Расположение</a></div>
+            <div class="header__menu-item header__menu-item--subitems"><a class="is-active" href="./flats.html">Квартиры</a>
+              <div class="header__submenu">
+                <div class="header__submenu-item"><a class="is-active" href="./select-grid.html">Подбор по параметрам</a></div>
+                <div class="header__submenu-item"><a href="./flats.html">Визуальный выбор</a></div>
+              </div>
+            </div>
+            <div class="header__menu-item"><a href="./mortgage.html">Ипотека</a></div>
+            <div class="header__menu-item"><a href="./contacts.html">Контакты</a></div>
+          </div>
+        </div><a class="header__tel" href="tel:+7(495)138-40-40">
+          <div class="header__tel-number">+7 (495) 138-40-40</div>
+          <div class="header__tel-icon">
+            <div class="icony">
+              <svg class="icon" width="15" height="14" viewBox="0 0 15 14">
+                <use xlink:href="images/sprites/main.stack.svg#image-phone"></use>
+              </svg>
+            </div>
+          </div></a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="selection">
+        <div class="container selection__container">
+          <div class="selection__header">
+            <div class="selection__title" data-aos="fade-up">
+              <h1 class="h2">Выбор квартиры</h1>
+            </div>
+            <div class="selection__header-button"><a class="btn" href="./flats.html" data-aos="fade-up" data-aos-delay="100">
+                <div class="btn__text">Перейти в визуальный выбор</div></a></div>
+          </div>
+          <div class="selection__filter" id="filter" data-aos="fade-up" data-aos-delay="200">
+            <div class="selection__filter-section selection__filter-section--frame">
+              <div class="selection__filter-title">Выберите<br> корпус:</div>
+              <div class="selection__filter-input">
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">1</span></span></label>
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">2</span></span></label>
+              </div>
+            </div>
+            <div class="selection__filter-section selection__filter-section--flats">
+              <div class="selection__filter-title">Количество<br> комнат:</div>
+              <div class="selection__filter-input">
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">CT</span></span></label>
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">1</span></span></label>
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">2</span></span></label>
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">3</span></span></label>
+                <label class="selection__filter-label"><span class="checkbox checkbox--filter">
+                    <input type="checkbox"><span class="checkbox__indicator"></span><span class="checkbox__text">4</span></span></label>
+              </div>
+            </div>
+            <div class="selection__filter-section selection__filter-section--floor">
+              <div class="selection__filter-title">Этаж</div>
+              <div class="selection__filter-input">
+                <div class="selection__filter-slider">
+                  <div class="selection__filter-slider-min" id="filterFloorMin"></div>
+                  <div class="selection__filter-slider-max" id="filterFloorMax"></div>
+                  <div class="selection__filter-slider-noui">
+                    <div id="filterFloor" data-min="3" data-max="20"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="selection__filter-section selection__filter-section--square">
+              <div class="selection__filter-title">Площадь м<sup>2</sup></div>
+              <div class="selection__filter-input">
+                <div class="selection__filter-slider">
+                  <div class="selection__filter-slider-min" id="filterSquareMin"></div>
+                  <div class="selection__filter-slider-max" id="filterSquareMax"></div>
+                  <div class="selection__filter-slider-noui">
+                    <div id="filterSquare" data-min="33" data-max="289"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="selection__filter-section selection__filter-section--cost">
+              <div class="selection__filter-title">Стоимость, ₽</div>
+              <div class="selection__filter-input">
+                <div class="selection__filter-slider">
+                  <div class="selection__filter-slider-min" id="filterCostMin"></div>
+                  <div class="selection__filter-slider-max" id="filterCostMax"></div>
+                  <div class="selection__filter-slider-noui">
+                    <div id="filterCost" data-min="6152000" data-max="18820000"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="selection__filter-section selection__filter-section--finishing">
+              <div class="selection__filter-title">Отделка:</div>
+              <div class="selection__filter-input">
+                <label><span class="checkbox">
+                    <input type="checkbox" checked><span class="checkbox__indicator"></span></span></label>
+              </div>
+            </div>
+            <div class="selection__filter-footer">
+              <div class="selection__filter-button">
+                <div class="btn js-showMore">
+                  <div class="btn__text">Показать</div>
+                </div>
+              </div>
+              <div class="selection__filter-results">Найдено: 52 лота</div>
+              <div class="selection__filter-clear"><a href="#">Сбросить
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="images/sprites/main.stack.svg#image-close"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="selection__results" data-aos="fade-up">
+          <div class="container">
+            <div class="selection__results-heading">
+              <div class="selection__view"><a class="selection__view-item is-active" href="./select-grid.html">
+                  <svg class="icon" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="images/sprites/main.stack.svg#image-view-grid"></use>
+                  </svg>
+                  <svg class="icon" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="images/sprites/main.stack.svg#image-view-grid-active"></use>
+                  </svg></a><a class="selection__view-item" href="./select-list.html">
+                  <svg class="icon" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="images/sprites/main.stack.svg#image-view-list"></use>
+                  </svg>
+                  <svg class="icon" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="images/sprites/main.stack.svg#image-view-list-active"></use>
+                  </svg></a></div>
+              <div class="selection__results-sorting">
+                <div class="selection__results-sorting-caption">Сортировать по:</div>
+                <div class="selection__results-sorting-list">
+                  <div class="selection__results-sorting-item is-active">Этажу</div>
+                  <div class="selection__results-sorting-item">Количеству комнат</div>
+                  <div class="selection__results-sorting-item">Площади</div>
+                </div>
+              </div>
+            </div>
+            <div class="selection__grid"><a class="selection__grid-item" href="./flat.html">
+                <div class="selection__grid-heading">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--number">
+                      <div class="selection__grid-label">Номер</div>
+                      <div class="selection__grid-value">152</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--frame">
+                      <div class="selection__grid-label">Корпус</div>
+                      <div class="selection__grid-value">1</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--floor">
+                      <div class="selection__grid-label">Этаж</div>
+                      <div class="selection__grid-value">20</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selection__grid-image"><img src="images/tmp/flat.svg" alt=""></div>
+                <div class="selection__grid-footer">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--flats">
+                      <div class="selection__grid-label">Комнат <b>2</b></div>
+                      <div class="selection__grid-value">43,34 <span class="measurements">м<sup>2</sup></span></div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--cost">
+                      <div class="selection__grid-label">Стоимость, ₽</div>
+                      <div class="selection__grid-value">18 820 000</div>
+                    </div>
+                  </div>
+                  <div class="selection__grid-cell selection__grid-cell--more">
+                    <div class="btn-more">
+                      <div class="btn__icon">
+                        <svg class="icon" width="10" height="17" viewBox="0 0 10 17">
+                          <use xlink:href="images/sprites/main.stack.svg#image-arrow-right"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text">Подробнее</div>
+                    </div>
+                  </div>
+                </div></a><a class="selection__grid-item" href="./flat.html">
+                <div class="selection__grid-heading">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--number">
+                      <div class="selection__grid-label">Номер</div>
+                      <div class="selection__grid-value">152</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--frame">
+                      <div class="selection__grid-label">Корпус</div>
+                      <div class="selection__grid-value">1</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--floor">
+                      <div class="selection__grid-label">Этаж</div>
+                      <div class="selection__grid-value">20</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selection__grid-image"><img src="images/tmp/flat.svg" alt=""></div>
+                <div class="selection__grid-footer">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--flats">
+                      <div class="selection__grid-label">Комнат <b>2</b></div>
+                      <div class="selection__grid-value">43,34 <span class="measurements">м<sup>2</sup></span></div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--cost">
+                      <div class="selection__grid-label">Стоимость, ₽</div>
+                      <div class="selection__grid-value">18 820 000</div>
+                    </div>
+                  </div>
+                  <div class="selection__grid-cell selection__grid-cell--more">
+                    <div class="btn-more">
+                      <div class="btn__icon">
+                        <svg class="icon" width="10" height="17" viewBox="0 0 10 17">
+                          <use xlink:href="images/sprites/main.stack.svg#image-arrow-right"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text">Подробнее</div>
+                    </div>
+                  </div>
+                </div></a><a class="selection__grid-item" href="./flat.html">
+                <div class="selection__grid-heading">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--number">
+                      <div class="selection__grid-label">Номер</div>
+                      <div class="selection__grid-value">152</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--frame">
+                      <div class="selection__grid-label">Корпус</div>
+                      <div class="selection__grid-value">1</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--floor">
+                      <div class="selection__grid-label">Этаж</div>
+                      <div class="selection__grid-value">20</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selection__grid-image"><img src="images/tmp/flat.svg" alt=""></div>
+                <div class="selection__grid-footer">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--flats">
+                      <div class="selection__grid-label">Комнат <b>2</b></div>
+                      <div class="selection__grid-value">43,34 <span class="measurements">м<sup>2</sup></span></div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--cost">
+                      <div class="selection__grid-label">Стоимость, ₽</div>
+                      <div class="selection__grid-value">18 820 000</div>
+                    </div>
+                  </div>
+                  <div class="selection__grid-cell selection__grid-cell--more">
+                    <div class="btn-more">
+                      <div class="btn__icon">
+                        <svg class="icon" width="10" height="17" viewBox="0 0 10 17">
+                          <use xlink:href="images/sprites/main.stack.svg#image-arrow-right"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text">Подробнее</div>
+                    </div>
+                  </div>
+                </div></a><a class="selection__grid-item" href="./flat.html">
+                <div class="selection__grid-heading">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--number">
+                      <div class="selection__grid-label">Номер</div>
+                      <div class="selection__grid-value">152</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--frame">
+                      <div class="selection__grid-label">Корпус</div>
+                      <div class="selection__grid-value">1</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--floor">
+                      <div class="selection__grid-label">Этаж</div>
+                      <div class="selection__grid-value">20</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selection__grid-image"><img src="images/tmp/flat.svg" alt=""></div>
+                <div class="selection__grid-footer">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--flats">
+                      <div class="selection__grid-label">Комнат <b>2</b></div>
+                      <div class="selection__grid-value">43,34 <span class="measurements">м<sup>2</sup></span></div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--cost">
+                      <div class="selection__grid-label">Стоимость, ₽</div>
+                      <div class="selection__grid-value">18 820 000</div>
+                    </div>
+                  </div>
+                  <div class="selection__grid-cell selection__grid-cell--more">
+                    <div class="btn-more">
+                      <div class="btn__icon">
+                        <svg class="icon" width="10" height="17" viewBox="0 0 10 17">
+                          <use xlink:href="images/sprites/main.stack.svg#image-arrow-right"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text">Подробнее</div>
+                    </div>
+                  </div>
+                </div></a><a class="selection__grid-item" href="./flat.html">
+                <div class="selection__grid-heading">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--number">
+                      <div class="selection__grid-label">Номер</div>
+                      <div class="selection__grid-value">152</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--frame">
+                      <div class="selection__grid-label">Корпус</div>
+                      <div class="selection__grid-value">1</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--floor">
+                      <div class="selection__grid-label">Этаж</div>
+                      <div class="selection__grid-value">20</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selection__grid-image"><img src="images/tmp/flat.svg" alt=""></div>
+                <div class="selection__grid-footer">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--flats">
+                      <div class="selection__grid-label">Комнат <b>2</b></div>
+                      <div class="selection__grid-value">43,34 <span class="measurements">м<sup>2</sup></span></div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--cost">
+                      <div class="selection__grid-label">Стоимость, ₽</div>
+                      <div class="selection__grid-value">18 820 000</div>
+                    </div>
+                  </div>
+                  <div class="selection__grid-cell selection__grid-cell--more">
+                    <div class="btn-more">
+                      <div class="btn__icon">
+                        <svg class="icon" width="10" height="17" viewBox="0 0 10 17">
+                          <use xlink:href="images/sprites/main.stack.svg#image-arrow-right"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text">Подробнее</div>
+                    </div>
+                  </div>
+                </div></a><a class="selection__grid-item" href="./flat.html">
+                <div class="selection__grid-heading">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--number">
+                      <div class="selection__grid-label">Номер</div>
+                      <div class="selection__grid-value">152</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--frame">
+                      <div class="selection__grid-label">Корпус</div>
+                      <div class="selection__grid-value">1</div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--floor">
+                      <div class="selection__grid-label">Этаж</div>
+                      <div class="selection__grid-value">20</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="selection__grid-image"><img src="images/tmp/flat.svg" alt=""></div>
+                <div class="selection__grid-footer">
+                  <div class="selection__grid-row">
+                    <div class="selection__grid-cell selection__grid-cell--flats">
+                      <div class="selection__grid-label">Комнат <b>2</b></div>
+                      <div class="selection__grid-value">43,34 <span class="measurements">м<sup>2</sup></span></div>
+                    </div>
+                    <div class="selection__grid-cell selection__grid-cell--cost">
+                      <div class="selection__grid-label">Стоимость, ₽</div>
+                      <div class="selection__grid-value">18 820 000</div>
+                    </div>
+                  </div>
+                  <div class="selection__grid-cell selection__grid-cell--more">
+                    <div class="btn-more">
+                      <div class="btn__icon">
+                        <svg class="icon" width="10" height="17" viewBox="0 0 10 17">
+                          <use xlink:href="images/sprites/main.stack.svg#image-arrow-right"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text">Подробнее</div>
+                    </div>
+                  </div>
+                </div></a>
+            </div>
+            <div class="selection__table-more">
+              <div class="selection__table-more-button"><a class="btn" href="#">
+                  <div class="btn__text">Показать еще</div></a></div>
+              <div class="selection__table-more-pages">1 - 12  из 23</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="container feedback__container">
+          <div class="feedback__title" data-aos="fade-up">
+            <h3 class="h3">Задайте нам вопрос</h3>
+          </div>
+          <form class="feedback__form">
+            <div class="form__row" data-aos="fade-up">
+              <label class="form__label">Имя</label>
+              <input class="input" type="text">
+            </div>
+            <div class="form__row" data-aos="fade-up">
+              <label class="form__label">Телефон</label>
+              <input class="input" type="text" name="phone">
+            </div>
+            <div class="form__row form__row--textarea" data-aos="fade-up">
+              <label class="form__label">Вопрос</label>
+              <textarea class="input"></textarea>
+            </div>
+            <div class="form__row form__row--checkbox" data-aos="fade-up">
+              <label class="label"><span class="checkbox">
+                  <input type="checkbox" checked><span class="checkbox__indicator"></span></span><span class="label__text">Согласен(-на) на обработку персональных данных</span></label>
+            </div>
+            <div class="form__row form__row--button" data-aos="fade-up">
+              <button class="btn js-submit" type="submit" onclick="_submitForm(this); return false"><span class="btn__text">Отправить</span></button>
+            </div>
+            <div class="feedback__form-thanks">
+              <p>Спасибо за ваше обращение! <br> Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" data-aos="fade-in">
+      <div class="container footer__container">
+        <div class="footer__grid">
+          <div class="footer__logo" data-aos="fade-in" data-aos-delay="50"><a class="logo" href="#"></a></div>
+          <div class="footer__menu">
+            <div class="footer__menu-container">
+              <div class="footer__menu-list" data-aos="fade-in" data-aos-delay="100">
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">О проекте</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Расположение</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Ипотека</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Контакты</a></div>
+              </div>
+              <div class="footer__menu-list" data-aos="fade-in" data-aos-delay="150">
+                <div class="footer__menu-item"><a class="footer__menu-link footer__menu-link--bold" href="#">Квартиры</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Подбор по параметрам</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Выбор на плане</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Паркинг</a></div>
+                <div class="footer__menu-item"><a class="footer__menu-link" href="#">Коммерция</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__booklet" data-aos="fade-in" data-aos-delay="200"><a href="#">Скачать буклет</a></div>
+          <div class="footer__address" data-aos="fade-in" data-aos-delay="250">
+            <div class="footer__address-caption">Офис продаж</div>
+            <p>г. Москва, Мичуринский проспект, д. 72а</p>
+            <div class="footer__address-tel"><a href="tel:+7(495)154-46-15">+7 (495) 154-46-15</a></div>
+          </div>
+          <div class="footer__dev" data-aos="fade-in" data-aos-delay="300">
+            <div class="footer__dev-link">
+              <div class="footer__dev-caption">Разработка:</div><a class="footer__dev-icon" href="#">
+                <svg class="icon" width="24" height="15" viewBox="0 0 24 15">
+                  <use xlink:href="images/sprites/main.stack.svg#image-lu"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__info" data-aos="fade-in" data-aos-delay="300">Застройщик “СЗ ДОХОДНЫЙ ДОМ”.<br> Проектная декларация на сайте наш.дом.рф.</div>
+          <div class="footer__offert" data-aos="fade-in" data-aos-delay="300">Любая информация, представленная на сайте, носит исключительно информационный характер и не является публичной офертой.</div>
+          <div class="footer__copy" data-aos="fade-in" data-aos-delay="300">© ЖК ОМ, 2023</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

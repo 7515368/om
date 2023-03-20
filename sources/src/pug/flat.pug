@@ -1,0 +1,117 @@
+extends base/_layout
+block head
+    title Выбор квартиры
+    -
+        let page = "Квартиры",
+            headerInner = true
+
+block page
+    section.select-flat.select-flat--one
+        .container
+            .select-flat__header
+                .select-flat__header-title(data-aos="fade-up")
+                    h1.h2 Выбор квартиры
+
+                .select-flat__header-button(data-aos="fade-up" data-aos-delay=100)
+                    a(href="./select-grid.html").btn
+                        .btn__text Выбор по параметрам
+
+            .select-flat__grid.select-flat__grid--one(data-aos="fade-up" data-aos-delay=200)
+                .select-flat__image
+                    .select-flat__image-close
+                        +use('close', 24, 24)
+
+                    .select-flat__image-flatnumber Квартира №12
+
+                    .select-flat__image-holder
+                        img(src="images/tmp/flat-one.svg" alt="")
+
+                    .select-flat__image-download
+                        a(href="#").btn.btn--download
+                            .btn__icon
+                                +use('download', 16, 13)
+                            .btn__text PDF-презентация
+
+                .select-flat__info.select-flat__info--one
+                    .select-flat__plan
+                        .select-flat__plan-image
+                            .flat-number.flat-number--one.is-active(style="left:9.1%; top: 51%") 1
+                            .flat-number.flat-number--two(style="right:7.4%; bottom: 12%") 2K
+                            .flat-number.flat-number--three(style="left:9.1%; top: 10.4%") 3
+                            +picture('flats/floor', 'jpg', true)
+
+                        .select-flat__plan-controls
+                            .select-flat__controls-direction
+                                +use('direction', 30, 30)
+
+                            .select-flat__controls-frame Корпус 1
+
+                            .select-flat__controls-body
+                                img(src="images/flats/body.svg" alt="")
+
+
+                    .select-flat__frame
+                        .select-flat__label Корпус
+                        .select-flat__number 1
+
+                    .select-flat__floor
+                        .select-flat__label Этаж
+                        .select-flat__number 20
+
+                    .select-flat__flats
+                        .select-flat__label Комнат
+                        .select-flat__number 2
+
+                    .select-flat__square
+                        .select-flat__label Площадь
+                        .select-flat__number 43,34 <span>м<sup>2</sup></span>
+
+                    .select-flat__cost
+                        .select-flat__label Стоимость
+                        .select-flat__number 18 820 000 ₽
+
+
+                .select-flat__controls
+                    .select-flat__controls-direction
+                        +use('direction', 30, 30)
+
+                    .select-flat__controls-body
+                        .select-flat__controls-body-label Корпус 1
+                        img(src="images/flats/body.svg" alt="")
+
+                .select-flat__order
+                    a(href="#").btn.js-order
+                        .btn__text Забронировать
+
+                .select-flat__modal
+                    .select-flat__modal-container
+                        .select-flat__modal-close.js-close
+                            +use('close', 24, 24)
+
+
+                        form.select-flat__modal-form
+                            .h3 Забронировать эту квартиру
+
+                            .select-flat__modal-content
+                                .select-flat__modal-data
+                                    .select-flat__modal-form-row
+                                        .select-flat__modal-form-label Имя
+                                        input(type="text").input
+
+                                    .select-flat__modal-form-row
+                                        .select-flat__modal-form-label Телефон
+                                        input(type="text" name="phone").input
+
+                                    label.checkbox.select-flat__modal-agreement
+                                        input(type="checkbox" checked)
+                                        span.checkbox__indicator
+                                        span.checkbox__text Согласен(-на) на обработку персональных данных
+
+                                    .select-flat__modal-footer
+                                        button(type="submit" onclick="return false").btn.btn--submit.js-submit
+                                            span.btn__text Отправить
+
+                                .select-flat__modal-thanks
+                                    p Спасибо за ваше обращение!<br> Мы свяжемся с вами в ближайшее время.
+
+    include blocks/_feedback

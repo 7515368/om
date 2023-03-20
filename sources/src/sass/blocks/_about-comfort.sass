@@ -1,0 +1,133 @@
+.about-comfort
+  margin-bottom: 40px
+
+  &__title
+    margin-bottom: 37px
+
+    .h3
+      font-size: 26px
+
+  &__list
+    margin-right: -20px
+    margin-bottom: 40px
+
+    &-item
+      background: #FBF9F9
+      padding: 19px 20px 14px
+      font-size: 11px
+      line-height: 1.57
+      height: 197px
+      display: flex
+      flex-direction: column
+
+    &-description
+      font-weight: 700
+      flex: 1
+
+    .swiper-slide
+      width: 190px
+
+    .swiper-pagination
+      position: unset
+      display: flex
+      justify-content: flex-start
+      margin-top: 28px
+
+  &__description
+    font-size: 11px
+    line-height: 1.57
+
+  @include mq($from: mobileX)
+    margin-bottom: 37px
+
+    &__title
+      .h3
+        font-size: 38px
+
+    &__list
+      &-item
+        font-size: 12px
+
+      .swiper-slide
+        margin-right: 34px
+
+      .swiper-pagination
+        display: none
+
+  @include mq($from: tablet)
+    margin-bottom: 0
+
+    &__title
+      margin-bottom: 33px
+
+      .h3
+        font-size: 54px
+
+    &__grid
+      display: flex
+
+      .about-comfort__list
+        margin-right: 0
+        flex: calc(((100% - (34px * 2)) / 3) * 2 + 34px) 0 0
+        display: flex
+
+      .swiper-slide
+          flex: calc((100% - 34px)/2) 0 0
+          margin: 0
+          width: unset
+
+      .swiper-wrapper
+        flex: 1
+        justify-content: space-between
+
+      .swiper-controls
+        display: none
+
+    &__description
+      padding-left: 34px
+      font-size: 12px
+      padding-top: 19px
+      padding-right: 20px
+
+  @include mq($from: desktop)
+    &__grid
+      .about-comfort__list
+        margin-right: 0
+        flex: calc(((100% - (34px * 3)) / 4) * 2 + 34px) 0 0
+        display: flex
+
+        &-item
+          padding: 18px 15px 14px
+          height: 184px
+
+    &__description
+      padding-right: 0
+
+  @include mq($from: desktopX)
+    margin-bottom: 59px
+
+    &__title
+      margin-bottom: 45px
+
+      .h3
+        font-size: 72px
+
+    &__grid
+      .about-comfort__list
+        flex: calc(((100% - (46px * 3)) / 4) * 2 + 46px) 0 0
+        margin-bottom: 0
+
+        &-item
+          padding: 28px 17px 17px 21px
+          height: 204px
+          font-size: 14px
+
+    .swiper-slide
+      flex-basis: calc((100% - 46px)/ 2)
+
+
+    &__description
+      font-size: 14px
+      padding-left: 46px
+      padding-right: 5%
+      padding-top: 28px

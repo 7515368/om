@@ -1,0 +1,106 @@
+@import "./normalize"
+@import "./vars"
+@import "./mixins"
+@import "./fonts"
+@import "./sprite_generated"
+@import "./mq"
+@import "../../libs/swiper/swiper-bundle"
+@import "../../libs/nouislider/dist/nouislider"
+@import "../../libs/simplebar/dist/simplebar"
+@import "../../libs/aos/dist/aos"
+
+  
+*, *:before, *:after
+  box-sizing: border-box
+  min-height: 0.001vw
+
+.preload *
+  transition: none !important
+
+body
+  display: flex
+  flex-direction: column
+  background: #FFF
+  font-family: "RF Dewi Extended", Helvetica, Arial, sans-serif
+  width: 100%
+  height: 100%
+  min-height: 100vh
+  line-height: 157%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: #2C2C2C
+  min-width: 320px
+
+a
+  text-decoration: none
+  transition: color .3s ease
+  color: $colorAccent
+
+  &:hover
+    color: $colorPrimary
+
+.icony
+  display: inline-flex
+  border-radius: 50%
+  align-items: center
+  justify-content: center
+  font-size: 0
+  border: 3px solid currentColor
+  width: 48px
+  min-width: 48px
+  height: 48px
+  min-height: 48px
+  transition: .3s ease
+
+  .icon
+    fill: currentColor
+
+  //@include mq($from: desktopX)
+    width: 64px
+    min-width: 64px
+    height: 64px
+    min-height: 64px
+    border-width: 4px
+
+  //@include mq($from: huge)
+    width: 72px
+    min-width: 72px
+    height: 72px
+    min-height: 72px
+
+.container
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  min-width: 280px
+  max-width: 1280px
+
+  @include mq($from: mobileX)
+    padding-left: 34px
+    padding-right: 34px
+
+  @include mq($from: desktopX)
+    padding-left: 46px
+    padding-right: 46px
+
+  //@include mq($from: wide)
+    padding-left: 5vw
+    padding-right: 5vw
+
+  //@include mq($from: huge)
+    padding-left: 16.3vw
+    padding-right: 16.3vw
+
+
+
+
+.logo
+  mask: url("../images/logo.svg") 50% 50% no-repeat
+  mask-size: contain
+  font-size: 0
+  display: block
+
+  &:after
+    content: ''
+    display: block
+    padding-bottom: 43.835616%

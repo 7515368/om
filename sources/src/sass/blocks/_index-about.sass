@@ -1,0 +1,102 @@
+.index-about
+  background: #FBF9F9
+  padding-top: 15px
+  margin-bottom: 20px
+
+  &__title
+    margin-bottom: 39px
+
+  &__content
+    background: $colorAccent
+    color: #FFF
+    padding-top: 38px
+    padding-bottom: 26px
+
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    &-item
+      margin-bottom: 15px
+      flex: 46.3% 0 0
+
+      &:nth-child(3)
+        align-self: center
+        margin-bottom: 5px
+
+    &-count
+      font-weight: 900
+      margin-bottom: 16px
+      font-size: 15px
+
+    &-title
+      font-weight: 300
+      font-size: 11px
+      line-height: 157%
+
+  @include mq($from: mobileX)
+    &__title
+      margin-bottom: 37px
+
+    &__content
+      padding-top: 40px
+      padding-bottom: 5px
+
+    &__list
+      &-title
+        font-size: 13px
+
+      &-count
+        font-size: 19px
+
+      &-item
+        margin-bottom: 32px
+
+        &:nth-child(3)
+          margin-bottom: 0
+          align-self: flex-start
+
+  @include mq($from: tablet)
+    &__list
+      &-item
+        flex-basis: 47.6%
+
+      &-count
+        margin-bottom: 14px
+
+      &-title
+        max-width: 67%
+
+    &__content
+      padding-bottom: 7px
+
+  @include mq($from: desktop)
+    &__content
+      padding-top: 38px
+
+    &__list
+      &-item
+        flex: 22% 0 0
+
+      &-title
+        max-width: unset
+
+  @include mq($from: desktopX)
+    margin-bottom: 40px
+
+    &__title
+      margin-bottom: 46px
+
+    &__list
+      &-count
+        font-size: 25px
+        margin-bottom: 24px
+
+      &-title
+        font-size: 17px
+
+    &__content
+      padding-top: 56px
+      padding-bottom: 19px

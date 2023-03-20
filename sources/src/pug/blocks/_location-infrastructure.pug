@@ -1,0 +1,39 @@
+section.location-infrastructure
+    .container
+        .location-infrastructure__title(data-aos="fade-up")
+            h2.h3 Развитая инфраструктура
+
+        .location-infrastructure__labels(data-aos="fade-up" data-aos-delay=100)
+            -
+                let labels = [{
+                    icon: 'label-mall',
+                    title: 'ТЦ'
+                }, {
+                    icon: 'label-university',
+                    title:'Вузы'
+                }, {
+                    icon: 'label-caffe',
+                    title: 'Кафе<br> и&nbsp;рестораны',
+                    isActive: true
+                },{
+                    icon: 'label-transport',
+                    title: 'Транспорт',
+                },{
+                    icon: 'label-kindergartens',
+                    title: 'Детские<br> сады',
+                },{
+                    icon: 'label-fitness',
+                    title: 'Фитнес<br> и спорт',
+                },{
+                    icon: 'label-recreation',
+                    title: 'Зоны<br> отдыха',
+                }]
+
+            each item,index in labels
+                .location-infrastructure__labels-item(data-aos="fade-up" data-aos-delay=`${index*50}`, class=item.isActive===true?'is-active':'')
+                    .location-infrastructure__labels-icon
+                        +use(`${item.icon}`,34,34)
+                    .location-infrastructure__labels-title !{item.title}
+
+        .location-infrastructure__map(data-aos="fade-up")
+            img(src="images/tmp/map.jpg" alt="")

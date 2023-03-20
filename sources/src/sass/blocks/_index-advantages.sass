@@ -1,0 +1,147 @@
+.index-advantages
+  padding-top: 40px
+  padding-bottom: 20px
+
+  &__title
+    margin-bottom: 34px
+
+  &__subtitle
+    line-height: 157%
+    margin-bottom: 39px
+    font-size: 11px
+
+  &__list
+    display: flex
+    overflow: auto
+    margin-right: -20px
+    margin-left: -20px
+    padding-left: 20px
+    padding-right: 20px
+    padding-bottom: 20px
+
+    &-item
+      width: 182px
+      min-width: 182px
+      margin: 0 30px
+      line-height: 157%
+
+      &:first-child
+        margin-left: auto
+
+      &:last-child
+        margin-right: auto
+
+    &-image
+      width: 154px
+      height: 154px
+      border-radius: 50%
+      overflow: hidden
+      position: relative
+      margin-bottom: 23px
+
+      img
+        width: calc(100% + 2px)
+        height: calc(100% + 2px)
+        position: absolute
+        object-fit: cover
+        display: block
+
+    &-description
+      font-size: 11px
+      line-height: 157%
+
+    &-title
+      font-size: 15px
+      margin-bottom: 10px
+      font-weight: 300
+
+  @include mq($from: mobileX)
+    &__list
+      margin-right: -34px
+      margin-left: -34px
+      padding-left: 34px
+      padding-right: 34px
+      padding-bottom: 0
+
+      &-item
+        min-width: 222px
+        width: 222px
+        margin: 0 38px
+
+    &__title
+      margin-bottom: 29px
+
+  @include mq($from: tablet)
+    padding-top: 35px
+    padding-bottom: 2px
+
+    &__title
+      margin-bottom: 27px
+      margin-left: unset
+
+    &__subtitle
+      font-size: 12px
+      margin-bottom: 40px
+      max-width: 428px
+
+    &__list
+      flex-wrap: wrap
+      justify-content: space-between
+      padding-bottom: unset
+      overflow: unset
+      align-items: flex-start
+
+      &-item
+        margin: 0 0 38px
+        flex: calc(50% - 15px) 0 0
+        padding-right: 20px
+
+        &:first-child
+          margin: unset
+
+        &:last-child
+          margin: unset
+
+      &-title
+        font-size: 17px
+        margin-bottom: 11px
+        line-height: 157%
+
+      &-description
+        font-size: 12px
+
+      &-image
+        margin-bottom: 21px
+
+  @include mq($from: desktop)
+    &__list
+      &-item
+        flex: calc(33.33% - 24px)  0 0
+        padding-right: unset
+
+  @include mq($from: desktopX)
+    &__title
+      margin-bottom: 35px
+
+    &__subtitle
+      max-width: 51%
+      font-size: 14px
+      margin-bottom: 52px
+
+    &__list
+      &-item
+        flex: calc((100% - 93px) / 3) 0 0
+        margin-bottom: 50px
+
+      &-image
+        width: 206px
+        height: 206px
+        margin-bottom: 30px
+
+      &-title
+        font-size: 22px
+        margin-bottom: 13px
+
+      &-description
+        font-size: 14px
+

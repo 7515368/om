@@ -1,0 +1,105 @@
+.container.selection__container
+    .selection__header
+        .selection__title(data-aos="fade-up")
+            h1.h2 Выбор квартиры
+
+        .selection__header-button
+            a(href="./flats.html").btn(data-aos="fade-up" data-aos-delay=100)
+                .btn__text Перейти в визуальный выбор
+
+    .selection__filter#filter(data-aos="fade-up" data-aos-delay=200)
+        .selection__filter-section.selection__filter-section--frame
+            .selection__filter-title Выберите<br> корпус:
+            .selection__filter-input
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text 1
+
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text 2
+
+        .selection__filter-section.selection__filter-section--flats
+            .selection__filter-title Количество<br> комнат:
+            .selection__filter-input
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text CT
+
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text 1
+
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text 2
+
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text 3
+
+                label.selection__filter-label
+                    span.checkbox.checkbox--filter
+                        input(type="checkbox")
+                        span.checkbox__indicator
+                        span.checkbox__text 4
+
+        .selection__filter-section.selection__filter-section--floor
+            .selection__filter-title Этаж
+            .selection__filter-input
+                .selection__filter-slider
+                    .selection__filter-slider-min#filterFloorMin
+                    .selection__filter-slider-max#filterFloorMax
+                    .selection__filter-slider-noui
+                        #filterFloor(data-min=3 data-max=20)
+
+        .selection__filter-section.selection__filter-section--square
+            .selection__filter-title Площадь м<sup>2</sup>
+            .selection__filter-input
+                .selection__filter-slider
+                    .selection__filter-slider-min#filterSquareMin
+                    .selection__filter-slider-max#filterSquareMax
+                    .selection__filter-slider-noui
+                        #filterSquare(data-min=33 data-max=289)
+
+        .selection__filter-section.selection__filter-section--cost
+            .selection__filter-title Стоимость, ₽
+            .selection__filter-input
+                .selection__filter-slider
+                    .selection__filter-slider-min#filterCostMin
+                    .selection__filter-slider-max#filterCostMax
+                    .selection__filter-slider-noui
+                        #filterCost(data-min=6152000 data-max=18820000)
+
+
+
+        .selection__filter-section.selection__filter-section--finishing
+            .selection__filter-title Отделка:
+            .selection__filter-input
+                label
+                    span.checkbox
+                        input(type="checkbox" checked)
+                        span.checkbox__indicator
+
+        .selection__filter-footer
+            .selection__filter-button
+                .btn.js-showMore
+                    .btn__text Показать
+
+            .selection__filter-results Найдено: 52 лота
+
+            .selection__filter-clear
+                a(href="#") Сбросить
+                    +use('close', 24, 24)

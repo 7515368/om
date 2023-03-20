@@ -1,0 +1,37 @@
+section.about-options
+    .container
+        .about-options__title(data-aos="fade-up")
+            h2.h3 Престижный и<br> защищённый
+
+        -
+            let options = [{
+                description: 'Клубный жилой комплекс из двух корпусов на 310 квартир – 150 и 159.',
+                icon: "option-housing"
+            },{
+                description: 'Территория круглосуточно находится под охраной и видеонаблюдением.',
+                icon: "option-security"
+            },{
+                description: 'Наземный и подземный 2-х уровневые паркинги.',
+                icon: "option-parking"
+            },{
+                description: 'Закрытый зелёный и минималистичный двор.',
+                icon: "option-yard"
+            },{
+                description: 'Развитая коммерческая инфраструктура.',
+                icon: "option-infrastructure"
+            }]
+
+        .about-options__list.swiper#aboutOptions
+            .swiper-wrapper
+                each item,index in options
+                    .swiper-slide
+                        .about-options__list-item(data-aos="fade-up" data-aos-delay=`${index*50}`)
+                            .about-options__list-description= item.description
+                            .about-options__list-icon
+                                +use(`${item.icon}`,40, 40)
+
+            .swiper-controls(data-aos="fade-up")
+                .swiper-pagination
+
+        .about-options__image(data-aos="fade-up")
+            +picture('about/options', 'jpg', true)

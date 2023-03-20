@@ -1,0 +1,130 @@
+.contacts
+  padding-top: 96px
+  margin-bottom: 40px
+
+  &__title
+    margin-bottom: 29px
+
+  &__description
+    font-size: 17px
+    margin-bottom: 32px
+
+  &__phone
+    font-size: 20px
+    margin-bottom: 8px
+
+  &__address
+    font-size: 12px
+    margin-bottom: 29px
+
+  &__working
+    font-size: 13px
+
+    &-title
+      margin-bottom: 11px
+
+    &-item
+      line-height: 157%
+
+  &__grid
+    margin-bottom: 20px
+
+  &__map
+    height: 198px
+    position: relative
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  @include mq($from: mobileX)
+    padding-top: 104px
+
+    &__description
+      font-size: 19px
+      margin-bottom: 34px
+
+    &__phone
+      font-size: 22px
+
+    &__address
+      font-size: 14px
+      margin-bottom: 30px
+
+    &__working
+      font-size: 14px
+
+    &__map
+      height: 343px
+
+  @include mq($from: tablet)
+    &__description
+      font-size: 23px
+      margin-bottom: 62px
+
+    &__title
+      margin-bottom: 26px
+
+    &__grid
+      display: grid
+      grid-template-rows: auto 1fr
+      grid-template-columns: auto 39.3%
+      grid-template-areas: "phone working" "address working"
+      margin-bottom: 37px
+
+    &__phone
+      font-size: 29px
+      grid-area: phone
+
+    &__address
+      grid-area: address
+      margin-top: auto
+      margin-bottom: unset
+      font-size: 17px
+
+    &__working
+      grid-area: working
+      font-size: 17px
+
+    &__map
+      height: 549px
+
+  @include mq($from: desktop)
+    &__grid
+      grid-template-columns: auto 48.2%
+
+    &__map
+      height: 298px
+
+  @include mq($from: desktopX)
+    padding-top: 134px
+    margin-bottom: 63px
+
+    &__title
+      margin-bottom: 40px
+
+    &__description
+      font-size: 30px
+      margin-bottom: 92px
+
+    &__phone
+      font-size: 38px
+
+    &__address
+      font-size: 22px
+      line-height: 157%
+
+    &__working
+      font-size: 22px
+
+      &-title
+        margin-top: -7px
+        margin-bottom: 24px
+
+    &__grid
+      margin-bottom: 81px
+
+    &__map
+      height: 397px
+

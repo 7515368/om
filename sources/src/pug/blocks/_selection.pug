@@ -1,0 +1,157 @@
+section.selection#selection
+    include ../blocks/_selection-filter
+
+    .selection__results
+        .container
+            .selection__results-heading
+                .selection__results-sorting
+                    .selection__results-sorting-caption Сортировать по:
+                    .selection__results-sorting-list
+                        .selection__results-sorting-item.is-active Этажу
+                        .selection__results-sorting-item Количеству комнат
+                        .selection__results-sorting-item Площади
+
+                .selection__view
+                    a(href="./index-grid.html#filter").selection__view-item
+                        +use('view-grid', 24, 24)
+                        +use('view-grid-active', 24, 24)
+
+                    a(href="./index.html#filter").selection__view-item.is-active
+                        +use('view-list', 24, 24)
+                        +use('view-list-active', 24, 24)
+
+            .selection__table
+                .selection__table-caption
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number Номер
+                        .selection__table-cell.selection__table-cell--floor Этаж
+                        .selection__table-cell.selection__table-cell--frame Корпус
+                        .selection__table-cell.selection__table-cell--flats Комнат
+                        .selection__table-cell.selection__table-cell--square Площадь, м2
+                        .selection__table-cell.selection__table-cell--cost Стоимость, ₽
+                        .selection__table-cell.selection__table-cell--more Подробнее
+
+                .selection__table-body
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number 152
+                        .selection__table-cell.selection__table-cell--floor 20
+                        .selection__table-cell.selection__table-cell--frame 1
+                        .selection__table-cell.selection__table-cell--flats 2
+                        .selection__table-cell.selection__table-cell--square(data-label="Площадь, м2") 43,34
+                        .selection__table-cell.selection__table-cell--cost(data-label="Стоимость, ₽") 18 820 000
+                        .selection__table-cell.selection__table-cell--more
+                            a(href="#" data-popup="#popupFlat1").btn-more.popup-link
+                                +use('arrow-right', 10, 17)
+
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number 152
+                        .selection__table-cell.selection__table-cell--floor 20
+                        .selection__table-cell.selection__table-cell--frame 1
+                        .selection__table-cell.selection__table-cell--flats 2
+                        .selection__table-cell.selection__table-cell--square(data-label="Площадь, м2") 43,34
+                        .selection__table-cell.selection__table-cell--cost(data-label="Стоимость, ₽") 18 820 000
+                        .selection__table-cell.selection__table-cell--more
+                            a(href="#" data-popup="#popupFlat1").btn-more.popup-link
+                                +use('arrow-right', 10, 17)
+
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number 152
+                        .selection__table-cell.selection__table-cell--floor 20
+                        .selection__table-cell.selection__table-cell--frame 1
+                        .selection__table-cell.selection__table-cell--flats 2
+                        .selection__table-cell.selection__table-cell--square(data-label="Площадь, м2") 43,34
+                        .selection__table-cell.selection__table-cell--cost(data-label="Стоимость, ₽") 18 820 000
+                        .selection__table-cell.selection__table-cell--more
+                            a(href="#" data-popup="#popupFlat1").btn-more.popup-link
+                                +use('arrow-right', 10, 17)
+
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number 152
+                        .selection__table-cell.selection__table-cell--floor 20
+                        .selection__table-cell.selection__table-cell--frame 1
+                        .selection__table-cell.selection__table-cell--flats 2
+                        .selection__table-cell.selection__table-cell--square(data-label="Площадь, м2") 43,34
+                        .selection__table-cell.selection__table-cell--cost(data-label="Стоимость, ₽") 18 820 000
+                        .selection__table-cell.selection__table-cell--more
+                            a(href="#" data-popup="#popupFlat1").btn-more.popup-link
+                                +use('arrow-right', 10, 17)
+
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number 152
+                        .selection__table-cell.selection__table-cell--floor 20
+                        .selection__table-cell.selection__table-cell--frame 1
+                        .selection__table-cell.selection__table-cell--flats 2
+                        .selection__table-cell.selection__table-cell--square(data-label="Площадь, м2") 43,34
+                        .selection__table-cell.selection__table-cell--cost(data-label="Стоимость, ₽") 18 820 000
+                        .selection__table-cell.selection__table-cell--more
+                            a(href="#" data-popup="#popupFlat1").btn-more.popup-link
+                                +use('arrow-right', 10, 17)
+
+                    .selection__table-row
+                        .selection__table-cell.selection__table-cell--number 152
+                        .selection__table-cell.selection__table-cell--floor 20
+                        .selection__table-cell.selection__table-cell--frame 1
+                        .selection__table-cell.selection__table-cell--flats 2
+                        .selection__table-cell.selection__table-cell--square(data-label="Площадь, м2") 43,34
+                        .selection__table-cell.selection__table-cell--cost(data-label="Стоимость, ₽") 18 820 000
+                        .selection__table-cell.selection__table-cell--more
+                            a(href="#" data-popup="#popupFlat1").btn-more.popup-link
+                                +use('arrow-right', 10, 17)
+
+
+            .selection__table-more
+                a(href="#").btn
+                    .btn__text Показать еще
+
+    .popup.popup--flat#popupFlat1
+        .popup__container
+            .popup__close
+                +use('close', 22, 22)
+            .popup__content(data-simplebar data-simplebar-auto-hide="false")
+                .popup__flat
+                    .popup__flat-caption
+                        .h2 1-комнатная квартира
+
+                    .popup__flat-info
+                        .selection__grid-item
+                            .popup__flat-images
+                                .popup__flat-plan
+                                    img(src="images/tmp/flat-1-plan.svg" alt="")
+
+                                .selection__grid-image
+                                    img(src="images/tmp/flat-1.svg" alt="")
+
+                            .selection__grid-data
+                                .selection__grid-heading
+                                    .selection__grid-row
+                                        .selection__grid-cell.selection__grid-cell--number(data-label="Номер") 152
+                                        .selection__grid-cell.selection__grid-cell--frame(data-label="Корпус") 1
+                                        .selection__grid-cell.selection__grid-cell--floor(data-label="Этаж") 20
+                                        .selection__grid-cell.selection__grid-cell--flats(data-label="Комнат") 2
+
+
+                                .selection__grid-footer
+                                    .selection__grid-row
+                                        .selection__grid-cell.selection__grid-cell--square(data-label="Площадь, м2") 43,34
+                                        .selection__grid-cell.selection__grid-cell--cost(data-label="Стоимость, ₽") 18 820 000
+
+                    form.feedback__form.feedback__form--order
+                        .feedback__form-caption
+                            .h2 Забронировать эту квартиру
+                        .form__row
+                            input(type="text" placeholder="Имя").input
+
+                        .form__row
+                            input(type="text" placeholder="Телефон" name="phone").input
+
+                        .form__row.form__row--checkbox
+                            label.label
+                                span.checkbox
+                                    input(type="checkbox" checked)
+                                    span.checkbox__indicator
+
+                                span.label__text Согласен(-на) на обработку персональных данных
+
+                        .form__row.form__row--button
+                            button(type="submit").btn
+                                span.btn__text Отправить

@@ -1,0 +1,40 @@
+header.header(class=headerInner===true?'header--inner':'')
+    .container.header__container
+        .header__burger
+            span
+            span
+            span
+
+        .header__logo
+            a(href="./").logo
+
+        .header__menu
+            .header__menu-list
+                .header__menu-item
+                    a(href="./about.html" class=page==='О проекте'?'is-active':'') О проекте
+
+                .header__menu-item
+                    a(href="./location.html" class=page === 'Расположение' ? 'is-active':'') Расположение
+
+                .header__menu-item.header__menu-item--subitems
+                    a(href="./flats.html" class=page === 'Квартиры' ? 'is-active':'') Квартиры
+
+                    .header__submenu
+                        .header__submenu-item
+                            a(href="./select-grid.html" class=isParams===true?"is-active":'') Подбор по параметрам
+
+                        .header__submenu-item
+                            a(href="./flats.html" class=isVisual===true?"is-active":'') Визуальный выбор
+
+                .header__menu-item
+                    a(href="./mortgage.html" class=page === 'Ипотека' ? 'is-active':'') Ипотека
+
+                .header__menu-item
+                    a(href="./contacts.html" class=page === 'Контакты' ? 'is-active':'') Контакты
+
+
+        a(href="tel:+7(495)138-40-40").header__tel
+            .header__tel-number +7 (495) 138-40-40
+            .header__tel-icon
+                .icony
+                    +use('phone', 15, 14)

@@ -1,0 +1,28 @@
+section.about-comfort
+    .container
+        .about-comfort__title(data-aos="fade-up")
+            h2.h3 Комфортабельность<br> изнутри
+
+        -
+            let comforts = [{
+                description: 'Высокие потолки в квартирах: от 3 метров.',
+                icon: "option-roof"
+            },{
+                description: 'Верхние квартиры имеют увеличенное пространство от пола до потолка.',
+                icon: "option-increased"
+            }]
+
+        .about-comfort__grid
+            .about-comfort__list.swiper#aboutComfort
+                .swiper-wrapper
+                    each item,index in comforts
+                        .swiper-slide
+                            .about-comfort__list-item(data-aos="fade-up" data-aos-delay=`${index*50}`)
+                                .about-comfort__list-description= item.description
+                                .about-comfort__list-icon
+                                    +use(`${item.icon}`,40, 40)
+
+                .swiper-controls
+                    .swiper-pagination
+
+            .about-comfort__description(data-aos="fade-up") Современный минимализм: наличие простых геометрических форм и линий, каждый предмет мебели и элемент декора имеет чётко выверенные пропорции.

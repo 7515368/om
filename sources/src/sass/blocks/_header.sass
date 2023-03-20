@@ -1,0 +1,400 @@
+.header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 20
+  padding-top: 13px
+  padding-bottom: 13px
+  transition: opacity .5s ease, background-color .5s ease, transform 1s ease
+
+  .preload &
+    opacity: 0
+    transform: translateY(-100%)
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 75px
+    background: #FBF9F9
+
+  &__logo
+    margin-right: auto
+    transition: .3s ease
+    opacity: 0
+    z-index: 1
+
+    .logo
+      background: $colorAccent
+      width: 60px
+
+  &__container
+    display: flex
+    align-items: center
+
+  &__burger
+    width: 35px
+    height: 35px
+    min-width: 35px
+    cursor: pointer
+    position: relative
+    z-index: 5
+    margin-right: 40px
+
+    span
+      display: block
+      position: absolute
+      width: 100%
+      height: 2px
+      border-radius: 1px
+      background: #FFF
+      transition: transform .3s ease, opacity .3s ease, background-color .3s ease
+      transform-origin: 50%
+
+      &:nth-child(1)
+        top: 10.5px
+
+      &:nth-child(2)
+        top: calc(50% - 1px)
+
+      &:nth-child(3)
+        bottom: 10.5px
+
+    &.is-active
+      span
+        background: $colorPrimary
+        width: 70%
+        margin-left: -3px
+
+        &:nth-child(1)
+          transform: rotate(135deg)
+          margin-top: 6px
+
+        &:nth-child(2)
+          opacity: 0
+
+        &:nth-child(3)
+          transform: rotate(-135deg)
+          margin-bottom: 6px
+
+      & ~ .header__logo
+        opacity: 1
+
+  &__tel
+    margin-left: auto
+    +fluidFontSize(11px, 13px, 320px, 480px, false)
+    white-space: nowrap
+    position: relative
+    z-index: 5
+    display: flex
+    align-items: center
+    font-size: 0
+
+    &-number
+      color: $colorPrimary
+      font-weight: normal
+      display: none
+
+    .icony
+      width: 34px
+      height: 34px
+      min-width: 34px
+      min-height: 34px
+
+    &:hover
+      .icony
+        background: $colorAccent
+        border-color: $colorAccent
+
+      .icon
+        fill: #FFF
+
+  &__menu
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #FFF
+    opacity: 0
+    pointer-events: none
+    transition: .3s ease
+    font-size: 14px
+    font-weight: 800
+    padding: 60px 20px 0
+    display: flex
+    align-items: flex-start
+    //height: 100vh
+
+    &-list
+      display: flex
+      flex-direction: column
+      width: 100%
+      overflow: auto
+      flex-shrink: 0
+      padding-top: 46px
+      height: 100%
+
+    &-item
+      flex-shrink: 0
+      opacity: 0
+      transition: .3s ease
+
+      @for $i from 0 through 10
+        &:nth-of-type(n + #{$i})
+          transform: translateY($i+10+px)
+          transition-delay: math.div($i, 15)+s
+
+      a
+        display: block
+        padding: 2px 0
+
+    &.is-active
+      opacity: 1
+      pointer-events: auto
+
+      .header__menu
+        &-item
+          transform: translateY(0)
+          opacity: 1
+
+      ~ .header__tel
+        .header__tel-link
+          color: #2C2C2C
+
+  &__submenu
+    font-weight: normal
+    
+    .is-active
+      color: #FFF
+
+  &.is-fixed,&.header--inner
+    background: #FFF
+
+    .header__logo
+      opacity: 1
+
+    .header__burger
+      span
+        background: $colorPrimary
+
+  @include mq($from: mobileX)
+    padding-top: 18px
+    padding-bottom: 18px
+
+    &:after
+      left: 223px
+
+    &__burger
+      margin-right: 35px
+
+    &__logo
+      .logo
+        width: 68px
+
+    &__tel
+      &-number
+        display: block
+
+      &-icon
+        margin-left: 14px
+
+    &__menu
+      padding-left: 34px
+      padding-right: 34px
+
+      &-list
+        display: grid
+        grid-template-columns: 1fr 46%
+        grid-template-rows: auto auto auto 1fr
+        align-items: flex-start
+        grid-template-areas: "about flats" "location flats" "margage flats" "contacts flats"
+
+      &-item
+
+        &:nth-child(1)
+          grid-area: about
+
+        &:nth-child(2)
+          grid-area: location
+
+        &:nth-child(3)
+          grid-area: flats
+
+        &:nth-child(4)
+          grid-area: margage
+
+        &:nth-child(5)
+          grid-area: contacts
+
+  @include mq($from: tablet)
+    &__menu
+      font-size: 19px
+      padding-top: 76px
+
+      &-list
+        grid-template-columns: 1fr 47.7%
+
+      &-item
+        a
+          padding-top: 11px
+          padding-bottom: 11px
+
+  @include mq($from: desktop)
+    padding-top: 0
+    padding-bottom: 0
+
+    &:after
+      left: 197px
+      z-index: -1
+
+    &__logo
+      margin-right: unset
+
+    &__burger
+      display: none
+
+    &__tel
+      margin-left: 32px
+
+    &__menu
+      position: unset
+      opacity: unset
+      padding: unset
+      font-size: 11px
+      pointer-events: unset
+      display: flex
+      font-weight: normal
+      margin-left: 95px
+      flex: auto
+      height: unset
+
+      &-list
+        display: flex
+        flex-direction: row
+        padding: unset
+        height: unset
+        width: 100%
+        overflow: unset
+
+      &-item
+        opacity: unset
+        transform: unset !important
+        flex: auto
+        position: relative
+
+        > a
+          padding: 23px 21px
+          white-space: nowrap
+          display: flex
+          justify-content: center
+          transition: color .3s ease, background-color .3s ease
+
+          &:hover
+            background: #C4DDC9
+
+          &.is-active
+            cursor: default
+            pointer-events: none
+            background: #C4DDC9
+            position: relative
+
+            &:after
+              content: ''
+              display: block
+              position: absolute
+              left: 0
+              right: 0
+              bottom: 0
+              border-bottom: 3px solid $colorAccent
+
+        &--subitems
+          &:hover
+            background: #C4DDC9
+
+            > a
+              &:after
+                content: ''
+                display: block
+                height: 3px
+                position: absolute
+                bottom: 0
+                background: $colorAccent
+                left: 50%
+                right: unset
+                width: 40px
+                transform: translateX(-50%)
+
+            .header__submenu
+              pointer-events: auto
+              opacity: 1
+
+    &__submenu
+      position: absolute
+      background: #C4DDC9
+      top: 100%
+      left: 0
+      right: 0
+      text-align: center
+      pointer-events: none
+      opacity: 0
+      transition: .3s ease
+
+      a
+        &:hover
+          color: #FFF
+
+  @include mq($from: desktopX)
+    &:after
+      display: none
+
+    &__container
+      position: relative
+
+      &:after
+        content: ''
+        display: block
+        background: #FFF
+        left: auto
+        max-width: 1188px
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        width: 400px
+        z-index: -1
+
+    &__menu
+      font-size: 14px
+      margin-left: 131px
+
+      &-item
+        > a
+          padding: 36px 21px 32px
+
+    &__logo
+      .logo
+        width: 86px
+
+    &__tel
+      font-size: 17px
+      font-weight: normal
+
+      &-icon
+        margin-left: 22px
+
+      .icony
+        width: 46px
+        height: 46px
+        min-width: 46px
+        min-height: 46px
+
+      .icon
+        width: 22px
+        height: 20px
+
+  @include mq($from: wide)

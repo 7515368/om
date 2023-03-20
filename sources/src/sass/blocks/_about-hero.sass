@@ -1,0 +1,89 @@
+.about-hero
+  padding-top: 96px
+  padding-bottom: 20px
+
+  &__title
+    margin-bottom: 35px
+
+  &__images
+    display: flex
+    padding-left: 0
+
+  &__picture
+    &--first
+      flex: 67% 0 0
+      margin-right: 22px
+
+    &--second
+      flex: 1
+
+  &__image
+    position: relative
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &:after
+      content: ''
+      display: block
+
+    &--first
+      &:after
+        padding-bottom: 77.61%
+
+    &--second
+      &:after
+        padding-bottom: 105.19%
+
+  @include mq($from: mobileX)
+    padding-top: 104px
+
+    &__picture
+      &--first
+        margin-right: 34px
+
+  @include mq($from: tablet)
+    padding-bottom: 17px
+
+    &__title
+      margin-bottom: 54px
+
+    &__image
+      &--first
+        &:after
+          padding-bottom: 298px
+
+      &--second
+        margin-top: -108px
+
+        &:after
+          padding-bottom: 221px
+
+  @include mq($from: desktopX)
+    padding-top: 134px
+    padding-bottom: 29px
+
+    &__title
+      margin-bottom: 75px
+
+    &__picture
+      &--first
+        flex-basis: 75%
+        margin-right: 44px
+
+    &__image
+      &--first
+        &:after
+          padding-bottom: 42.9%
+
+      &--second
+        margin-top: -144px
+
+        &:after
+          padding-bottom: 111.49%
+
+
+

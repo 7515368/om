@@ -1,0 +1,1045 @@
+.select-flat
+  height: 0
+  margin-bottom: 96px
+  overflow: hidden
+
+  &--one
+    height: unset
+    overflow: unset
+    padding-top: 96px
+    margin-bottom: 67px
+
+    .select-flat
+      &__header-button
+        display: none
+
+      &__header
+        margin-bottom: 32px
+
+  &__header
+    margin-bottom: 20px
+
+    &-title
+      margin-bottom: 15px
+
+  &__plan
+    position: relative
+    display: block
+
+    .flat-number
+      width: 29px
+      height: 29px
+      border-radius: 8px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 12px
+      border: 1px solid $colorPrimary
+      transition: .3s ease
+      cursor: pointer
+      background: #FFF
+      color: $colorPrimary
+      position: absolute
+
+      &:hover,&.is-active
+        background: $colorAccent
+        color: #FFF
+
+
+  &__image
+    position: relative
+    margin-bottom: 20px
+
+    .floor
+      transition: .3s ease
+      position: absolute
+
+      &--current
+        background: #FCCAAF
+
+      &--empty
+        background: rgba(44, 44, 44, 0.45)
+
+      &:hover
+        background: #C4DDC9
+
+
+
+    &-body
+      position: absolute
+      font-size: 11px
+      color: #FFF
+
+      &--first
+        top: 20px
+        left: 30%
+
+      &--second
+        top: 25%
+        left: 67%
+
+    &-label
+      position: absolute
+      border: 3px solid #FFF
+      border-radius: 12px
+      background: $colorAccent
+      color: #FFF
+      display: flex
+      font-size: 9px
+      line-height: 1.2
+      left: 28.5%
+      top: 33.8%
+      padding: .6em
+
+      &-item
+        display: flex
+        align-items: center
+
+        &:first-of-type
+          border-right: 1px solid #FFF
+          margin-right: 2px
+          padding-right: 11px
+
+      &-count
+        font-size: 21px
+        min-width: 33px
+        margin-right: 3px
+        display: flex
+        justify-content: center
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 100%
+        border: 12px solid transparent
+        border-top-color: #FFF
+        left: 50%
+        transform: translateX(-50%)
+
+      &--second
+        left: 62%
+
+    img
+      display: block
+      width: 100%
+
+  &__floor
+    margin-bottom: 20px
+
+    &-label
+      font-size: 12px
+      font-weight: bold
+      margin-bottom: 5px
+
+    &-number
+      font-size: 17px
+
+  &__cost
+    &-item
+      display: flex
+      align-items: center
+      color: $colorPrimary
+      margin-bottom: 12px
+      white-space: nowrap
+      line-height: 1
+
+    &-rooms
+      font-size: 13px
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 33px
+      width: 33px
+      height: 33px
+      border-radius: 8px
+      border: 1px solid $colorPrimary
+      margin-right: 15px
+
+    &-price
+      font-size: 17px
+
+      &:before
+        content: attr(data-prefix)
+        margin-right: 3px
+        align-self: baseline
+        font-size: 10px
+        
+  &__grid
+    &--one
+      display: flex
+      flex-direction: column
+      position: relative
+
+      .select-flat
+        &__image
+          background: #FBF9F9
+          margin-left: -20px
+          margin-right: -20px
+          padding: 21px 20px 20px
+          order: 1
+
+          &-holder
+            margin-bottom: 58px
+            display: flex
+            align-items: center
+            justify-content: center
+
+            img
+              width: unset
+              max-width: 100%
+
+          &-close
+            width: 36px
+            height: 36px
+            border-radius: 50%
+            position: absolute
+            right: 21px
+            top: 22px
+            align-items: center
+            justify-content: center
+            border: 1px solid $colorPrimary
+            cursor: pointer
+            transition: .3s ease
+            display: none
+
+            .icon
+              fill: currentColor
+
+            &:hover
+              background: #FFF
+              border-color: #FFF
+
+          &-flatnumber
+            font-weight: bold
+            font-size: 17px
+            padding: 20px
+            margin-bottom: 40px
+
+          &-download
+            .btn
+              font-size: 11px
+
+        &__info
+          order: 2
+          display: flex
+          flex-wrap: wrap
+          margin-bottom: 62px
+
+        &__controls
+          display: none
+
+        &__label
+          font-size: 11px
+          font-weight: bold
+
+        &__value
+          font-size: 17px
+
+        &__frame
+          order: 1
+          flex: 43.3% 0 0
+          margin-bottom: 14px
+
+        &__floor
+          order: 3
+          flex: 30% 0 0
+          margin-bottom: unset
+
+        &__flats
+          order: 5
+          margin-left: auto
+
+        &__square
+          order: 8
+          flex: 43% 0 0
+          margin-bottom: 61px
+
+        &__cost
+          order: 8
+
+        &__plan
+          order: 12
+          display: flex
+
+          &-image
+            flex: 62% 0 0
+            margin-right: auto
+
+            img
+              max-width: 100%
+
+          &-controls
+            flex: 30% 0 0
+            display: flex
+            flex-direction: column
+
+            img
+              display: block
+              max-width: 100%
+
+          .select-flat__controls
+            &-body
+              margin-top: auto
+
+            &-frame
+              display: none
+
+        &__order
+          order: 15
+
+          .btn
+            border-width: 3px
+
+  &__modal
+    background: $colorAccent
+    color: #FFF
+    right: -20px
+    left: -20px
+    position: absolute
+    padding: 88px 20px 26px 20px
+    opacity: 0
+    pointer-events: none
+    transition: .3s ease
+    transition-delay: 10ms
+
+    &.is-active
+      opacity: 1
+      pointer-events: auto
+
+    &-close
+      width: 32px
+      height: 32px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      transition: background .3s ease
+      border: 1px solid #FFF
+      position: absolute
+      right: 23px
+      top: 28px
+
+      .icon
+        width: 18px
+        height: 18px
+        fill: #FFF
+        transition: .3s ease
+
+      &:hover
+        background: #FFF
+
+        .icon
+          fill: $colorAccent
+
+    .h3
+      margin-bottom: 40px
+      font-size: 21px
+
+    &-form
+      &-label
+        font-size: 11px
+        margin-bottom: 3px
+
+      &-row
+        margin-bottom: 19px
+
+    &-agreement
+      font-size: 8px
+      display: flex
+      padding-top: 8px
+      margin-bottom: 77px
+
+      .checkbox__indicator
+        border-color: #FFF
+        margin-right: 15px
+
+        &:after
+          background: #FFF
+
+    &-content
+      position: relative
+
+    &-thanks
+      opacity: 0
+      position: absolute
+      pointer-events: none
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      font-size: 17px
+      line-height: 1.57
+      background: $colorAccent
+      font-weight: 250
+
+      p
+        margin-top: unset
+        margin-bottom: .5em
+
+    .btn
+      border-color: #FFF
+      color: #FFF
+      border-width: 3px
+      justify-content: center
+
+      &--disabled
+        opacity: .3
+        pointer-events: none
+        cursor: default
+
+      &:hover
+        background: #FFF
+        color: $colorAccent
+
+
+    &.is-success
+      .select-flat__modal-thanks
+        opacity: 1
+        pointer-events: auto
+
+  @include mq($from: mobileX)
+    &--one
+      padding-top: 104px
+
+    &__grid
+      &--one
+        .select-flat
+          &__image
+            margin-left: -34px
+            margin-right: -34px
+            padding-left: 34px
+            padding-right: 34px
+
+            &-flatnumber
+              padding-left: unset
+              padding-right: unset
+
+          &__frame
+            display: none
+
+          &__floor
+            flex-basis: 20.7%
+
+          &__flats
+            margin-left: unset
+            flex-basis: 23.5%
+
+          &__square
+            flex-basis: 28.1%
+            margin-bottom: 39px
+
+          &__plan
+            &-image
+              flex-basis: 47.5%
+
+            &-controls
+              display: flex
+              flex-wrap: wrap
+              flex-direction: unset
+              flex: 150px 0 0
+              margin-left: auto
+
+            .select-flat__controls
+              &-direction
+                margin-right: 20px
+
+              &-body
+                margin-top: unset
+                flex: 97px 0 0
+                margin-left: auto
+
+
+              &-frame
+                display: block
+                font-size: 11px
+                flex: 97px 0 0
+                margin-left: auto
+                line-height: 1
+    &__modal
+      left: -34px
+      right: -34px
+      padding: 40px 34px
+
+      &-close
+        width: 36px
+        height: 36px
+        right: 35px
+        top: 38px
+
+      .h3
+        font-size: 23px
+        max-width: 80%
+        margin-bottom: 31px
+
+      &-form
+        &-label
+          font-size: 12px
+
+      &-data
+        max-width: 333px
+
+      &-agreement
+        font-size: 10px
+        margin-bottom: 65px
+
+    &__plan
+      .flat-number
+        width: 33px
+        height: 33px
+        font-size: 13px
+
+
+  @include mq($from: tablet)
+    height: unset
+    padding-top: 102px
+    margin-bottom: 40px
+
+    &--one
+      margin-bottom: 23px
+
+      .select-flat
+        &__header-button
+          display: block
+
+        &__image
+          &-holder
+            img
+              max-width: 72%
+
+
+    &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 31px
+
+      &-title
+        margin: 0
+
+    &__image
+      flex: calc(100% - 157px) 0 0
+      order: 1
+      margin: 0 0 44px
+
+    &__info
+      order: 3
+      display: flex
+      justify-content: space-between
+      flex: calc(100% - 157px) 0 0
+
+    &__plan
+      flex: 197px 0 0
+      min-width: 197px
+      margin-right: 47px
+
+      img
+        max-width: 100%
+        display: block
+
+    &__floor
+      flex: 1
+      min-width: 100px
+      margin-top: -8px
+
+    &__cost
+      margin-top: 1px
+
+    &__controls
+      order: 2
+      padding-left: 34px
+      flex: 157px 0 0
+      max-width: 157px
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      margin-bottom: 44px
+
+      &-body
+        &-label
+          font-size: 11px
+          margin-bottom: 20px
+
+        img
+          max-width: 90%
+          display: block
+
+      &-list
+        width: 37px
+    &__grid
+      display: flex
+      flex-wrap: wrap
+
+      &--one
+        flex-direction: unset
+
+        .select-flat
+          &__image
+            margin: unset
+            padding: 28px
+            flex: calc(100% - 157px) 0 0
+
+            &-holder
+              margin-bottom: 31px
+
+            &-flatnumber
+              padding: unset
+
+            &-close
+              display: flex
+
+          &__info
+            display: grid
+            grid-template-columns: 45% 22.6% 19% auto
+            grid-template-rows: auto 1fr
+            grid-template-areas: "map floor flats square" "map . cost cost"
+            order: 3
+            margin-top: 37px
+            justify-content: unset
+            margin-bottom: 0
+
+          &__controls
+            display: flex
+            order: 2
+            flex: 157px 0 0
+            padding-left: 35px
+            margin-bottom: unset
+
+          &__plan
+            order: 1
+            padding-top: 8px
+            grid-area: map
+
+            &-image
+              flex: 100% 0 0
+              margin: unset
+
+            &-controls
+              display: none
+
+          &__floor
+            order: 2
+            margin: unset
+            max-width: unset
+            flex-basis: 22.7%
+            grid-area: floor
+
+          &__flats
+            order: 3
+            grid-area: flats
+
+          &__label
+            font-size: 12px
+
+          &__square
+            order: 4
+            grid-area: square
+            margin-bottom: 10px
+
+            .select-flat__number
+              span
+                font-size: .7em
+                font-weight: bold
+
+          &__cost
+            order: 5
+            grid-area: cost
+
+          &__order
+            margin-left: auto
+            transform: translateY(-75px)
+
+    &__modal
+      padding: 33px 34px
+
+      &-close
+        right: 30px
+        top: 28px
+
+      .h3
+        margin-bottom: 13px
+
+      &-data
+        display: grid
+        grid-template-columns: repeat(2, 100%)
+        grid-template-rows: auto 1fr
+        grid-gap: 34px
+
+      &-form
+        &-row
+          margin-bottom: 13px
+
+      &-footer
+        margin-left: auto
+
+      &-agreement
+        margin-bottom: unset
+
+  @include mq($from: desktop)
+    &--one
+      margin-bottom: unset
+
+    &__info
+      display: block
+      order: 1
+      flex: 197px 0 0
+      max-width: 197px
+      margin-right: 34px
+      align-items: flex-start
+
+    &__image
+      flex-basis: calc(100% - 117px - 197px - 34px)
+      order: 2
+      margin: unset
+
+    &__controls
+      flex-basis: 117px
+      max-width: 117px
+      order: 3
+      margin: unset
+
+      &-body
+        margin-right: -20px
+        padding-bottom: 13px
+
+        img
+          max-width: 100%
+
+    &__plan
+      margin-bottom: 29px
+      margin-right: unset
+
+    &__floor
+      margin: 0 0 40px
+
+    &__grid
+      &--one
+        .select-flat
+          &__plan
+            display: block
+
+          &__info
+            order: 1
+            display: flex
+            margin-top: -8px
+            align-items: flex-start
+            justify-content: flex-start
+            align-self: flex-start
+            padding-bottom: 80px
+
+          &__image
+            order: 2
+            flex: calc(100% - 157px - 156px - 36px) 0 0
+
+            &-holder
+              min-height: 38vw
+              max-height: 470px
+
+          &__controls
+            margin-left: auto
+            padding-left: unset
+            flex-basis: 78px
+            max-width: 78px
+
+          &__floor
+            flex: 100% 0 0
+            margin-bottom: 36px
+
+          &__flats
+            flex: 55% 0 0
+
+          &__square
+            flex: 45% 0 0
+
+          &__order
+            margin-left: unset
+
+    &__modal
+      padding-top: 143px
+      padding-bottom: 29px
+      display: flex
+
+      &-container
+        display: flex
+        width: 100%
+
+      &-form
+        display: flex
+        flex: 1
+        flex-direction: column
+
+        &-label
+          font-size: 10px
+          margin-bottom: -1px
+
+        &-row
+          margin-bottom: 20px
+          width: 100%
+
+      &-content
+        display: flex
+        flex: 1
+
+      &-data
+        display: flex
+        flex-direction: column
+        grid-gap: unset
+        align-items: flex-start
+
+      &-agreement
+        margin-top: 28px
+        font-size: 11px
+        margin-bottom: auto
+
+        .checkbox__indicator
+          margin-top: -4px
+
+        .checkbox__text
+          line-height: 1.57
+
+      &-footer
+        margin-left: unset
+
+
+
+  @include mq($until: desktopX)
+    &__header
+      &-button
+        padding-top: 5px
+
+      .btn
+        height: 32px
+        border-radius: 16px
+        font-size: 10px
+        font-weight: 900
+
+
+  @include mq($from: desktopX)
+    padding-top: 134px
+    margin-bottom: 60px
+
+    &--one
+      margin-bottom: 5px
+
+      .select-flat
+        &__header
+          margin-bottom: 42px
+
+    &__header
+      margin-bottom: 41px
+
+      .btn
+        padding-right: 75px
+        padding-left: 75px
+
+    &__info
+      flex-basis: 238px
+      max-width: 238px
+      margin-right: 70px
+
+    &__plan
+      margin-bottom: 30px
+
+      .flat-number
+        width: 40px
+        height: 40px
+        font-size: 17px
+
+    &__floor
+      margin-bottom: 61px
+
+      &-label
+        font-size: 17px
+        margin-bottom: 14px
+
+      &-number
+        font-size: 22px
+
+    &__cost
+      &-item
+        margin-bottom: 17px
+
+      &-rooms
+        font-size: 17px
+        width: 40px
+        height: 40px
+        min-width: 40px
+        margin-right: 22px
+
+      &-price
+        font-size: 22px
+
+        &:before
+          font-size: 12px
+          margin-right: 5px
+
+    &__image
+      flex-basis: calc(100% - 238px - 70px - 154px)
+
+      &-body
+        font-size: 14px
+
+        &--first
+          top: 28px
+          left: 30.5%
+
+        &--second
+          top: 23.4%
+          left: 67.7%
+
+      &-label
+        border-width: 4px
+        padding: 0.7em 1.3em
+
+        &-item
+          font-size: 12px
+
+          &:nth-child(1)
+            margin-right: 9px
+            padding-right: 15px
+
+        &-count
+          font-size: 28px
+          margin-right: 9px
+
+        &-title
+          line-height: 1.16
+
+    &__controls
+      flex-basis: 124px
+      max-width: 124px
+      padding-left: unset
+      margin-left: 30px
+
+      &-direction
+        padding-left: 4px
+
+        .icon
+          width: 39px
+          height: 39px
+
+      &-list
+        width: 48px
+
+      &-body
+        padding-bottom: 0
+
+        &-label
+          font-size: 14px
+          margin-bottom: 31px
+
+    &__grid
+      &--one
+        .select-flat
+          &__image
+            flex: calc(100% - 157px - 270px - 36px) 0 0
+            padding: 38px
+
+            &-holder
+              margin-bottom: 51px
+              min-height: 487px
+              max-height: unset
+
+            &-flatnumber
+              font-size: 22px
+              margin-bottom: 83px
+
+            &-close
+              width: 48px
+              height: 48px
+              right: 30px
+              top: 29px
+
+              .icon
+                width: 26px
+                height: 26px
+
+            &-download
+              .btn
+                font-size: 14px
+
+              .btn__icon
+                width: 40px
+                height: 40px
+                margin-right: 23px
+
+          &__info
+            max-width: 238px
+            flex: 238px 0 0
+
+          &__plan
+            flex: 100% 0 0
+
+          &__label
+            font-size: 14px
+            margin-bottom: 9px
+
+          &__number
+            font-size: 22px
+
+          &__floor
+            margin-bottom: 58px
+
+            .select-flat__label
+              font-size: 17px
+
+          &__flats
+            margin-bottom: 24px
+
+          &__controls
+            flex-basis: 123px
+            max-width: 123px
+
+          &__order
+            transform: translateY(-93px)
+
+            .btn
+              height: 64px
+              border-width: 4px
+              border-radius: 32px
+              font-size: 14px
+              padding-left: 50px
+              padding-right: 50px
+    &__modal
+      left: -46px
+      padding: 180px 46px 29px
+
+      &-close
+        width: 48px
+        height: 48px
+
+        .icon
+          width: 26px
+          height: 26px
+
+      .h3
+        font-size: 30px
+        margin-bottom: 23px
+
+      &-form
+        &-label
+          font-size: 14px
+          margin-bottom: 6px
+
+        &-row
+          margin-bottom: 31px
+
+      &-agreement
+        margin-top: 5px
+
+        .checkbox__text
+          font-size: 14px
+
+        .checkbox__indicator
+          margin-right: 20px
+
+      &-footer
+        .btn
+          height: 64px
+          border-width: 4px
+          width: 232px
+          border-radius: 32px
+
+      &-thanks
+        font-size: 22px

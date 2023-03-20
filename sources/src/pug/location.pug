@@ -1,0 +1,13 @@
+extends base/_layout
+block head
+    title Расположение
+    -
+        let page = "Расположение",
+        headerInner = true
+
+block page
+    include blocks/_location-hero
+    include blocks/_location-comfort
+    include blocks/_location-culture
+    include blocks/_location-infrastructure
+    include blocks/_feedback

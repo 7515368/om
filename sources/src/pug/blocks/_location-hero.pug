@@ -1,0 +1,31 @@
+section.location-hero
+    .container
+        .location-hero__title(data-aos="fade-up")
+            h1.h2 Расположение
+
+    .location-hero__map-holder(data-aos="fade-up" data-aos-delay=100)
+        .location-hero__map
+            img(src="images/location/hero-map.svg" alt="")
+
+    .container(data-aos="fade-up" data-aos-delay=150)
+        .location-hero__address
+            +use('pin-om', 17, 21)
+            | Мичуринский проспект д. 72а
+
+    .location-hero__list(data-aos="fade-up" data-aos-delay=200)
+        .location-hero__list-content.container
+            .location-hero__list-item(data-aos="fade-up")
+                .location-hero__list-count Пешая<br> доступность
+                .location-hero__list-title станций метро «Озёрная» и&nbsp;«Мичуринский проспект»
+
+            .location-hero__list-item(data-aos="fade-up" data-aos-delay="100")
+                .location-hero__list-count 15<br> минут
+                .location-hero__list-title до центра Москвы
+
+            .location-hero__list-item(data-aos="fade-up" data-aos-delay="200")
+                .location-hero__list-count Прямой<br> выезд
+                .location-hero__list-title на Мичуринский проспект
+
+            .location-hero__list-item(data-aos="fade-up" data-aos-delay="300")
+                .location-hero__list-count Удобный<br> выезд
+                .location-hero__list-title на Аминьевское шоссе
