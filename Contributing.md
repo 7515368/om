@@ -1,7 +1,3 @@
-# OM
-
-[Страница на github-pages](https://7515368.github.io/om/html/)
-
 # Front-end/Вёрстка сайта. Gulp сборщик. Pug + Sass/SCSS.
 
 Спасибо что выбрали работу с нашей командой!  
