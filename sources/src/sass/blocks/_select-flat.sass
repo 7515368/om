@@ -45,7 +45,6 @@
         background: $colorAccent
         color: #FFF
 
-
   &__image
     position: relative
     margin-bottom: 20px
@@ -62,8 +61,6 @@
 
       &:hover
         background: #C4DDC9
-
-
 
     &-body
       position: absolute
@@ -164,7 +161,7 @@
         margin-right: 3px
         align-self: baseline
         font-size: 10px
-        
+
   &__grid
     &--one
       display: flex
@@ -393,7 +390,6 @@
         background: #FFF
         color: $colorAccent
 
-
     &.is-success
       .select-flat__modal-thanks
         opacity: 1
@@ -450,7 +446,6 @@
                 flex: 97px 0 0
                 margin-left: auto
 
-
               &-frame
                 display: block
                 font-size: 11px
@@ -490,7 +485,6 @@
         height: 33px
         font-size: 13px
 
-
   @include mq($from: tablet)
     height: unset
     padding-top: 102px
@@ -507,7 +501,6 @@
           &-holder
             img
               max-width: 72%
-
 
     &__header
       display: flex
@@ -593,7 +586,7 @@
             display: grid
             grid-template-columns: 45% 22.6% 19% auto
             grid-template-rows: auto 1fr
-            grid-template-areas: "map floor flats square" "map . cost cost"
+            grid-template-areas: "map floor flats square" "map .cost cost"
             order: 3
             margin-top: 37px
             justify-content: unset
@@ -801,8 +794,6 @@
       &-footer
         margin-left: unset
 
-
-
   @include mq($until: desktopX)
     &__header
       &-button
@@ -813,7 +804,6 @@
         border-radius: 16px
         font-size: 10px
         font-weight: 900
-
 
   @include mq($from: desktopX)
     padding-top: 134px
@@ -891,6 +881,7 @@
       &-label
         border-width: 4px
         padding: 0.7em 1.3em
+        z-index: 100
 
         &-item
           font-size: 12px
