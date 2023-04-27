@@ -5,8 +5,19 @@ section.location-culture
 
         .location-culture__slider.swiper#locationCultureSlider(data-aos="fade-up" data-aos-delay=100)
             .swiper-wrapper
-                - let k=5
-                    while k > 0
+           
+                        .swiper-slide
+                            .location-culture__slider-item
+                                .location-culture__slider-picture.location-culture__slider-picture--first
+                                    .location-culture__slider-image.location-culture__slider-image--first
+                                        +picture('location/slide-2-3',"jpg", true)
+
+                                .location-culture__slider-picture.location-culture__slider-picture--second
+                                    .location-culture__slider-image.location-culture__slider-image--second
+                                        +picture('location/slide-2-2',"jpg", true)
+
+                                .location-culture__slider-description Современный ЖК «ОМ» составляет симбиоз с развитой инфраструктурой района и позволяет его жителям прочувствовать концепцию этого места.
+                     
                         .swiper-slide
                             .location-culture__slider-item
                                 .location-culture__slider-picture.location-culture__slider-picture--first
@@ -15,11 +26,23 @@ section.location-culture
 
                                 .location-culture__slider-picture.location-culture__slider-picture--second
                                     .location-culture__slider-image.location-culture__slider-image--second
-                                        +picture('location/slide-2-2',"jpg", true)
+                                        +picture('location/slide-2-4',"jpg", true)
 
                                 .location-culture__slider-description Современный ЖК «ОМ» составляет симбиоз с развитой инфраструктурой района и позволяет его жителям прочувствовать концепцию этого места.
-                        -
-                            k--
+                     
+                        .swiper-slide
+                            .location-culture__slider-item
+                                .location-culture__slider-picture.location-culture__slider-picture--first
+                                    .location-culture__slider-image.location-culture__slider-image--first
+                                        +picture('location/slide-2-5',"jpg", true)
+
+                                .location-culture__slider-picture.location-culture__slider-picture--second
+                                    .location-culture__slider-image.location-culture__slider-image--second
+                                        +picture('location/slide-2-6',"jpg", true)
+
+                                .location-culture__slider-description Современный ЖК «ОМ»  составляет симбиоз с развитой инфр составляет симбиоз с развитой инфр составляет симбиоз с развитой инфраструктурой района и позволяет его жителям прочувствовать концепцию этого места.
+                     
+
 
         .swiper-controls#locationCultureControls(data-aos="fade-up")
             .swiper-controls__buttons

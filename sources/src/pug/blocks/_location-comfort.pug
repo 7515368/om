@@ -5,8 +5,6 @@ section.location-comfort
 
         .location-comfort__slider.swiper#locationComfortSlider(data-aos="fade-up" data-aos-delay=100)
             .swiper-wrapper
-                - let n=5
-                    while n>0
                         .swiper-slide
                             .location-comfort__slider-item
                                 .location-comfort__slider-picture.location-comfort__slider-picture--first
@@ -17,9 +15,33 @@ section.location-comfort
                                     .location-comfort__slider-image.location-comfort__slider-image--second
                                         +picture('location/slide-1-2',"jpg", true)
 
+                                .location-comfort__slider-description В 2 минутах ходьбы от ЖК «ОМ»  детские и спортивные площадки, церковь и смотровая площадка.
+                        
+                        .swiper-slide
+                            .location-comfort__slider-item
+                                .location-comfort__slider-picture.location-comfort__slider-picture--first
+                                    .location-comfort__slider-image.location-comfort__slider-image--first
+                                        +picture('location/slide-1-3',"jpg", true)
+
+                                .location-comfort__slider-picture.location-comfort__slider-picture--second
+                                    .location-comfort__slider-image.location-comfort__slider-image--second
+                                        +picture('location/slide-1-4',"jpg", true)
+
                                 .location-comfort__slider-description В 2 минутах ходьбы от ЖК «ОМ» находится Очаковский парк: на его территории есть большой пруд, детские и спортивные площадки, церковь и смотровая площадка.
-                        -
-                            n--
+
+                        .swiper-slide
+                            .location-comfort__slider-item
+                                .location-comfort__slider-picture.location-comfort__slider-picture--first
+                                    .location-comfort__slider-image.location-comfort__slider-image--first
+                                        +picture('location/slide-1-5',"jpg", true)
+
+                                .location-comfort__slider-picture.location-comfort__slider-picture--second
+                                    .location-comfort__slider-image.location-comfort__slider-image--second
+                                        +picture('location/slide-1-6',"jpg", true)
+
+                                .location-comfort__slider-description В 2 минутах ходьбы от ЖК «ОМ» находится Очаковский парк: на его территории есть большой пруд, детские и спортивные площадки, церковь и смотровая площадка.
+                                                
+
 
         .swiper-controls#locationComfortControls(data-aos="fade-up")
             .swiper-controls__buttons

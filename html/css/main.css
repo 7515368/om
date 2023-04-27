@@ -6715,7 +6715,7 @@ textarea.input {
     grid-area: description;
     margin-left: 34px;
     font-size: 12px;
-    margin-bottom: 31px
+    height: 100px
   }
   .location-comfort__slider .swiper-wrapper {
     margin-bottom: 33px
@@ -6739,7 +6739,7 @@ textarea.input {
   }
   .location-comfort__slider-description {
     max-width: 72%;
-    margin-bottom: 30px
+    height: 100px
   }
   .location-comfort__slider-image--first:after {
     padding-bottom: 159.9%
@@ -6785,7 +6785,7 @@ textarea.input {
     margin-left: 45px;
     font-size: 14px;
     max-width: 610px;
-    margin-bottom: 53px
+    height: 120px
   }
   .location-comfort .swiper-controls__buttons {
     margin-left: 310px
@@ -6826,7 +6826,8 @@ textarea.input {
 .location-culture__slider-description {
   padding-left: 20px;
   font-size: 11px;
-  line-height: 1.57
+  line-height: 1.57;
+  height: 60px
 }
 .location-culture__slider-image {
   position: relative
@@ -6849,7 +6850,7 @@ textarea.input {
   padding-bottom: 158.44%
 }
 .location-culture__slider .swiper-wrapper {
-  margin-bottom: 63px
+  margin-bottom: 23px
 }
 @media (min-width:30em) {
   .location-culture__title {
@@ -6921,7 +6922,8 @@ textarea.input {
     padding-bottom: 158%
   }
   .location-culture__slider-description {
-    max-width: 76%
+    max-width: 76%;
+    height: 80px
   }
 }
 @media (min-width:80em) {
