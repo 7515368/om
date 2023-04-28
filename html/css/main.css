@@ -6643,7 +6643,8 @@ textarea.input {
 .location-comfort__slider-description {
   padding-right: 20px;
   font-size: 11px;
-  line-height: 1.57
+  line-height: 1.57;
+  height: 60px
 }
 .location-comfort__slider-image {
   position: relative
@@ -6861,7 +6862,7 @@ textarea.input {
   padding-bottom: 158.44%
 }
 .location-culture__slider .swiper-wrapper {
-  margin-bottom: 23px
+  margin-bottom: 63px
 }
 @media (min-width:30em) {
   .location-culture__title {
