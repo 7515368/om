@@ -440,10 +440,10 @@ const mortgageSlider = () => {
                         slidesPerView: 'auto',
                         freeMode: true,
                         loop: true,
-                        autoplay: {
-                            delay: 0,
-                            disableOnInteraction: false
-                        },
+                        // autoplay: {
+                        //     delay: 0,
+                        //     disableOnInteraction: false
+                        // },
                         breakpoints: {
                             960: {
                                 spaceBetween: 60,
