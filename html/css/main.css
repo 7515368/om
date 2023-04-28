@@ -4114,6 +4114,14 @@ textarea.input {
   font-size: 11px;
   margin-bottom: 34px
 }
+.footer__seo {
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px
+}
 .footer__menu {
   display: none
 }
@@ -4269,6 +4277,9 @@ textarea.input {
     grid-template-areas: "logo menu menu address address" "booklet . . . ." "copy info offert offert dev"
   }
   .footer__booklet {
+    text-align: unset
+  }
+  .footer__seo {
     text-align: unset
   }
   .footer__menu {
