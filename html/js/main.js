@@ -107,8 +107,8 @@ const aboutOptionsSlider = () => {
                 swiper = new Swiper(optionsSlider, {
                     speed: 1000,
                     slidesPerView: 'auto',
+                    // slidesPerView: '1',
                     spaceBetween: 20,
-                    loop: true,
                     pagination: {
                         el: '.swiper-pagination',
                         type: 'bullets',
@@ -120,7 +120,8 @@ const aboutOptionsSlider = () => {
                     },
                     breakpoints: {
                         479: {
-                            spaceBetween: 34
+                            spaceBetween: 34,
+                            // slidesPerView: '2',
                         }
                     }
                 });
@@ -150,7 +151,7 @@ const aboutComfortSlider = () => {
                     speed: 1000,
                     slidesPerView: 'auto',
                     spaceBetween: 20,
-                    loop: true,
+                    // loop: true,
                     pagination: {
                         el: '.swiper-pagination',
                         type: 'bullets',
