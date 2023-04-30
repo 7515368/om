@@ -18,8 +18,10 @@ block page
 
             .select-flat__grid.select-flat__grid--one(data-aos="fade-up" data-aos-delay=200)
                 .select-flat__image
-                    .select-flat__image-close
-                        +use('close', 24, 24)
+                    a(href="#").btn(style="float:right")
+                        .btn__text Показать фасад
+                    //- .select-flat__image-close
+                    //-     +use('close', 24, 24)
 
                     .select-flat__image-flatnumber Квартира №12
 
