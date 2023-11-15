@@ -200,6 +200,7 @@ template {
 .svg-image-close,
 .svg-image-direction,
 .svg-image-download,
+.svg-image-icon_fire,
 .svg-image-label-caffe,
 .svg-image-label-fitness,
 .svg-image-label-kindergartens,
@@ -228,7 +229,7 @@ template {
   background: url(../images/sprites/main.svg) no-repeat
 }
 .svg-image-arrow-right {
-  background-position: 57.6048509348% 45.2698781196%;
+  background-position: 57.6048509348% 45.0086555107%;
   background-size: 1882.8828828829% auto;
   width: 11.1px
 }
@@ -244,7 +245,7 @@ template {
   height: 18.7px
 }
 .svg-image-check {
-  background-position: 8.9947089947% 94.9720670391%;
+  background-position: 17.4603174603% 94.4444444444%;
   background-size: 1045% auto;
   width: 20px
 }
@@ -260,7 +261,7 @@ template {
   height: 12px
 }
 .svg-image-close {
-  background-position: 91.2087912088% 68.2926829268%;
+  background-position: 91.2087912088% 67.8787878788%;
   background-size: 774.0740740741% auto;
   width: 27px
 }
@@ -307,8 +308,24 @@ template {
   width: 15px;
   height: 12.3px
 }
+.svg-image-icon_fire {
+  background-position: 0 100%;
+  background-size: 1306.25% auto;
+  width: 16px
+}
+.svg-image-icon_fire:before {
+  content: "";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 137.5%
+}
+.svg-image-icon_fire-dims {
+  width: 16px;
+  height: 22px
+}
 .svg-image-label-caffe {
-  background-position: 73.4104046243% 26.1437908497%;
+  background-position: 73.4104046243% 25.974025974%;
   background-size: 580.5555555556% auto;
   width: 36px
 }
@@ -324,7 +341,7 @@ template {
   height: 38px
 }
 .svg-image-label-fitness {
-  background-position: 41.1428571429% 74.5222929936%;
+  background-position: 41.1428571429% 74.0506329114%;
   background-size: 614.7058823529% auto;
   width: 34px
 }
@@ -340,7 +357,7 @@ template {
   height: 34px
 }
 .svg-image-label-kindergartens {
-  background-position: 24.2774566474% 50.3225806452%;
+  background-position: 24.2774566474% 50%;
   background-size: 580.5555555556% auto;
   width: 36px
 }
@@ -356,7 +373,7 @@ template {
   height: 36px
 }
 .svg-image-label-mall {
-  background-position: 45.0867052023% 49.6815286624%;
+  background-position: 45.0867052023% 49.3670886076%;
   background-size: 580.5555555556% auto;
   width: 36px
 }
@@ -372,7 +389,7 @@ template {
   height: 34px
 }
 .svg-image-label-recreation {
-  background-position: 73.8372093023% 50.3225806452%;
+  background-position: 73.8372093023% 50%;
   background-size: 564.8648648649% auto;
   width: 37px
 }
@@ -388,7 +405,7 @@ template {
   height: 36px
 }
 .svg-image-label-transport {
-  background-position: 0 75.4838709677%;
+  background-position: 0 75%;
   background-size: 580.5555555556% auto;
   width: 36px
 }
@@ -404,7 +421,7 @@ template {
   height: 36px
 }
 .svg-image-label-university {
-  background-position: 20.8092485549% 75.4838709677%;
+  background-position: 20.8092485549% 75%;
   background-size: 580.5555555556% auto;
   width: 36px
 }
@@ -420,7 +437,7 @@ template {
   height: 36px
 }
 .svg-image-list-grid {
-  background-position: 58.8888888889% 72.2222222222%;
+  background-position: 58.8888888889% 71.7791411043%;
   background-size: 720.6896551724% auto;
   width: 29px
 }
@@ -436,7 +453,7 @@ template {
   height: 29px
 }
 .svg-image-list-list {
-  background-position: 75% 72.2222222222%;
+  background-position: 75% 71.7791411043%;
   background-size: 720.6896551724% auto;
   width: 29px
 }
@@ -452,7 +469,7 @@ template {
   height: 29px
 }
 .svg-image-lu {
-  background-position: 0 87.9310344828%;
+  background-position: 0 87.4285714286%;
   background-size: 803.8461538462% auto;
   width: 26px
 }
@@ -484,7 +501,7 @@ template {
   height: 39px
 }
 .svg-image-option-increased {
-  background-position: 0 25.6578947368%;
+  background-position: 0 25.4901960784%;
   background-size: 497.619047619% auto;
   width: 42px
 }
@@ -500,7 +517,7 @@ template {
   height: 39px
 }
 .svg-image-option-infrastructure {
-  background-position: 25.1497005988% 25.6578947368%;
+  background-position: 25.1497005988% 25.4901960784%;
   background-size: 497.619047619% auto;
   width: 42px
 }
@@ -548,7 +565,7 @@ template {
   height: 39px
 }
 .svg-image-option-security {
-  background-position: 50.8982035928% 25.6578947368%;
+  background-position: 50.8982035928% 25.4901960784%;
   background-size: 497.619047619% auto;
   width: 42px
 }
@@ -564,7 +581,7 @@ template {
   height: 39px
 }
 .svg-image-option-yard {
-  background-position: 0 51.3157894737%;
+  background-position: 0 50.9803921569%;
   background-size: 497.619047619% auto;
   width: 42px
 }
@@ -580,7 +597,7 @@ template {
   height: 39px
 }
 .svg-image-phone {
-  background-position: 99.2835209826% 6.9807037457%;
+  background-position: 99.2835209826% 6.9413092551%;
   background-size: 1536.7647058824% auto;
   width: 13.6px
 }
@@ -596,7 +613,7 @@ template {
   height: 14.8px
 }
 .svg-image-pin-om {
-  background-position: 0 100%;
+  background-position: 8.3333333333% 99.4152046784%;
   background-size: 1229.4117647059% auto;
   width: 17px
 }
@@ -612,7 +629,7 @@ template {
   height: 21px
 }
 .svg-image-slider-next {
-  background-position: 89.8268398268% 77.4373259053%;
+  background-position: 89.8268398268% 77.0083102493%;
   background-size: 863.6363636364% auto;
   width: 24.2px
 }
@@ -628,7 +645,7 @@ template {
   height: 11.5px
 }
 .svg-image-slider-prev {
-  background-position: 14.0692640693% 85.2367688022%;
+  background-position: 14.0692640693% 84.7645429363%;
   background-size: 863.6363636364% auto;
   width: 24.2px
 }
@@ -660,7 +677,7 @@ template {
   height: 28px
 }
 .svg-image-view-grid-active {
-  background-position: 91.7127071823% 17.1779141104%;
+  background-position: 91.7127071823% 17.0731707317%;
   background-size: 746.4285714286% auto;
   width: 28px
 }
@@ -676,7 +693,7 @@ template {
   height: 28px
 }
 .svg-image-view-list {
-  background-position: 91.7127071823% 34.3558282209%;
+  background-position: 91.7127071823% 34.1463414634%;
   background-size: 746.4285714286% auto;
   width: 28px
 }
@@ -692,7 +709,7 @@ template {
   height: 28px
 }
 .svg-image-view-list-active {
-  background-position: 91.7127071823% 51.5337423313%;
+  background-position: 91.7127071823% 51.2195121951%;
   background-size: 746.4285714286% auto;
   width: 28px
 }
@@ -9777,10 +9794,10 @@ textarea.input {
     font-size: 22px;
     margin-left: 12px
   }
-  .selection__grid-footer .selection__grid-cell .selection__grid-value {
+  .selection__grid-footer .selection__grid-cell--flats .selection__grid-value {
     font-size: 22px
   }
-  .selection__grid-footer .selection__grid-cell .measurements {
+  .selection__grid-footer .selection__grid-cell--flats .measurements {
     font-size: 14px
   }
   .selection__grid-footer .selection__grid-cell--cost .selection__grid-label:after {
@@ -9832,6 +9849,38 @@ textarea.input {
     bottom: -10px;
     border-left-width: 11px
   }
+}
+.checbox_special {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto
+}
+.checbox_special .checkbox__indicator {
+  text-align: center;
+  border-color: transparent
+}
+.checbox_special .checkbox__indicator._active {
+  border-color: #2c2c2c
+}
+.checbox_special .checkbox__text {
+  margin-left: 55px;
+  font-size: 14px
+}
+.selection__filter-section--special {
+  clear: both;
+  -webkit-order: 7;
+  -ms-flex-order: 7;
+  order: 7
+}
+.selection__grid-value .old_price,
+.special_price .old_price {
+  color: #8e8e8d;
+  font-size: 14px;
+  text-decoration: line-through
+}
+.selection__grid-value .old_price {
+  text-align: right
 }
 .mortgage {
   padding-top: 96px;

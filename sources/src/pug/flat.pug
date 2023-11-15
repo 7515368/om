@@ -68,9 +68,14 @@ block page
                         .select-flat__label Площадь
                         .select-flat__number 43,34 <span>м<sup>2</sup></span>
 
-                    .select-flat__cost
+                    .select-flat__cost.special_price
                         .select-flat__label Стоимость
-                        .select-flat__number 18 820 000 ₽
+                        .select-flat__number 
+                            span 18 820 000 ₽
+                            span.fire
+                                +use('icon_fire', 24, 24)
+                        .old_price 28 820 000
+
 
 
                 .select-flat__controls

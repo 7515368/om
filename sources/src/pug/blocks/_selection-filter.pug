@@ -93,6 +93,15 @@
                         input(type="checkbox" checked)
                         span.checkbox__indicator
 
+        .selection__filter-section.selection__filter-section--special
+            label.selection__filter-label
+                span.checkbox.checkbox--filter.checbox_special
+                    input(type="checkbox") 
+                    span.checkbox__indicator._active 
+                        +use('icon_fire', 24, 24)
+                    span.checkbox__text Спецпредложение 
+               
+
         .selection__filter-footer
             .selection__filter-button
                 .btn.js-showMore

@@ -26,7 +26,6 @@
         flex: 30% 0 0
         margin-right: auto
 
-
       &--flats
         flex: 58% 0 0
         margin-left: auto
@@ -125,7 +124,6 @@
 
       &-noui
         flex: 100% 0 0
-
 
   &__results
     background: #FBF9F9
@@ -247,7 +245,6 @@
 
         &--number,&--floor,&--frame,&--flats
           padding-bottom: 0
-
 
         &--square
           display: block
@@ -374,7 +371,6 @@
           background: #FFF
           padding: 10px 20px
 
-
     &-cell
       font-size: 17px
 
@@ -447,7 +443,7 @@
 
           .btn__icon
             margin-right: 0
-            
+
       &:hover
         .btn-more
           .btn__icon
@@ -563,7 +559,6 @@
 
               &--square
                 flex-basis: 43.9%
-
 
   @include mq($from: tablet)
     padding-top: 102px
@@ -967,7 +962,6 @@
           padding-left: 74px
           padding-right: 74px
 
-
     &__table
       &-caption
         margin-left: calc(-9.33vw)
@@ -1083,15 +1077,15 @@
             margin-bottom: 7px
 
           &--flats
-           .selection__grid-label b
-            font-size: 22px
-            margin-left: 12px
+            .selection__grid-label b
+              font-size: 22px
+              margin-left: 12px
 
-          .selection__grid-value
-            font-size: 22px
+            .selection__grid-value
+              font-size: 22px
 
-          .measurements
-            font-size: 14px
+            .measurements
+              font-size: 14px
 
           &--cost
             .selection__grid-label
@@ -1140,3 +1134,28 @@
                   top: -10px
                   bottom: -10px
                   border-left-width: 11px
+
+.checbox_special
+  display: flex
+  width: auto
+  .checkbox__indicator
+    text-align: center
+    border-color: transparent
+  .checkbox__indicator._active
+    border-color: #2c2c2c
+
+  .checkbox__text
+    margin-left: 55px
+    font-size: 14px
+.selection__filter-section--special
+  clear: both
+  order: 7
+
+.selection__grid-value .old_price,
+.special_price .old_price
+  color: #8e8e8d
+  font-size: 14px
+  text-decoration: line-through
+
+.selection__grid-value .old_price
+  text-align: right
