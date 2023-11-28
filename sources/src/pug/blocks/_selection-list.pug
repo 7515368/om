@@ -50,7 +50,10 @@ section.selection
 
                             .selection__grid-cell.selection__grid-cell--cost
                                 .selection__grid-label Стоимость
-                                .selection__grid-value 18 820 000 ₽
+                                .selection__grid-value 
+                                    span.fire
+                                        +use('icon_fire', 24, 24)
+                                        span 18 820 000 ₽
 
                             .selection__grid-cell.selection__grid-cell--more
                                 .btn-more.popup-link
